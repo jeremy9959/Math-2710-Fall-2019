@@ -1,6 +1,11 @@
-Week1.html : Week1.md
-	pandoc -s --mathjax -t revealjs Week1.md -o Week1.html -V revealjs-url=https://revealjs.com -V theme=simple
+all : Week1.html Week1.pdf
 
-install : Week1.html
-	cp Week1.html ../blackboard
+%.html : %.md
+	pandoc -s --mathjax -t revealjs $< -o $@ -V revealjs-url=https://revealjs.com -V theme=simple
+
+%.pdf : %.md
+	pandoc -s --mathjax -t beamer $< -o $@
+
+install : 
+	rsync -uv *.html *.pdf ../blackboard
 
