@@ -35,20 +35,18 @@
 <section id="title-slide">
   <h1 class="title">Math 2710</h1>
   <p class="author">Aug 26-28</p>
-  <p class="date"><span class="math inline">\(P \to Q\)</span></p>
 </section>
 
-<section id="course-info" class="slide level1">
-<h1>Course Info</h1>
+<section><section id="course-info" class="title-slide slide level1"><h1>Course Info</h1></section><section id="key-links" class="slide level2">
+<h2>Key links</h2>
 <ul>
 <li><a href="https://learn.uconn.edu/bbcswebdav/courses/M1198-MATH-2710-001.002/syllabus.pdf">Syllabus</a></li>
 <li>Tests</li>
 <li><a href="https://learn.uconn.edu/bbcswebdav/courses/M1198-MATH-2710-001.002/Homework.html">Homework</a></li>
 <li><a href="https://piazza.com/uconn/fall2019/m1198math2710001002">Piazza</a></li>
 </ul>
-</section>
-<section id="grading" class="slide level1">
-<h1>Grading</h1>
+</section><section id="grading" class="slide level2">
+<h2>Grading</h2>
 <ul>
 <li>Two midterms (25 points) tentatively Sep 30 and Nov 5.
 <ul>
@@ -58,15 +56,295 @@
 <li>Homework (8 points)</li>
 <li>Piazza participation (2 points)</li>
 </ul>
-</section>
-<section id="homework" class="slide level1">
-<h1>Homework</h1>
+</section><section id="homework" class="slide level2">
+<h2>Homework</h2>
 <ul>
 <li>daily assignments</li>
 <li>periodically collected and graded with short lead time</li>
 <li>assorted short quizzes or other assignments from time to time</li>
 </ul>
-</section>
+</section></section>
+<section><section id="what-is-this-course-about" class="title-slide slide level1"><h1>1.1 What is this course about?</h1></section><section id="mathematics-as-a-discipline" class="slide level2">
+<h2>Mathematics as a discipline</h2>
+<p>This course is about</p>
+<ul>
+<li><em>how mathematics is done</em></li>
+<li><em>how mathematics is communicated</em>.</li>
+</ul>
+<p>The actual mathematics we will learn in this course is less important than the approach</p>
+</section><section id="a-very-simple-example" class="slide level2">
+<h2>A very simple example</h2>
+<p><strong>Assertion:</strong> The sum of two even numbers is an even number.</p>
+<p>Goal: find a mathematical proof of this fact.</p>
+</section><section id="mathematical-proof" class="slide level2">
+<h2>Mathematical Proof</h2>
+<p>A <em>mathematical proof</em> of this assertion is an argument that starts from known facts and definitions and establishes the the truth of the assertion using the tools of logic.</p>
+<p>A proof in <em>formal logic</em> starts from explicit hypotheses or axioms and applies the rules of deductive logic to reach a conclusion. Proofs of even simple facts in formal logic are extremely long and mostly not readable by humans.</p>
+<p>In principle, a mathematical proof contains enough information to produce a formal logical proof.</p>
+</section><section id="good-mathematical-proofs" class="slide level2">
+<h2>Good Mathematical Proofs</h2>
+<p>A good mathematical proof is</p>
+<ul>
+<li><em>rigorous</em>, meaning it gives a complete logical argument,</li>
+<li><em>informative</em>, meaning that it provides enough information to explain why the assertion is true</li>
+<li><em>efficient</em>, meaning that it is as short as possible while still being rigorous and informative.</li>
+</ul>
+</section><section id="example-continued" class="slide level2">
+<h2>Example, continued</h2>
+<p>To construct a proof of this assertion, we need:</p>
+<ul>
+<li>to know exactly what the terms mean (what is an even integer?)</li>
+<li>to establish in our own minds that the assertion IS true, and figure out why</li>
+<li>communicate our understanding of why the assertion is true rigorously and efficiently.</li>
+</ul>
+</section><section id="discussion" class="slide level2">
+<h2>Discussion</h2>
+<ul>
+<li>Define <em>even number</em>.</li>
+<li>Explain why the assertion about even numbers is true, as rigorously and efficiently as you can.</li>
+</ul>
+</section><section id="key-vocabulary" class="slide level2">
+<h2>Key Vocabulary</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>theorem</li>
+<li>lemma</li>
+<li>proposition</li>
+<li>corollary</li>
+<li>example</li>
+<li>algorithm</li>
+<li>definition</li>
+<li>proof</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>statement</li>
+<li>proposition</li>
+<li>converse</li>
+<li>contrapositive</li>
+<li>conditional statement</li>
+</ul>
+</div>
+</div>
+<aside class="notes">
+<p>Section 1.2 starts here, Wed Aug 28.</p>
+</aside>
+</section></section>
+<section><section id="logic" class="title-slide slide level1"><h1>1.2 Logic</h1></section><section id="statements" class="slide level2">
+<h2>Statements</h2>
+<p>A statement is a sentence that is either <strong>True</strong> or <strong>False</strong></p>
+<p>Compound statements are built up using logical operators <strong>AND</strong>, <strong>OR</strong>, <strong>NOT</strong>, and others.</p>
+<p>The truth of a compound statement depends on the individual statements and the properties of the operators.</p>
+</section><section id="and-or-not" class="slide level2">
+<h2>AND, OR, NOT</h2>
+<div class="columns">
+<div class="column" style="width:33%;">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">P</th>
+<th style="text-align: left;">Q</th>
+<th style="text-align: left;"><strong>AND</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">T</td>
+<td style="text-align: left;">T</td>
+<td style="text-align: left;">T</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">T</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">F</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">T</td>
+<td style="text-align: left;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">F</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:33%;">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">P</th>
+<th style="text-align: left;">Q</th>
+<th style="text-align: left;"><strong>OR</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">T</td>
+<td style="text-align: left;">T</td>
+<td style="text-align: left;">T</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">T</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">T</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">T</td>
+<td style="text-align: left;">T</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">F</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:33%;">
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">P</th>
+<th style="text-align: left;"><strong>NOT</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">T</td>
+<td style="text-align: left;">F</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">T</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="implicationsconditionals" class="slide level2">
+<h2>Implications/Conditionals</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<table>
+<thead>
+<tr class="header">
+<th>P</th>
+<th>Q</th>
+<th><span class="math inline">\(\implies\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>T</td>
+<td>T</td>
+<td>T</td>
+</tr>
+<tr class="even">
+<td>T</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>T</td>
+<td>T</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td>T</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<table>
+<thead>
+<tr class="header">
+<th>P</th>
+<th>Q</th>
+<th><span class="math inline">\(\Longleftrightarrow\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>T</td>
+<td>T</td>
+<td>T</td>
+</tr>
+<tr class="even">
+<td>T</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>T</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td>T</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="discussion-1" class="slide level2">
+<h2>Discussion</h2>
+<ul>
+<li><span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> are equivalent means <span class="math inline">\(P\Longleftrightarrow Q\)</span> or “<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”.</li>
+<li>Show: <span class="math inline">\(P \implies Q\)</span> is equivalent to (<span class="math inline">\(Q\)</span> OR NOT <span class="math inline">\(P\)</span>).</li>
+<li>Exclusive OR is the operator that is TRUE when one of two statements is True, but not both. Express it in terms of AND, OR, and NOT.</li>
+<li>If my basement is wet, then it is either very rainy or a pipe has broken. Express this using the various operators and test its truth under different conditions.</li>
+</ul>
+<p>::: notes</p>
+<p>Section 1.3 starts here, Friday Aug. 30</p>
+</section></section>
+<section><section id="sets" class="title-slide slide level1"><h1>1.3 Sets</h1></section><section id="sets-1" class="slide level2">
+<h2>Sets</h2>
+<p>We rely on a “naive” notion of set, meaning a collection of objects. For example:</p>
+<ul>
+<li>the set of integers</li>
+<li>the set of words in the English language</li>
+<li>the set of people in the world</li>
+<li>the empty set</li>
+</ul>
+</section><section id="subsets" class="slide level2">
+<h2>Subsets</h2>
+<p>We can construct sets by selecting elements of another set, yielding a <em>subset</em> of the original set.</p>
+</section><section id="explicit-specification" class="slide level2">
+<h2>Explicit specification</h2>
+<p><span class="math inline">\(A=\{1,3,5,8,9\}\)</span>, a subset of the integers.</p>
+</section><section id="selection-by-a-property" class="slide level2">
+<h2>Selection by a property</h2>
+<p>Suppose <span class="math inline">\(P\)</span> is the set of people. Then <span class="math display">\[\{p\in P: \textrm{$p$ is a legal resident of Chicago}\}\]</span> is shorthand for the set consisting of people <span class="math inline">\(p\)</span> for which the statement “<span class="math inline">\(p\)</span> is a legal resident of Chicago” is True.</p>
+</section><section id="set-operations" class="slide level2">
+<h2>Set operations</h2>
+<p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are both subsets of some huge (and usually unmentioned) set <span class="math inline">\(U\)</span>, then:</p>
+<ul>
+<li><span class="math inline">\(A=B\)</span> means that <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same elements.</li>
+<li><span class="math inline">\(A\subset B\)</span> means that every element of <span class="math inline">\(A\)</span> is also an element of <span class="math inline">\(B\)</span>.</li>
+</ul>
+</section><section id="more-set-operations" class="slide level2">
+<h2>More set operations</h2>
+<ul>
+<li><span class="math inline">\(A\cup B\)</span>, the union of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, is <span class="math inline">\(\{x\in U : x \in A \mathrm{\ OR\ } x\in B\}\)</span></li>
+<li><span class="math inline">\(A\cap B\)</span>, the intersection of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, is <span class="math inline">\(\{x \in U : x \in A \mathrm{\ AND\ } x\in B\}\)</span></li>
+<li><span class="math inline">\(A\times B\)</span>, the product of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, is the set of all ordered pairs <span class="math inline">\((x,y)\)</span> where <span class="math inline">\(x\in A\)</span> and <span class="math inline">\(y\in B\)</span>.</li>
+</ul>
+</section><section id="discussion-2" class="slide level2">
+<h2>Discussion</h2>
+<p>Suppose <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are two sets contained in some big set <span class="math inline">\(U\)</span>. Prove the following; truth tables may be helpful.</p>
+<ul>
+<li><span class="math inline">\(A=B\)</span> if and only if <span class="math inline">\(A\subset B\)</span> and <span class="math inline">\(B\subset A\)</span>.<br />
+</li>
+<li><span class="math inline">\(((A\cap B) = A)\)</span> implies <span class="math inline">\(A\subset B\)</span>.</li>
+</ul>
+</section></section>
     </div>
   </div>
 

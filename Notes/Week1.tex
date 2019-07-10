@@ -1,0 +1,248 @@
+\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[ignorenonframetext,]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph:
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+\centering
+\begin{beamercolorbox}[sep=16pt,center]{part title}
+  \usebeamerfont{part title}\insertpart\par
+\end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+\centering
+\begin{beamercolorbox}[sep=12pt,center]{part title}
+  \usebeamerfont{section title}\insertsection\par
+\end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+\centering
+\begin{beamercolorbox}[sep=8pt,center]{part title}
+  \usebeamerfont{subsection title}\insertsubsection\par
+\end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provides euro and other symbols
+\else % if luatex or xelatex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\usepackage{hyperref}
+\hypersetup{
+            pdftitle={Math 2710},
+            pdfauthor={Aug 26-28},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\newif\ifbibliography
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\title{Math 2710}
+\author{Aug 26-28}
+\date{}
+
+\begin{document}
+\frame{\titlepage}
+
+\hypertarget{course-info}{%
+\section{Course Info}\label{course-info}}
+
+\begin{frame}{Key links}
+\protect\hypertarget{key-links}{}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://learn.uconn.edu/bbcswebdav/courses/M1198-MATH-2710-001.002/syllabus.pdf}{Syllabus}
+\item
+  Tests
+\item
+  \href{https://learn.uconn.edu/bbcswebdav/courses/M1198-MATH-2710-001.002/Homework.html}{Homework}
+\item
+  \href{https://piazza.com/uconn/fall2019/m1198math2710001002}{Piazza}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Grading}
+\protect\hypertarget{grading}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Two midterms (25 points) tentatively Sep 30 and Nov 5.
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Notify me by Sep 20 if you need an alternate date for the first exam
+    because of Rosh Hashanah.
+  \end{itemize}
+\item
+  Final Exam (40 points)
+\item
+  Homework (8 points)
+\item
+  Piazza participation (2 points)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Homework}
+\protect\hypertarget{homework}{}
+
+\begin{itemize}
+\tightlist
+\item
+  daily assignments
+\item
+  periodically collected and graded with short lead time
+\item
+  assorted short quizzes or other assignments from time to time
+\end{itemize}
+
+\end{frame}
+
+\hypertarget{what-is-this-course-about}{%
+\section{What is this course about?}\label{what-is-this-course-about}}
+
+\begin{frame}{Mathematics as a discipline}
+\protect\hypertarget{mathematics-as-a-discipline}{}
+
+This course is about
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{how mathematics is done}
+\item
+  \emph{how mathematics is communicated}.
+\end{itemize}
+
+The actual mathematics we will learn in this course is less important
+than the approach
+
+\end{frame}
+
+\begin{frame}{A very simple example}
+\protect\hypertarget{a-very-simple-example}{}
+
+\textbf{Assertion:} The sum of two even numbers is an even number.
+
+Question: why is this true?
+
+\end{frame}
+
+\begin{frame}{Mathematical Proof}
+\protect\hypertarget{mathematical-proof}{}
+
+A \emph{mathematical proof} of this assertion is an argument that starts
+from known facts and definitions and establishes the the truth of the
+assertion using the tools of logic.
+
+A good mathematical proof is
+
+\begin{itemize}
+\tightlist
+\item
+  \emph{rigorous}, meaning it gives a complete logical argument,
+\item
+  \emph{informative}, meaning that it provides enough information to
+  explain why the assertion is true
+\item
+  \emph{efficient}, meaning that it is as short as possible while still
+  being rigorous and informative.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Example, continued}
+\protect\hypertarget{example-continued}{}
+
+To construct a proof of this assertion, we need:
+
+\begin{itemize}
+\tightlist
+\item
+  to know exactly what the terms mean (what is an even integer?)
+\item
+  to establish in our own minds that the assertion IS true, and figure
+  out why
+\item
+  communicate our understanding of why the assertion is true rigorously
+  and efficiently.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Discussion}
+\protect\hypertarget{discussion}{}
+
+\begin{itemize}
+\tightlist
+\item
+  Define \emph{even number}.
+\item
+  Explain why the assertion about even numbers is true, as rigorously
+  and efficiently as you can.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Key Vocabulary}
+\protect\hypertarget{key-vocabulary}{}
+
+theorem, lemma, proposition, corollary, example, algorithm, definition,
+proof, statement, proposition, converse, contrapositive, conditional
+statement
+
+\end{frame}
+
+\end{document}
