@@ -19,7 +19,7 @@ Office hours: 9:00 - 10:00 Mondays, 12:15-13:00 Wednesdays (or by appointment)<b
 (Spock, date unknown)<br>
 </p>
 
-Read the [syllabus](https://learn.uconn.edu/bbcswebdav/courses/M1198-MATH-2710-001.002/syllabus.html)!
+
 
 
 
