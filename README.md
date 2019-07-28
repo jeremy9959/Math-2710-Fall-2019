@@ -13,10 +13,10 @@ Office: Monteith 231 <br>
 Office hours: 9:00 - 10:00 Mondays, 12:15-13:00 Wednesdays (or by appointment)<br />
 
 <p>
-*..do not worry about your difficulties in Mathematics.  I can assure you mine are still greater.*
-(Albert Einstein, 1943)*<br>
-*..logic is a little bird tweeting in the field; logic is a wreath of pretty flowers that smells BAD*
-(Spock, date unknown)*<br>
+* ..do not worry about your difficulties in Mathematics.  I can assure you mine are still greater. *
+(Albert Einstein, 1943)<br>
+* ..logic is a little bird tweeting in the field; logic is a wreath of pretty flowers that smells BAD *
+(Spock, date unknown)<br>
 </p>
 
 
