@@ -1,110 +1,99 @@
-<!DOCTYPE html>
-<html>
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
-  <meta name="author" content="Aug 26-28">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Aug 26-28" />
   <title>Math 2710</title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="https://revealjs.com/css/reveal.css">
   <style type="text/css">
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <link rel="stylesheet" href="https://revealjs.com/css/theme/simple.css" id="theme">
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'https://revealjs.com/css/print/pdf.css' : 'https://revealjs.com/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-  </script>
-  <!--[if lt IE 9]>
-  <script src="https://revealjs.com/lib/js/html5shiv.js"></script>
-  <![endif]-->
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
 </head>
 <body>
-  <div class="reveal">
-    <div class="slides">
-
-<section id="title-slide">
+<div class="slide titlepage">
   <h1 class="title">Math 2710</h1>
-  <p class="author">Aug 26-28</p>
-</section>
-
-<section><section id="course-info" class="title-slide slide level1"><h1>Course Info</h1></section><section id="key-links" class="slide level2">
-<h2>Key links</h2>
+  <p class="author">
+Aug 26-28
+  </p>
+</div>
+<div id="course-info" class="title-slide slide section level1"><h1>Course Info</h1></div><div id="key-links" class="slide section level2">
+<h1>Key links</h1>
 <ul>
 <li><a href="https://learn.uconn.edu/bbcswebdav/courses/M1198-MATH-2710-001.002/syllabus.pdf">Syllabus</a></li>
 <li>Tests</li>
 <li><a href="https://learn.uconn.edu/bbcswebdav/courses/M1198-MATH-2710-001.002/Homework.html">Homework</a></li>
 <li><a href="https://piazza.com/uconn/fall2019/m1198math2710001002">Piazza</a></li>
 </ul>
-</section><section id="grading" class="slide level2">
-<h2>Grading</h2>
+</div><div id="grading" class="slide section level2">
+<h1>Grading</h1>
 <ul>
 <li>Two midterms (25 points) tentatively Sep 30 and Nov 5.
 <ul>
 <li>Notify me by Sep 20 if you need an alternate date for the first exam because of Rosh Hashanah.</li>
 </ul></li>
 <li>Final Exam (40 points)</li>
-<li>Homework (8 points)</li>
-<li>Piazza participation (2 points)</li>
+<li>Homework + participation (including Piazza) (10 points)</li>
 </ul>
-</section><section id="homework" class="slide level2">
-<h2>Homework</h2>
+</div><div id="homework" class="slide section level2">
+<h1>Homework</h1>
 <ul>
 <li>daily assignments</li>
 <li>periodically collected and graded with short lead time</li>
 <li>assorted short quizzes or other assignments from time to time</li>
 </ul>
-</section></section>
-<section><section id="what-is-this-course-about" class="title-slide slide level1"><h1>1.1 What is this course about?</h1></section><section id="mathematics-as-a-discipline" class="slide level2">
-<h2>Mathematics as a discipline</h2>
+</div>
+<div id="what-is-this-course-about" class="title-slide slide section level1"><h1>1.1 What is this course about?</h1></div><div id="mathematics-as-a-discipline" class="slide section level2">
+<h1>Mathematics as a discipline</h1>
 <p>This course is about</p>
 <ul>
 <li><em>how mathematics is done</em></li>
 <li><em>how mathematics is communicated</em>.</li>
 </ul>
 <p>The actual mathematics we will learn in this course is less important than the approach</p>
-</section><section id="a-very-simple-example" class="slide level2">
-<h2>A very simple example</h2>
+</div><div id="a-very-simple-example" class="slide section level2">
+<h1>A very simple example</h1>
 <p><strong>Assertion:</strong> The sum of two even numbers is an even number.</p>
 <p>Goal: find a mathematical proof of this fact.</p>
-</section><section id="mathematical-proof" class="slide level2">
-<h2>Mathematical Proof</h2>
+</div><div id="mathematical-proof" class="slide section level2">
+<h1>Mathematical Proof</h1>
 <p>A <em>mathematical proof</em> of this assertion is an argument that starts from known facts and definitions and establishes the the truth of the assertion using the tools of logic.</p>
 <p>A proof in <em>formal logic</em> starts from explicit hypotheses or axioms and applies the rules of deductive logic to reach a conclusion. Proofs of even simple facts in formal logic are extremely long and mostly not readable by humans.</p>
 <p>In principle, a mathematical proof contains enough information to produce a formal logical proof.</p>
-</section><section id="good-mathematical-proofs" class="slide level2">
-<h2>Good Mathematical Proofs</h2>
+</div><div id="good-mathematical-proofs" class="slide section level2">
+<h1>Good Mathematical Proofs</h1>
 <p>A good mathematical proof is</p>
 <ul>
 <li><em>rigorous</em>, meaning it gives a complete logical argument,</li>
 <li><em>informative</em>, meaning that it provides enough information to explain why the assertion is true</li>
 <li><em>efficient</em>, meaning that it is as short as possible while still being rigorous and informative.</li>
 </ul>
-</section><section id="example-continued" class="slide level2">
-<h2>Example, continued</h2>
+</div><div id="example-continued" class="slide section level2">
+<h1>Example, continued</h1>
 <p>To construct a proof of this assertion, we need:</p>
 <ul>
 <li>to know exactly what the terms mean (what is an even integer?)</li>
 <li>to establish in our own minds that the assertion IS true, and figure out why</li>
 <li>communicate our understanding of why the assertion is true rigorously and efficiently.</li>
 </ul>
-</section><section id="discussion" class="slide level2">
-<h2>Discussion</h2>
+</div><div id="discussion" class="slide section level2">
+<h1>Discussion</h1>
 <ul>
 <li>Define <em>even number</em>.</li>
 <li>Explain why the assertion about even numbers is true, as rigorously and efficiently as you can.</li>
 </ul>
-</section><section id="key-vocabulary" class="slide level2">
-<h2>Key Vocabulary</h2>
+</div><div id="key-vocabulary" class="slide section level2">
+<h1>Key Vocabulary</h1>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
@@ -127,47 +116,45 @@
 </ul>
 </div>
 </div>
-<aside class="notes">
-<p>Section 1.2 starts here, Wed Aug 28.</p>
-</aside>
-</section></section>
-<section><section id="logic" class="title-slide slide level1"><h1>1.2 Logic</h1></section><section id="statements" class="slide level2">
-<h2>Statements</h2>
+
+</div>
+<div id="logic" class="title-slide slide section level1"><h1>1.2 Logic</h1></div><div id="statements" class="slide section level2">
+<h1>Statements</h1>
 <p>A statement is a sentence that is either <strong>True</strong> or <strong>False</strong></p>
 <p>Compound statements are built up using logical operators <strong>AND</strong>, <strong>OR</strong>, <strong>NOT</strong>, and others.</p>
 <p>The truth of a compound statement depends on the individual statements and the properties of the operators.</p>
-</section><section id="and-or-not" class="slide level2">
-<h2>AND, OR, NOT</h2>
+</div><div id="and-or-not" class="slide section level2">
+<h1>AND, OR, NOT</h1>
 <div class="columns">
 <div class="column" style="width:33%;">
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">P</th>
-<th style="text-align: left;">Q</th>
-<th style="text-align: left;"><strong>AND</strong></th>
+<th align="left">P</th>
+<th align="left">Q</th>
+<th align="left"><strong>AND</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">T</td>
-<td style="text-align: left;">T</td>
-<td style="text-align: left;">T</td>
+<td align="left">T</td>
+<td align="left">T</td>
+<td align="left">T</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">T</td>
-<td style="text-align: left;">F</td>
-<td style="text-align: left;">F</td>
+<td align="left">T</td>
+<td align="left">F</td>
+<td align="left">F</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">F</td>
-<td style="text-align: left;">T</td>
-<td style="text-align: left;">F</td>
+<td align="left">F</td>
+<td align="left">T</td>
+<td align="left">F</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">F</td>
-<td style="text-align: left;">F</td>
-<td style="text-align: left;">F</td>
+<td align="left">F</td>
+<td align="left">F</td>
+<td align="left">F</td>
 </tr>
 </tbody>
 </table>
@@ -175,31 +162,31 @@
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">P</th>
-<th style="text-align: left;">Q</th>
-<th style="text-align: left;"><strong>OR</strong></th>
+<th align="left">P</th>
+<th align="left">Q</th>
+<th align="left"><strong>OR</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">T</td>
-<td style="text-align: left;">T</td>
-<td style="text-align: left;">T</td>
+<td align="left">T</td>
+<td align="left">T</td>
+<td align="left">T</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">T</td>
-<td style="text-align: left;">F</td>
-<td style="text-align: left;">T</td>
+<td align="left">T</td>
+<td align="left">F</td>
+<td align="left">T</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">F</td>
-<td style="text-align: left;">T</td>
-<td style="text-align: left;">T</td>
+<td align="left">F</td>
+<td align="left">T</td>
+<td align="left">T</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">F</td>
-<td style="text-align: left;">F</td>
-<td style="text-align: left;">F</td>
+<td align="left">F</td>
+<td align="left">F</td>
+<td align="left">F</td>
 </tr>
 </tbody>
 </table>
@@ -207,27 +194,35 @@
 <table>
 <thead>
 <tr class="header">
-<th style="text-align: left;">P</th>
-<th style="text-align: left;"><strong>NOT</strong></th>
+<th align="left">P</th>
+<th align="left"><strong>NOT</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">T</td>
-<td style="text-align: left;">F</td>
+<td align="left">T</td>
+<td align="left">F</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">F</td>
-<td style="text-align: left;">T</td>
+<td align="left">F</td>
+<td align="left">T</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-</section><section id="implicationsconditionals" class="slide level2">
-<h2>Implications/Conditionals</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
+</div><div id="implicationsconditionals" class="slide section level2">
+<h1>Implications/Conditionals</h1>
+<p>A great deal of reasoning is about <em>conditional statments</em>.</p>
+<ul>
+<li>If I get a vaccine for flu today, then I will not get the flu this year.</li>
+<li>If there is a recession in the next six months, President Trump will not be re-elected.</li>
+<li>If the nucleotide at a certain genomic position is switched from A to T, the affected individual will have a certain genetic disease.</li>
+</ul>
+<p>The truth of an implication depends on the Truth/Falsehood of BOTH components. But if the first clause is FALSE, the statement is TRUE. So the interesting cases are when the first clause is TRUE.</p>
+<p><strong>For discussion:</strong> Compare how other disciplines think about implications such as those above with how mathematicians do. Which of the statements above might be susceptible to proof in “real life”?</p>
+</div><div id="truth-tables-for-conditionals" class="slide section level2">
+<h1>Truth Tables for conditionals</h1>
 <table>
 <thead>
 <tr class="header">
@@ -259,7 +254,24 @@
 </tr>
 </tbody>
 </table>
-</div><div class="column" style="width:50%;">
+</div><div id="alternate-formulations" class="slide section level2">
+<h1>Alternate formulations</h1>
+<ul>
+<li>P implies Q</li>
+<li>If P, then Q</li>
+<li>Q if P</li>
+<li>P only if Q</li>
+<li>P suffices for Q, or is sufficient for Q</li>
+<li>Q is necessary for P.</li>
+</ul>
+</div><div id="equivalence" class="slide section level2">
+<h1>Equivalence</h1>
+<p>The claim that two statements are <em>equivalent</em> is the claim that they are either both True or both False.</p>
+<ul>
+<li>P is equivalent to Q</li>
+<li>P if and only if Q</li>
+<li>P is necessary and sufficient for Q.</li>
+</ul>
 <table>
 <thead>
 <tr class="header">
@@ -291,21 +303,20 @@
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</section><section id="discussion-1" class="slide level2">
-<h2>Discussion</h2>
+</div><div id="discussion-1" class="slide section level2">
+<h1>Discussion</h1>
 <ul>
+<li>Give some examples (in English) of statements where P implies Q (meaning P implies Q is TRUE), but Q does not imply P.</li>
+<li>Give some examples of statements that are equivalent.</li>
+<li>Are their statements P and Q so that neither P implies Q nor Q implies P are True?</li>
 <li><span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> are equivalent means <span class="math inline">\(P\Longleftrightarrow Q\)</span> or “<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”.</li>
 <li>Show: <span class="math inline">\(P \implies Q\)</span> is equivalent to (<span class="math inline">\(Q\)</span> OR NOT <span class="math inline">\(P\)</span>).</li>
 <li>Exclusive OR is the operator that is TRUE when one of two statements is True, but not both. Express it in terms of AND, OR, and NOT.</li>
 <li>If my basement is wet, then it is either very rainy or a pipe has broken. Express this using the various operators and test its truth under different conditions.</li>
 </ul>
-<p>::: notes</p>
-<p>Section 1.3 starts here, Friday Aug. 30</p>
-</section></section>
-<section><section id="sets" class="title-slide slide level1"><h1>1.3 Sets</h1></section><section id="sets-1" class="slide level2">
-<h2>Sets</h2>
+</div>
+<div id="sets" class="title-slide slide section level1"><h1>1.3 Sets</h1></div><div id="sets-1" class="slide section level2">
+<h1>Sets</h1>
 <p>We rely on a “naive” notion of set, meaning a collection of objects. For example:</p>
 <ul>
 <li>the set of integers</li>
@@ -313,76 +324,37 @@
 <li>the set of people in the world</li>
 <li>the empty set</li>
 </ul>
-</section><section id="subsets" class="slide level2">
-<h2>Subsets</h2>
+</div><div id="subsets" class="slide section level2">
+<h1>Subsets</h1>
 <p>We can construct sets by selecting elements of another set, yielding a <em>subset</em> of the original set.</p>
-</section><section id="explicit-specification" class="slide level2">
-<h2>Explicit specification</h2>
+</div><div id="explicit-specification" class="slide section level2">
+<h1>Explicit specification</h1>
 <p><span class="math inline">\(A=\{1,3,5,8,9\}\)</span>, a subset of the integers.</p>
-</section><section id="selection-by-a-property" class="slide level2">
-<h2>Selection by a property</h2>
+</div><div id="selection-by-a-property" class="slide section level2">
+<h1>Selection by a property</h1>
 <p>Suppose <span class="math inline">\(P\)</span> is the set of people. Then <span class="math display">\[\{p\in P: \textrm{$p$ is a legal resident of Chicago}\}\]</span> is shorthand for the set consisting of people <span class="math inline">\(p\)</span> for which the statement “<span class="math inline">\(p\)</span> is a legal resident of Chicago” is True.</p>
-</section><section id="set-operations" class="slide level2">
-<h2>Set operations</h2>
+</div><div id="set-operations" class="slide section level2">
+<h1>Set operations</h1>
 <p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are both subsets of some huge (and usually unmentioned) set <span class="math inline">\(U\)</span>, then:</p>
 <ul>
 <li><span class="math inline">\(A=B\)</span> means that <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same elements.</li>
 <li><span class="math inline">\(A\subset B\)</span> means that every element of <span class="math inline">\(A\)</span> is also an element of <span class="math inline">\(B\)</span>.</li>
 </ul>
-</section><section id="more-set-operations" class="slide level2">
-<h2>More set operations</h2>
+</div><div id="more-set-operations" class="slide section level2">
+<h1>More set operations</h1>
 <ul>
 <li><span class="math inline">\(A\cup B\)</span>, the union of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, is <span class="math inline">\(\{x\in U : x \in A \mathrm{\ OR\ } x\in B\}\)</span></li>
 <li><span class="math inline">\(A\cap B\)</span>, the intersection of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, is <span class="math inline">\(\{x \in U : x \in A \mathrm{\ AND\ } x\in B\}\)</span></li>
 <li><span class="math inline">\(A\times B\)</span>, the product of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, is the set of all ordered pairs <span class="math inline">\((x,y)\)</span> where <span class="math inline">\(x\in A\)</span> and <span class="math inline">\(y\in B\)</span>.</li>
 </ul>
-</section><section id="discussion-2" class="slide level2">
-<h2>Discussion</h2>
+</div><div id="discussion-2" class="slide section level2">
+<h1>Discussion</h1>
 <p>Suppose <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are two sets contained in some big set <span class="math inline">\(U\)</span>. Prove the following; truth tables may be helpful.</p>
 <ul>
 <li><span class="math inline">\(A=B\)</span> if and only if <span class="math inline">\(A\subset B\)</span> and <span class="math inline">\(B\subset A\)</span>.<br />
 </li>
 <li><span class="math inline">\(((A\cap B) = A)\)</span> implies <span class="math inline">\(A\subset B\)</span>.</li>
 </ul>
-</section></section>
-    </div>
-  </div>
-
-  <script src="https://revealjs.com/lib/js/head.min.js"></script>
-  <script src="https://revealjs.com/js/reveal.js"></script>
-
-  <script>
-
-      // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
-        // Push each slide change to the browser history
-        history: true,
-        math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js',
-          config: 'TeX-AMS_HTML-full',
-          tex2jax: {
-            inlineMath: [['\\(','\\)']],
-            displayMath: [['\\[','\\]']],
-            balanceBraces: true,
-            processEscapes: false,
-            processRefs: true,
-            processEnvironments: true,
-            preview: 'TeX',
-            skipTags: ['script','noscript','style','textarea','pre','code'],
-            ignoreClass: 'tex2jax_ignore',
-            processClass: 'tex2jax_process'
-          },
-        },
-
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'https://revealjs.com/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'https://revealjs.com/plugin/zoom-js/zoom.js', async: true },
-          { src: 'https://revealjs.com/plugin/math/math.js', async: true },
-          { src: 'https://revealjs.com/plugin/notes/notes.js', async: true }
-        ]
-      });
-    </script>
-    </body>
+</div>
+</body>
 </html>
