@@ -96,11 +96,6 @@ To construct a proof of this assertion, we need:
 :::
 :::
 
-::: notes
-
-Section 1.2 starts here, Wed Aug 28.
-
-:::
 
 # 1.2 Logic
 
@@ -175,7 +170,7 @@ mathematicians do.  Which of the statements above might be susceptible to proof 
 
 
 | P | Q | $\implies$ |
-|---|---|------------|
+|---|---|:------------:|
 | T | T | T          |
 | T | F | F          |
 | F | T | T          |
@@ -201,15 +196,34 @@ The claim that two statements are *equivalent* is the claim that they are either
 - P is necessary and sufficient for Q.
 
 | P | Q | $\Longleftrightarrow$ |
-|---|---|-----------------------|
+|---|---|:-----------------------:|
 | T | T | T                     |
 | T | F | F                     |
 | F | T | F                     |
 | F | F | T                     |
 
 
+## Example Computation
+
+(X and (Y or Z)) $\Longleftrightarrow$ ((X and Y) or (X and Z))
+
+
+
+| X   | Y | Z | Y or Z | X and (Y or Z) | X and Y | X and Z | ((X and Y) or (X and Z)) |
+|-----|---|---|:------:|:--------------:|:-------:|:-------:|:------------------------:|
+| T   | T | T | T      | T              | T       | T       | T                        |
+| T   | T | F | T      | T              | T       | F       | T                        |
+| T   | F | T | T      | T              | F       | T       | T                        |
+| T   | F | F | F      | F              | F       | F       | F                        |
+| F   | T | T | T      | F              | F       | F       | F                         |
+| ... |   |   |        |                |         |         |                          |
+
+(X and (Y or Z)) have the same truth values as ((X and Y) or (X and Z)) and so the statements are
+equivalent.
+
 ## Discussion
 
+<<<<<<< HEAD
 - Give some examples (in English) of statements where P implies Q (meaning P implies Q is TRUE), 
 but Q does not imply P.
 - Give some examples of statements that are equivalent.
@@ -218,7 +232,6 @@ but Q does not imply P.
 - Show: $P \implies Q$ is equivalent to ($Q$ OR NOT $P$).
 - Exclusive OR is the operator that is TRUE when one of two statements is True, but not both. Express it in terms of AND, OR, and NOT.
 - If my basement is wet, then it is either very rainy or a pipe has broken. Express this using the various operators and test its truth under different conditions.
-
 
 
 # 1.3 Sets
@@ -231,6 +244,8 @@ We rely on a "naive" notion of set, meaning a collection of objects. For example
 - the set of words in the English language
 - the set of people in the world
 - the empty set
+
+For a discussion of why this is naive, see [Russell's paradox](https://www.scientificamerican.com/article/what-is-russells-paradox/).
 
 ## Subsets
 
@@ -248,21 +263,23 @@ is shorthand for the set consisting of people $p$ for which the statement "$p$ i
 
 If $A$ and $B$ are both subsets of some huge (and usually unmentioned) set $U$, then:
 
-- $A=B$ means that $A$ and $B$ have the same elements.
-- $A\subset B$ means that every element of $A$ is also an element of $B$.
+- $A\subset B$ means that every element of $A$ is also an element of $B$ or $x\in A \implies x\in B$.
+- $A=B$ means that $A$ and $B$ have the same elements, or $x\in A \Longleftrightarrow x\in B$.
 
 ## More set operations
 
-- $A\cup B$, the union of $A$ and $B$, is $\{x\in U : x \in A \mathrm{\ OR\ } x\in B\}$
-- $A\cap B$, the intersection of $A$ and $B$, is $\{x \in U : x \in A \mathrm{\ AND\ } x\in B\}$
+- $A\cup B$, the union of $A$ and $B$, is $\{x\in U : x \in A \mathrm{\ OR\ } x\in B\}$.
+- $A\cap B$, the intersection of $A$ and $B$, is $\{x \in U : x \in A \mathrm{\ AND\ } x\in B\}$.
 - $A\times B$, the product of $A$ and $B$, is the set of all ordered pairs $(x,y)$ where $x\in A$ and $y\in B$.
 
 ## Discussion
 
-Suppose $A$ and $B$ are two sets contained in some big set $U$. Prove the following; truth tables may be helpful.
+Suppose $A$ and $B$ are two sets contained in some big set $U$. Prove the following by a truth table:
 
-- $A=B$ if and only if $A\subset B$ and $B\subset A$.  
 - $((A\cap B) = A)$ implies $A\subset B$.
+
+Hint: Start with the statements $X=(x\in A)$ and $Y=(x\in B)$.  Then $A\subset B$ is $X\implies Y$.
+Express the left hand side similarly and work out the truth table.
 
 
 

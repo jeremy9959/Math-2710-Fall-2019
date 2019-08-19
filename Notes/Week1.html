@@ -116,7 +116,6 @@ Aug 26-28
 </ul>
 </div>
 </div>
-
 </div>
 <div id="logic" class="title-slide slide section level1"><h1>1.2 Logic</h1></div><div id="statements" class="slide section level2">
 <h1>Statements</h1>
@@ -228,29 +227,29 @@ Aug 26-28
 <tr class="header">
 <th>P</th>
 <th>Q</th>
-<th><span class="math inline">\(\implies\)</span></th>
+<th align="center"><span class="math inline">\(\implies\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>T</td>
 <td>T</td>
-<td>T</td>
+<td align="center">T</td>
 </tr>
 <tr class="even">
 <td>T</td>
 <td>F</td>
-<td>F</td>
+<td align="center">F</td>
 </tr>
 <tr class="odd">
 <td>F</td>
 <td>T</td>
-<td>T</td>
+<td align="center">T</td>
 </tr>
 <tr class="even">
 <td>F</td>
 <td>F</td>
-<td>T</td>
+<td align="center">T</td>
 </tr>
 </tbody>
 </table>
@@ -277,7 +276,46 @@ Aug 26-28
 <tr class="header">
 <th>P</th>
 <th>Q</th>
-<th><span class="math inline">\(\Longleftrightarrow\)</span></th>
+<th align="center"><span class="math inline">\(\Longleftrightarrow\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>T</td>
+<td>T</td>
+<td align="center">T</td>
+</tr>
+<tr class="even">
+<td>T</td>
+<td>F</td>
+<td align="center">F</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>T</td>
+<td align="center">F</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td align="center">T</td>
+</tr>
+</tbody>
+</table>
+</div><div id="example-computation" class="slide section level2">
+<h1>Example Computation</h1>
+<p>(X and (Y or Z)) <span class="math inline">\(\Longleftrightarrow\)</span> ((X and Y) or (X and Z))</p>
+<table>
+<thead>
+<tr class="header">
+<th>X</th>
+<th>Y</th>
+<th>Z</th>
+<th align="center">Y or Z</th>
+<th align="center">X and (Y or Z)</th>
+<th align="center">X and Y</th>
+<th align="center">X and Z</th>
+<th align="center">((X and Y) or (X and Z))</th>
 </tr>
 </thead>
 <tbody>
@@ -285,35 +323,68 @@ Aug 26-28
 <td>T</td>
 <td>T</td>
 <td>T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+</tr>
+<tr class="even">
+<td>T</td>
+<td>T</td>
+<td>F</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">T</td>
+</tr>
+<tr class="odd">
+<td>T</td>
+<td>F</td>
+<td>T</td>
+<td align="center">T</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">T</td>
+<td align="center">T</td>
 </tr>
 <tr class="even">
 <td>T</td>
 <td>F</td>
 <td>F</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">F</td>
 </tr>
 <tr class="odd">
 <td>F</td>
 <td>T</td>
-<td>F</td>
+<td>T</td>
+<td align="center">T</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">F</td>
+<td align="center">F</td>
 </tr>
 <tr class="even">
-<td>F</td>
-<td>F</td>
-<td>T</td>
+<td>…</td>
+<td></td>
+<td></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
 </tr>
 </tbody>
 </table>
+<p>(X and (Y or Z)) have the same truth values as ((X and Y) or (X and Z)) and so the statements are equivalent.</p>
 </div><div id="discussion-1" class="slide section level2">
 <h1>Discussion</h1>
-<ul>
-<li>Give some examples (in English) of statements where P implies Q (meaning P implies Q is TRUE), but Q does not imply P.</li>
-<li>Give some examples of statements that are equivalent.</li>
-<li>Are their statements P and Q so that neither P implies Q nor Q implies P are True?</li>
-<li><span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> are equivalent means <span class="math inline">\(P\Longleftrightarrow Q\)</span> or “<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”.</li>
-<li>Show: <span class="math inline">\(P \implies Q\)</span> is equivalent to (<span class="math inline">\(Q\)</span> OR NOT <span class="math inline">\(P\)</span>).</li>
-<li>Exclusive OR is the operator that is TRUE when one of two statements is True, but not both. Express it in terms of AND, OR, and NOT.</li>
-<li>If my basement is wet, then it is either very rainy or a pipe has broken. Express this using the various operators and test its truth under different conditions.</li>
-</ul>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD - Give some examples (in English) of statements where P implies Q (meaning P implies Q is TRUE), but Q does not imply P. - Give some examples of statements that are equivalent. - Are their statements P and Q so that neither P implies Q nor Q implies P are True? - <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> are equivalent means <span class="math inline">\(P\Longleftrightarrow Q\)</span> or “<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”. - Show: <span class="math inline">\(P \implies Q\)</span> is equivalent to (<span class="math inline">\(Q\)</span> OR NOT <span class="math inline">\(P\)</span>). - Exclusive OR is the operator that is TRUE when one of two statements is True, but not both. Express it in terms of AND, OR, and NOT. - If my basement is wet, then it is either very rainy or a pipe has broken. Express this using the various operators and test its truth under different conditions.</p>
 </div>
 <div id="sets" class="title-slide slide section level1"><h1>1.3 Sets</h1></div><div id="sets-1" class="slide section level2">
 <h1>Sets</h1>
@@ -324,6 +395,7 @@ Aug 26-28
 <li>the set of people in the world</li>
 <li>the empty set</li>
 </ul>
+<p>For a discussion of why this is naive, see <a href="https://www.scientificamerican.com/article/what-is-russells-paradox/">Russell’s paradox</a>.</p>
 </div><div id="subsets" class="slide section level2">
 <h1>Subsets</h1>
 <p>We can construct sets by selecting elements of another set, yielding a <em>subset</em> of the original set.</p>
@@ -337,24 +409,23 @@ Aug 26-28
 <h1>Set operations</h1>
 <p>If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are both subsets of some huge (and usually unmentioned) set <span class="math inline">\(U\)</span>, then:</p>
 <ul>
-<li><span class="math inline">\(A=B\)</span> means that <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same elements.</li>
-<li><span class="math inline">\(A\subset B\)</span> means that every element of <span class="math inline">\(A\)</span> is also an element of <span class="math inline">\(B\)</span>.</li>
+<li><span class="math inline">\(A\subset B\)</span> means that every element of <span class="math inline">\(A\)</span> is also an element of <span class="math inline">\(B\)</span> or <span class="math inline">\(x\in A \implies x\in B\)</span>.</li>
+<li><span class="math inline">\(A=B\)</span> means that <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same elements, or <span class="math inline">\(x\in A \Longleftrightarrow x\in B\)</span>.</li>
 </ul>
 </div><div id="more-set-operations" class="slide section level2">
 <h1>More set operations</h1>
 <ul>
-<li><span class="math inline">\(A\cup B\)</span>, the union of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, is <span class="math inline">\(\{x\in U : x \in A \mathrm{\ OR\ } x\in B\}\)</span></li>
-<li><span class="math inline">\(A\cap B\)</span>, the intersection of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, is <span class="math inline">\(\{x \in U : x \in A \mathrm{\ AND\ } x\in B\}\)</span></li>
+<li><span class="math inline">\(A\cup B\)</span>, the union of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, is <span class="math inline">\(\{x\in U : x \in A \mathrm{\ OR\ } x\in B\}\)</span>.</li>
+<li><span class="math inline">\(A\cap B\)</span>, the intersection of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, is <span class="math inline">\(\{x \in U : x \in A \mathrm{\ AND\ } x\in B\}\)</span>.</li>
 <li><span class="math inline">\(A\times B\)</span>, the product of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, is the set of all ordered pairs <span class="math inline">\((x,y)\)</span> where <span class="math inline">\(x\in A\)</span> and <span class="math inline">\(y\in B\)</span>.</li>
 </ul>
 </div><div id="discussion-2" class="slide section level2">
 <h1>Discussion</h1>
-<p>Suppose <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are two sets contained in some big set <span class="math inline">\(U\)</span>. Prove the following; truth tables may be helpful.</p>
+<p>Suppose <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are two sets contained in some big set <span class="math inline">\(U\)</span>. Prove the following by a truth table:</p>
 <ul>
-<li><span class="math inline">\(A=B\)</span> if and only if <span class="math inline">\(A\subset B\)</span> and <span class="math inline">\(B\subset A\)</span>.<br />
-</li>
 <li><span class="math inline">\(((A\cap B) = A)\)</span> implies <span class="math inline">\(A\subset B\)</span>.</li>
 </ul>
+<p>Hint: Start with the statements <span class="math inline">\(X=(x\in A)\)</span> and <span class="math inline">\(Y=(x\in B)\)</span>. Then <span class="math inline">\(A\subset B\)</span> is <span class="math inline">\(X\implies Y\)</span>. Express the left hand side similarly and work out the truth table.</p>
 </div>
 </body>
 </html>

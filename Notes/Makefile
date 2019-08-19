@@ -6,6 +6,6 @@ all : Week1.html Week1.pdf Week1.md
 %.pdf : %.md
 	pandoc -s --mathjax -t beamer $< -o $@
 
-install : 
-	rsync -uv *.html *.pdf ../blackboard
+install : all
+	cp *.html *.pdf ../blackboard
 
