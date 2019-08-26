@@ -7,7 +7,7 @@
 
 
 **Instructor** <br>
-Professor [Jeremy Teitelbaum](jeremy.teitelbaum@uconn.edu) <br>
+Professor [Jeremy Teitelbaum](mailto:jeremy.teitelbaum@uconn.edu) <br>
 homepage: [https://teitelbaum.math.uconn.edu](https://teitelbaum.math.uconn.edu) <br>
 Office: Monteith 231 <br>
 Office hours: 9:00 - 10:00 Mondays, 12:15-13:00 Wednesdays (or by appointment)<br />
