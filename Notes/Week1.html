@@ -43,8 +43,7 @@ Aug 26-28
 <li>Notify me by Sep 20 if you need an alternate date for the first exam because of Rosh Hashanah.</li>
 </ul></li>
 <li>Final Exam (40 points)</li>
-<li>Homework (8 points)</li>
-<li>Piazza participation (2 points)</li>
+<li>Homework + participation (including Piazza) (10 points)</li>
 </ul>
 </div><div id="homework" class="slide section level2">
 <h1>Homework</h1>
@@ -213,8 +212,16 @@ Aug 26-28
 </div>
 </div><div id="implicationsconditionals" class="slide section level2">
 <h1>Implications/Conditionals</h1>
-<div class="columns">
-<div class="column" style="width:50%;">
+<p>A great deal of reasoning is about <em>conditional statments</em>.</p>
+<ul>
+<li>If I get a vaccine for flu today, then I will not get the flu this year.</li>
+<li>If there is a recession in the next six months, President Trump will not be re-elected.</li>
+<li>If the nucleotide at a certain genomic position is switched from A to T, the affected individual will have a certain genetic disease.</li>
+</ul>
+<p>The truth of an implication depends on the Truth/Falsehood of BOTH components. But if the first clause is FALSE, the statement is TRUE. So the interesting cases are when the first clause is TRUE.</p>
+<p><strong>For discussion:</strong> Compare how other disciplines think about implications such as those above with how mathematicians do. Which of the statements above might be susceptible to proof in “real life”?</p>
+</div><div id="truth-tables-for-conditionals" class="slide section level2">
+<h1>Truth Tables for conditionals</h1>
 <table>
 <thead>
 <tr class="header">
@@ -246,7 +253,24 @@ Aug 26-28
 </tr>
 </tbody>
 </table>
-</div><div class="column" style="width:50%;">
+</div><div id="alternate-formulations" class="slide section level2">
+<h1>Alternate formulations</h1>
+<ul>
+<li>P implies Q</li>
+<li>If P, then Q</li>
+<li>Q if P</li>
+<li>P only if Q</li>
+<li>P suffices for Q, or is sufficient for Q</li>
+<li>Q is necessary for P.</li>
+</ul>
+</div><div id="equivalence" class="slide section level2">
+<h1>Equivalence</h1>
+<p>The claim that two statements are <em>equivalent</em> is the claim that they are either both True or both False.</p>
+<ul>
+<li>P is equivalent to Q</li>
+<li>P if and only if Q</li>
+<li>P is necessary and sufficient for Q.</li>
+</ul>
 <table>
 <thead>
 <tr class="header">
@@ -278,13 +302,6 @@ Aug 26-28
 </tr>
 </tbody>
 </table>
-<p>Note that <span class="math inline">\(P\Longleftrightarrow Q\)</span> is TRUE exactly when <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> have the same truth value.</p>
-</div>
-</div>
-<ul>
-<li><span class="math inline">\(P\implies Q\)</span> is read “If <span class="math inline">\(P\)</span> then <span class="math inline">\(Q\)</span>” or “<span class="math inline">\(P\)</span> implies <span class="math inline">\(Q\)</span>.”</li>
-<li><span class="math inline">\(P\Longleftrightarrow Q\)</span> is read “<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>” or “<span class="math inline">\(P\)</span> is equivalent to <span class="math inline">\(Q\)</span>”.</li>
-</ul>
 </div><div id="example-computation" class="slide section level2">
 <h1>Example Computation</h1>
 <p>(X and (Y or Z)) <span class="math inline">\(\Longleftrightarrow\)</span> ((X and Y) or (X and Z))</p>
@@ -367,11 +384,7 @@ Aug 26-28
 <p>(X and (Y or Z)) have the same truth values as ((X and Y) or (X and Z)) and so the statements are equivalent.</p>
 </div><div id="discussion-1" class="slide section level2">
 <h1>Discussion</h1>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(P \implies Q\)</span> is equivalent to (<span class="math inline">\(Q\)</span> OR NOT <span class="math inline">\(P\)</span>). Express this in English.</li>
-<li>Exclusive OR is the operator that is TRUE when one of two statements is True, but not both. Express it in terms of AND, OR, and NOT.</li>
-<li>If my basement is wet, then it is either very rainy or a pipe has broken. Express this using the various operators and test its truth under different conditions.</li>
-</ol>
+<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD - Give some examples (in English) of statements where P implies Q (meaning P implies Q is TRUE), but Q does not imply P. - Give some examples of statements that are equivalent. - Are their statements P and Q so that neither P implies Q nor Q implies P are True? - <span class="math inline">\(P\)</span> and <span class="math inline">\(Q\)</span> are equivalent means <span class="math inline">\(P\Longleftrightarrow Q\)</span> or “<span class="math inline">\(P\)</span> if and only if <span class="math inline">\(Q\)</span>”. - Show: <span class="math inline">\(P \implies Q\)</span> is equivalent to (<span class="math inline">\(Q\)</span> OR NOT <span class="math inline">\(P\)</span>). - Exclusive OR is the operator that is TRUE when one of two statements is True, but not both. Express it in terms of AND, OR, and NOT. - If my basement is wet, then it is either very rainy or a pipe has broken. Express this using the various operators and test its truth under different conditions.</p>
 </div>
 <div id="sets" class="title-slide slide section level1"><h1>1.3 Sets</h1></div><div id="sets-1" class="slide section level2">
 <h1>Sets</h1>
@@ -382,6 +395,7 @@ Aug 26-28
 <li>the set of people in the world</li>
 <li>the empty set</li>
 </ul>
+<p>For a discussion of why this is naive, see <a href="https://www.scientificamerican.com/article/what-is-russells-paradox/">Russell’s paradox</a>.</p>
 </div><div id="subsets" class="slide section level2">
 <h1>Subsets</h1>
 <p>We can construct sets by selecting elements of another set, yielding a <em>subset</em> of the original set.</p>
@@ -407,10 +421,11 @@ Aug 26-28
 </ul>
 </div><div id="discussion-2" class="slide section level2">
 <h1>Discussion</h1>
-<p>Suppose <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are two sets contained in some big set <span class="math inline">\(U\)</span>. Prove the following; truth tables may be helpful.</p>
+<p>Suppose <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are two sets contained in some big set <span class="math inline">\(U\)</span>. Prove the following by a truth table:</p>
 <ul>
 <li><span class="math inline">\(((A\cap B) = A)\)</span> implies <span class="math inline">\(A\subset B\)</span>.</li>
 </ul>
+<p>Hint: Start with the statements <span class="math inline">\(X=(x\in A)\)</span> and <span class="math inline">\(Y=(x\in B)\)</span>. Then <span class="math inline">\(A\subset B\)</span> is <span class="math inline">\(X\implies Y\)</span>. Express the left hand side similarly and work out the truth table.</p>
 </div>
 </body>
 </html>

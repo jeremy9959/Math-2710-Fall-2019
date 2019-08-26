@@ -15,8 +15,7 @@
   - Notify me by Sep 20
 if you need an alternate date for the first exam because of Rosh Hashanah.
 - Final Exam (40 points)
-- Homework (8 points)
-- Piazza participation (2 points)
+- Homework + participation (including Piazza)  (10 points)
 
 ##  Homework
 
@@ -43,6 +42,7 @@ The actual mathematics we will learn in this course is less important than the a
 Goal: find a mathematical proof of this fact. 
 
 ## Mathematical Proof
+
 A *mathematical proof* of this assertion is an argument that starts from known facts
 and definitions and establishes the the truth of the assertion using the tools of logic. 
 
@@ -153,9 +153,21 @@ operators.
 
 ## Implications/Conditionals
 
-::: {.columns}
+A great deal of reasoning is about *conditional statments*.  
 
-::: {.column width="50%"}
+- If I get a vaccine for flu today, then I will not get the flu this year.
+- If there is a recession in the next six months, President Trump will not be re-elected.
+- If the nucleotide at a certain genomic position is switched from A to T, the affected individual will have a certain
+genetic disease.
+
+The truth of an implication depends on the Truth/Falsehood of BOTH components.  But if the first
+clause is FALSE, the statement is TRUE.  So the interesting cases are when the first clause is TRUE.
+
+**For discussion:**  Compare how other disciplines think about implications such as those above with how
+mathematicians do.  Which of the statements above might be susceptible to proof in "real life"?
+
+## Truth Tables for conditionals
+
 
 | P | Q | $\implies$ |
 |---|---|:------------:|
@@ -164,9 +176,24 @@ operators.
 | F | T | T          |
 | F | F | T           |
 
-:::
 
-::: {.column width="50%"}
+## Alternate formulations
+
+- P implies Q
+- If P, then Q
+- Q if P
+- P only if Q
+- P suffices for Q, or is sufficient for Q
+- Q is necessary for P.
+
+
+## Equivalence
+
+The claim that two statements are *equivalent* is the claim that they are either both True or both False.
+
+- P is equivalent to Q
+- P if and only if Q
+- P is necessary and sufficient for Q.
 
 | P | Q | $\Longleftrightarrow$ |
 |---|---|:-----------------------:|
@@ -174,16 +201,6 @@ operators.
 | T | F | F                     |
 | F | T | F                     |
 | F | F | T                     |
-
-Note that $P\Longleftrightarrow Q$ is TRUE exactly when $P$ and $Q$ have the same truth value.
-
-:::
-
-:::
-
-
-- $P\implies Q$ is read "If $P$ then $Q$" or "$P$ implies $Q$."
-- $P\Longleftrightarrow Q$ is read "$P$ if and only if $Q$" or "$P$ is equivalent to $Q$".
 
 
 ## Example Computation
@@ -206,11 +223,15 @@ equivalent.
 
 ## Discussion
 
-
-1. $P \implies Q$ is equivalent to ($Q$ OR NOT $P$). Express this in English.
-2. Exclusive OR is the operator that is TRUE when one of two statements is True, but not both. Express it in terms of AND, OR, and NOT.
-3.  If my basement is wet, then it is either very rainy or a pipe has broken. Express this using the various operators and test its truth under different conditions.
-
+<<<<<<< HEAD
+- Give some examples (in English) of statements where P implies Q (meaning P implies Q is TRUE), 
+but Q does not imply P.
+- Give some examples of statements that are equivalent.
+- Are their statements P and Q so that neither P implies Q nor Q implies P are True?
+- $P$ and $Q$ are equivalent means $P\Longleftrightarrow Q$ or "$P$ if and only if $Q$".
+- Show: $P \implies Q$ is equivalent to ($Q$ OR NOT $P$).
+- Exclusive OR is the operator that is TRUE when one of two statements is True, but not both. Express it in terms of AND, OR, and NOT.
+- If my basement is wet, then it is either very rainy or a pipe has broken. Express this using the various operators and test its truth under different conditions.
 
 
 # 1.3 Sets
