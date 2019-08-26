@@ -23,6 +23,11 @@ Office hours: 9:00 - 10:00 Mondays, 12:15-13:00 Wednesdays (or by appointment)<b
 </p>
 
 
+### Notes
+
+- <a href="Notes/Week1.html"> Week One  </a>
+
+
 
 
 
