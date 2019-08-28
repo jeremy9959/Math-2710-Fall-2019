@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Sep 2-6" />
+  <title>Math 2710</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Math 2710</h1>
+  <p class="author">
+Sep 2-6
+  </p>
+</div>
+<div id="variable-statements-and-quantifiers" class="title-slide slide section level1"><h1>1.4 Variable statements and quantifiers</h1></div><div id="first-examples" class="slide section level2">
+<h1>First examples</h1>
+<p><strong>Compare the following three statements</strong></p>
+<ul>
+<li><em>Helen</em> is a UConn student who has watched every minute of Game of Thrones.</li>
+<li><em>There is a UConn student</em> who has watched every minute of Game of Thrones.</li>
+<li><em>Every UConn student</em> has watched every minute of Game of Thrones.</li>
+</ul>
+<p><strong>All make assertions about the set <span class="math inline">\(U\)</span> of UConn students</strong></p>
+<ul>
+<li>The first asserts that a <em>particular</em> named element of <span class="math inline">\(U\)</span> has a certain property (…has watched every minute of GoT)</li>
+<li>The second asserts that <em>There exists</em> an element of <span class="math inline">\(U\)</span> with that property.</li>
+<li>The third asserts that <em>Every</em> element of <span class="math inline">\(U\)</span> has that property.</li>
+</ul>
+</div><div id="universal-quantifier-for-all-for-every-for-each" class="slide section level2">
+<h1>Universal quantifier (For all, for every, for each)</h1>
+<p>A statement that includes a universal quantifier makes a claim about ALL objects of a particular type.</p>
+<ul>
+<li>For all <span class="math inline">\(x\)</span> in the real numbers, <span class="math inline">\((x^2-1)=(x+1)(x-1)\)</span>.</li>
+<li>Every declared democratic presidential candidate will appear in the next official television debate.</li>
+<li>Each midterm exam in this course counts as 25% of your final grade.</li>
+</ul>
+<p><strong>Symbolic Form</strong></p>
+<ul>
+<li>For all <span class="math inline">\(X\)</span>, <span class="math inline">\(P(X)\)</span></li>
+<li><span class="math inline">\(\forall x\)</span>, <span class="math inline">\(P(X)\)</span>.</li>
+</ul>
+</div><div id="existential-quantifier-there-is-there-exists-for-some" class="slide section level2">
+<h1>Existential quantifier (There is, there exists, for some)</h1>
+<ul>
+<li>There is a real number <span class="math inline">\(y\)</span> so that <span class="math inline">\(y^2=11\)</span>.</li>
+<li>There exists a car for sale in the United States that gets 50 mpg.</li>
+<li>There are some dogs that you should be afraid of.</li>
+</ul>
+<p><strong>Symbolic Form</strong></p>
+<ul>
+<li>There exists <span class="math inline">\(X\)</span> such that <span class="math inline">\(P(X)\)</span></li>
+<li><span class="math inline">\(\exists x\)</span> such that <span class="math inline">\(P(x)\)</span>.</li>
+</ul>
+</div><div id="relation-between-universal-and-existential-quantifiers" class="slide section level2">
+<h1>Relation between universal and existential quantifiers</h1>
+<p>To show that the statement <em>Every UConn student has watched every minute of Game of Thrones</em> is FALSE, you must produce an example of a UConn student who has NOT watched every minute. So the negation of this claim is:</p>
+<p><strong>Some UConn student has not watched every minute of Game of Thrones</strong> or <strong>There is a UConn student who has not watched every minute of Game of Thrones</strong></p>
+<p>To show that the statement <em>There is a UConn student who has watched every minute of Game of Thrones</em> is FALSE, you must show that: <strong>No student has watched every minute of Game of Thrones</strong> or <strong>All students at UConn have NOT watched every minute of Game of Thrones.</strong></p>
+<p><strong>Symbolic Form (page 11 of the text)</strong></p>
+<ul>
+<li>NOT(<span class="math inline">\(\forall x, P(x)\)</span>) <span class="math inline">\(\leftrightarrow\)</span> <span class="math inline">\(\exists x, \mathrm{NOT\ } P(x)\)</span></li>
+<li>NOT(<span class="math inline">\(\exists x, P(x)\)</span>) <span class="math inline">\(\leftrightarrow\)</span> <span class="math inline">\(\forall x, \mathrm{NOT\ } P(x)\)</span></li>
+</ul>
+</div><div id="second-order-statements" class="slide section level2">
+<h1>Second order statements</h1>
+<p>Second order statements have two quantifiers.</p>
+<ul>
+<li>For all <span class="math inline">\(x\)</span>, there exists <span class="math inline">\(y\)</span>, so that….</li>
+<li>There exists <span class="math inline">\(x\)</span>, so that for all <span class="math inline">\(y\)</span>, …</li>
+</ul>
+<p><strong>For all <span class="math inline">\(x\)</span>, there exists <span class="math inline">\(y\)</span>.</strong></p>
+<ul>
+<li>For every even integer <span class="math inline">\(x\)</span>, there exists an integer <span class="math inline">\(y\)</span> so that <span class="math inline">\(x=2y\)</span>.</li>
+<li>For every real positive number <span class="math inline">\(x\)</span>, there exists a real number <span class="math inline">\(y\)</span> so that <span class="math inline">\(x=y^2\)</span>.</li>
+<li>For every real <span class="math inline">\(\epsilon&gt;0\)</span>, there exists a real <span class="math inline">\(\delta&gt;0\)</span> so that if <span class="math inline">\(|x|&lt;\delta\)</span> then <span class="math inline">\(x^2&lt;\epsilon\)</span>.</li>
+</ul>
+<p><strong>There exists <span class="math inline">\(y\)</span>, so that for all <span class="math inline">\(x\)</span></strong></p>
+<ul>
+<li>There exists an integer <span class="math inline">\(x\)</span> so that, for all integers <span class="math inline">\(y\)</span>, <span class="math inline">\(xy=0\)</span>.</li>
+</ul>
+</div><div id="an-example" class="slide section level2">
+<h1>An example</h1>
+<p><strong>Definition:</strong> Given two integers <span class="math inline">\(n\)</span> and <span class="math inline">\(d\)</span>, we say that</p>
+<p>-<em><span class="math inline">\(n\)</span> is divisible by <span class="math inline">\(d\)</span></em></p>
+<p>or</p>
+<p>-<em><span class="math inline">\(n\)</span> is a multiple of <span class="math inline">\(d\)</span></em></p>
+<p>or</p>
+<p>-<em><span class="math inline">\(d\)</span> divides <span class="math inline">\(n\)</span></em></p>
+<p>if there exists an integer <span class="math inline">\(m\)</span> so that <span class="math inline">\(n=dm\)</span>.</p>
+</div>
+</body>
+</html>
