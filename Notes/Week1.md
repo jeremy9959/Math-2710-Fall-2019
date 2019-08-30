@@ -232,6 +232,20 @@ but Q does not imply P.
 - Exclusive OR is the operator that is TRUE when one of two statements is True, but not both. Express it in terms of AND, OR, and NOT.
 - If my basement is wet, then it is either very rainy or a pipe has broken. Express this using the various operators and test its truth under different conditions.
 
+# Problems for discussion (from piazza)
+
+**Definition:** An integer x is 5-ish if there is an integer y so that x=5y.
+
+1. Write the definition for a number that is NOT 5-ish.
+2.  Is 37 a 5-ish number?  How do you know?
+
+**Definition:** An integer x is "purple" if there is a integer y so that x=5y+1.
+
+Which of the following statements are true?
+
+1. If x is purple, then x is not 5-ish.
+2. If x is 5-ish, then x is not purple.
+3. There is a number z that is neither purple nor 5-ish.
 
 # 1.3 Sets
 
