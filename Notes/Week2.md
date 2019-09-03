@@ -112,3 +112,85 @@ or
 -*$d$ divides $n$* 
 
 if there exists an integer $m$ so that $n=dm$. 
+
+# Section 1.5: Proofs
+
+## Main ingredients
+
+Remember that a mathematical proof is a careful explanation of the logical reasons for the truth of a proposition.
+Good proofs are:
+
+-*rigorous*, meaning that they present a completely, logically correct argument
+-*informative*, meaning that they convey the reasoning behind the truth of the proposition being proved
+-*efficient*, meaning that they are as short as possible while still being rigorous and informative.
+
+
+## Things to try
+
+Faced with a proposition to be provided:
+
+- Make sure you understand the definitions of all the terms in the statement
+- Carefully review the logical structure of the proposition so you know what you need to establish.
+- If it's not clear how to proceed, consider some special cases or examples.  Review carefully what you know already.  We will see more approaches later.
+- Finding a proof of a proposition can be hard. It can take many people working for centuries.  For example, the [Clay Millenium problems](https://www.claymath.org/millennium-problems) are a series of propositions to be proved (or disproved); successfully solving one of these problems brings a $1M dollar prize as well as world-wide fame.
+
+## Examples 1: Direct Implication
+
+**Proposition:** Let $S$ and $T$ be sets.  Prove that if $S \cap T=S$ then $S\subset T$.
+
+Analysis: This is a direct implication $P\implies Q$.
+
+- $P$ is the statement $S \cap T=S$.
+- $Q$ is the statement $S \subset T$.
+
+$S\cap T = S$ means that $x\in S \mathrm{\ and\ }x\in T$ if and only if $x\in S$.
+
+$S\subset T$ means that $(x\in S)\implies (x\in T)$.
+
+Look at the truth tables and compare with paragraph on page 14.
+
+## Examples 2: If and only if
+
+**Proposition:** $S \cap T = S\cup T$ if and only if $S=T$.
+
+- $P$ is the statement $x\in (S\cap T) \Leftrightarrow x\in (S \cup T)$.
+- $Q$ is the statement $x\in S \Leftrightarrow x\in T$.
+
+Look at truth tables and compare with paragraph on page 14.
+
+## Examples 3: Contrapositive
+
+**Proposition:** If $x$ is a real number such that $x^3+7x^2<9$ then $x<1.1$.
+
+- $P$ is the statement $x^3+7x^2<9$
+- $Q$ is the statement $x<1.1$.
+
+$P\implies Q$ is equivalent to $~Q \implies ~P$.
+
+Must show: $x\ge 1.1$ implies $x^3+7x^2\ge 9$.
+
+## Example 4: Contradiction.
+
+**Proposition:** There is no largest integer.
+
+Suppose that this statement $P$ is false.  Then there is a largest integer; call it $n$.  Since $n$ is the largest integer, $n+1$ must be less than or equal to $n$.
+Therefore $n+1\le n$ or $1\le 0$.  This is false.
+
+Let $Q$ be the statement "There is no largest integer."  Let $P$ be the statement $1\le 0$. 
+
+Then we have shown that $~Q \implies P$.  Since $P$ is false, this implication can only be true if $~Q$ is false, so $Q$ is true.
+
+This is called *PROOF BY CONTRADICTION.*
+
+## Example 5: Compound implications
+
+**Proposition:** If $x$ is a real number, then $(x-a)(x-b)=0$ if and only if either $x=a$ or $x=b$.
+
+Here $P$ is $(x-a)(x-b)=0$.
+The conclusion is of the form $Q \mathrm{\ or\ } R$ where  $Q$ is $x=a$ and $R$ is $x=b$.
+
+One approach: $P\implies (Q\mathrm{\ or\ } R)$ is equivalent to $P\mathrm{\ and\ }~R\implies Q$.
+So $(x-a)(x-b)=0$ and $x\not=a$ means we can divide by $x-a$ to get $x=b$.
+
+In the other direction, try each possibility.
+

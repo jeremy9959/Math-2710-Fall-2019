@@ -27,6 +27,15 @@
 Sep 2-6
   </p>
 </div>
+<div id="some-catch-up-from-prior-classes" class="title-slide slide section level1"><h1>Some catch-up from prior classes</h1></div><div id="two-notes" class="slide section level2">
+<h1>Two notes</h1>
+<p><strong>Definitions</strong></p>
+<p>Although I never said this explicitly, a <strong>definition</strong> is an ‘if and only if’ statment. When I write:</p>
+<p><em>Definition:</em> An integer <span class="math inline">\(x\)</span> is “5-ish” if there is an integer <span class="math inline">\(n\)</span> so that <span class="math inline">\(x=5n\)</span></p>
+<p>I am actually saying that &quot;<span class="math inline">\(x\)</span> is 5-ish IF AND ONLY IF there is an integer <span class="math inline">\(n\)</span> so that <span class="math inline">\(x=5n\)</span>.</p>
+<p><strong>Negation of implication</strong></p>
+<p>The easiest way to express NOT (A implies B) is as (A and NOT B). Check the truth tables.</p>
+</div>
 <div id="variable-statements-and-quantifiers" class="title-slide slide section level1"><h1>1.4 Variable statements and quantifiers</h1></div><div id="first-examples" class="slide section level2">
 <h1>First examples</h1>
 <p><strong>Compare the following three statements</strong></p>
@@ -102,6 +111,61 @@ Sep 2-6
 <p>or</p>
 <p>-<em><span class="math inline">\(d\)</span> divides <span class="math inline">\(n\)</span></em></p>
 <p>if there exists an integer <span class="math inline">\(m\)</span> so that <span class="math inline">\(n=dm\)</span>.</p>
+</div>
+<div id="section-1.5-proofs" class="title-slide slide section level1"><h1>Section 1.5: Proofs</h1></div><div id="main-ingredients" class="slide section level2">
+<h1>Main ingredients</h1>
+<p>Remember that a mathematical proof is a careful explanation of the logical reasons for the truth of a proposition. Good proofs are:</p>
+<p>-<em>rigorous</em>, meaning that they present a completely, logically correct argument -<em>informative</em>, meaning that they convey the reasoning behind the truth of the proposition being proved -<em>efficient</em>, meaning that they are as short as possible while still being rigorous and informative.</p>
+</div><div id="things-to-try" class="slide section level2">
+<h1>Things to try</h1>
+<p>Faced with a proposition to be provided:</p>
+<ul>
+<li>Make sure you understand the definitions of all the terms in the statement</li>
+<li>Carefully review the logical structure of the proposition so you know what you need to establish.</li>
+<li>If it’s not clear how to proceed, consider some special cases or examples. Review carefully what you know already. We will see more approaches later.</li>
+<li>Finding a proof of a proposition can be hard. It can take many people working for centuries. For example, the <a href="https://www.claymath.org/millennium-problems">Clay Millenium problems</a> are a series of propositions to be proved (or disproved); successfully solving one of these problems brings a $1M dollar prize as well as world-wide fame.</li>
+</ul>
+</div><div id="examples-1-direct-implication" class="slide section level2">
+<h1>Examples 1: Direct Implication</h1>
+<p><strong>Proposition:</strong> Let <span class="math inline">\(S\)</span> and <span class="math inline">\(T\)</span> be sets. Prove that if <span class="math inline">\(S \cap T=S\)</span> then <span class="math inline">\(S\subset T\)</span>.</p>
+<p>Analysis: This is a direct implication <span class="math inline">\(P\implies Q\)</span>.</p>
+<ul>
+<li><span class="math inline">\(P\)</span> is the statement <span class="math inline">\(S \cap T=S\)</span>.</li>
+<li><span class="math inline">\(Q\)</span> is the statement <span class="math inline">\(S \subset T\)</span>.</li>
+</ul>
+<p><span class="math inline">\(S\cap T = S\)</span> means that <span class="math inline">\(x\in S \mathrm{\ and\ }x\in T\)</span> if and only if <span class="math inline">\(x\in S\)</span>.</p>
+<p><span class="math inline">\(S\subset T\)</span> means that <span class="math inline">\((x\in S)\implies (x\in T)\)</span>.</p>
+<p>Look at the truth tables and compare with paragraph on page 14.</p>
+</div><div id="examples-2-if-and-only-if" class="slide section level2">
+<h1>Examples 2: If and only if</h1>
+<p><strong>Proposition:</strong> <span class="math inline">\(S \cap T = S\cup T\)</span> if and only if <span class="math inline">\(S=T\)</span>.</p>
+<ul>
+<li><span class="math inline">\(P\)</span> is the statement <span class="math inline">\(x\in (S\cap T) \Leftrightarrow x\in (S \cup T)\)</span>.</li>
+<li><span class="math inline">\(Q\)</span> is the statement <span class="math inline">\(x\in S \Leftrightarrow x\in T\)</span>.</li>
+</ul>
+<p>Look at truth tables and compare with paragraph on page 14.</p>
+</div><div id="examples-3-contrapositive" class="slide section level2">
+<h1>Examples 3: Contrapositive</h1>
+<p><strong>Proposition:</strong> If <span class="math inline">\(x\)</span> is a real number such that <span class="math inline">\(x^3+7x^2&lt;9\)</span> then <span class="math inline">\(x&lt;1.1\)</span>.</p>
+<ul>
+<li><span class="math inline">\(P\)</span> is the statement <span class="math inline">\(x^3+7x^2&lt;9\)</span></li>
+<li><span class="math inline">\(Q\)</span> is the statement <span class="math inline">\(x&lt;1.1\)</span>.</li>
+</ul>
+<p><span class="math inline">\(P\implies Q\)</span> is equivalent to <span class="math inline">\(~Q \implies ~P\)</span>.</p>
+<p>Must show: <span class="math inline">\(x\ge 1.1\)</span> implies <span class="math inline">\(x^3+7x^2\ge 9\)</span>.</p>
+</div><div id="example-4-contradiction." class="slide section level2">
+<h1>Example 4: Contradiction.</h1>
+<p><strong>Proposition:</strong> There is no largest integer.</p>
+<p>Suppose that this statement <span class="math inline">\(P\)</span> is false. Then there is a largest integer; call it <span class="math inline">\(n\)</span>. Since <span class="math inline">\(n\)</span> is the largest integer, <span class="math inline">\(n+1\)</span> must be less than or equal to <span class="math inline">\(n\)</span>. Therefore <span class="math inline">\(n+1\le n\)</span> or <span class="math inline">\(1\le 0\)</span>. This is false.</p>
+<p>Let <span class="math inline">\(Q\)</span> be the statement “There is no largest integer.” Let <span class="math inline">\(P\)</span> be the statement <span class="math inline">\(1\le 0\)</span>.</p>
+<p>Then we have shown that <span class="math inline">\(~Q \implies P\)</span>. Since <span class="math inline">\(P\)</span> is false, this implication can only be true if <span class="math inline">\(~Q\)</span> is false, so <span class="math inline">\(Q\)</span> is true.</p>
+<p>This is called <em>PROOF BY CONTRADICTION.</em></p>
+</div><div id="example-5-compound-implications" class="slide section level2">
+<h1>Example 5: Compound implications</h1>
+<p><strong>Proposition:</strong> If <span class="math inline">\(x\)</span> is a real number, then <span class="math inline">\((x-a)(x-b)=0\)</span> if and only if either <span class="math inline">\(x=a\)</span> or <span class="math inline">\(x=b\)</span>.</p>
+<p>Here <span class="math inline">\(P\)</span> is <span class="math inline">\((x-a)(x-b)=0\)</span>. The conclusion is of the form <span class="math inline">\(Q \mathrm{\ or\ } R\)</span> where <span class="math inline">\(Q\)</span> is <span class="math inline">\(x=a\)</span> and <span class="math inline">\(R\)</span> is <span class="math inline">\(x=b\)</span>.</p>
+<p>One approach: <span class="math inline">\(P\implies (Q\mathrm{\ or\ } R)\)</span> is equivalent to <span class="math inline">\(P\mathrm{\ and\ }~R\implies Q\)</span>. So <span class="math inline">\((x-a)(x-b)=0\)</span> and <span class="math inline">\(x\not=a\)</span> means we can divide by <span class="math inline">\(x-a\)</span> to get <span class="math inline">\(x=b\)</span>.</p>
+<p>In the other direction, try each possibility.</p>
 </div>
 </body>
 </html>
