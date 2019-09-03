@@ -1,6 +1,23 @@
 % Math 2710
 % Sep 2-6
 
+# Some catch-up from prior classes
+
+## Two notes
+
+**Definitions**
+
+Although I never said this explicitly, a **definition** is an 'if and only if' statment. When I write:
+
+*Definition:* An integer $x$ is "5-ish" if there is an integer $n$ so that $x=5n$
+
+I am actually saying that "$x$ is 5-ish IF AND ONLY IF there is an integer $n$ so that $x=5n$.  
+
+**Negation of implication**
+
+The easiest way to express NOT (A implies B) is as (A and NOT B).  Check the truth tables.
+
+
 # 1.4 Variable statements and quantifiers
 
 ## First examples 
