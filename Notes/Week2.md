@@ -181,7 +181,7 @@ Look at truth tables and compare with paragraph on page 14.
 - $P$ is the statement $x^3+7x^2<9$
 - $Q$ is the statement $x<1.1$.
 
-$P\implies Q$ is equivalent to $~Q \implies ~P$.
+$P\implies Q$ is equivalent to $\sim Q \implies \sim P$.
 
 Must show: $x\ge 1.1$ implies $x^3+7x^2\ge 9$.
 
