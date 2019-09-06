@@ -80,6 +80,14 @@ or
  - NOT($\forall x, P(x)$) $\leftrightarrow$ $\exists x, \mathrm{NOT\ } P(x)$
  - NOT($\exists x, P(x)$) $\leftrightarrow$ $\forall x, \mathrm{NOT\ } P(x)$
 
+## Examples
+
+The statement $(S\cap T)\subset U$  is the statement that
+
+$\forall x, ((x\in S) and (x\in T)) \implies x\in U$
+
+Write the negation of this statement in a simple form.
+
 ## Second order statements 
 
 Second order statements have two quantifiers.
@@ -112,6 +120,14 @@ or
 -*$d$ divides $n$* 
 
 if there exists an integer $m$ so that $n=dm$. 
+
+## Divisibility examples
+
+A. Let $X=\{ n\in \mathbb{Z}: 3|n \}$ and let $Y=\{n\in \mathbb{Z}: 5|n\}$.  Show that
+$X\cap Y=\{n\in \mathbb{Z}: 15|n\}$.
+
+B. Let $X=\{n \in \mathbb{Z}: 6|n\}$ and let $Y=\{n \in \mathbb{Z}: 4|n\}$.  Show that
+$X\cap Y$ is not equal to $W=\{n\in\mathbb{Z}: 24|z\}$.
 
 # Section 1.5: Proofs
 
@@ -194,3 +210,6 @@ So $(x-a)(x-b)=0$ and $x\not=a$ means we can divide by $x-a$ to get $x=b$.
 
 In the other direction, try each possibility.
 
+## Discussion Problems
+
+Selected problems from 55-61 on page 21 and 65-70 on page 22 of the book.
