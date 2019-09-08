@@ -286,7 +286,7 @@ If $A$ and $B$ are both subsets of some huge (and usually unmentioned) set $U$, 
 - $A\cap B$, the intersection of $A$ and $B$, is $\{x \in U : x \in A \mathrm{\ AND\ } x\in B\}$.
 - $A\times B$, the product of $A$ and $B$, is the set of all ordered pairs $(x,y)$ where $x\in A$ and $y\in B$.
 
-## Discussion
+## Discussion 1
 
 Suppose $A$ and $B$ are two sets contained in some big set $U$. Prove the following by a truth table:
 
@@ -295,5 +295,13 @@ Suppose $A$ and $B$ are two sets contained in some big set $U$. Prove the follow
 Hint: Start with the statements $X=(x\in A)$ and $Y=(x\in B)$.  Then $A\subset B$ is $X\implies Y$.
 Express the left hand side similarly and work out the truth table.
 
+## Discussion 2
 
+What is the truth table associated to the proposition about any three sets $A, B, C$:
+
+$$
+A\cup (B\cap C) = (A\cup B)\cap (A\cup C)
+$$
+
+Is the proposition true?
 
