@@ -223,7 +223,6 @@ equivalent.
 
 ## Discussion
 
-<<<<<<< HEAD
 - Give some examples (in English) of statements where P implies Q (meaning P implies Q is TRUE), 
 but Q does not imply P.
 - Give some examples of statements that are equivalent.
