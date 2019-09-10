@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Sep 9-13" />
+  <title>Math 2710</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Math 2710</h1>
+  <p class="author">
+Sep 9-13
+  </p>
+</div>
+<div id="catch-up" class="title-slide slide section level1"><h1>Catch-up</h1></div><div id="discussion-problems" class="slide section level2">
+<h1>Discussion problems</h1>
+<p>By groups, look at:</p>
+<ul>
+<li>page 21, prob. 57</li>
+<li>page 21, prob. 58</li>
+<li>page 21: prob. 60</li>
+<li>page 22: prob. 66</li>
+</ul>
+</div>
+<div id="section-1.6-counterexamples" class="title-slide slide section level1"><h1>Section 1.6: Counterexamples</h1></div><div id="counterexamples-disproving-for-all-statements" class="slide section level2">
+<h1>Counterexamples: disproving for all statements</h1>
+<p>Suppose have a proposition that makes a “for all” assertion.</p>
+<p><strong>Proposition:</strong> All odd numbers are prime.</p>
+<p>More formally, the proposition says: For all integers <span class="math inline">\(x\)</span>, if <span class="math inline">\(x\)</span> is odd then <span class="math inline">\(x\)</span> is prime.</p>
+<p>This statement is FALSE if we can find <em>one</em> odd integer <span class="math inline">\(x\)</span> that is not prime. In other words, if we can show the negation:</p>
+<p>There exists an <span class="math inline">\(x\)</span> such that <span class="math inline">\(x\)</span> is odd and <span class="math inline">\(x\)</span> is not prime.</p>
+<p>Notice that the negation of “If <span class="math inline">\(x\)</span> is odd then <span class="math inline">\(x\)</span> is prime” is “<span class="math inline">\(x\)</span> is odd and <span class="math inline">\(x\)</span> is not prime” as we’ve seen before.</p>
+</div><div id="disproving-existence-statements" class="slide section level2">
+<h1>Disproving existence statements</h1>
+<p>Suppose we have a proposition that makes a “there exists” statement.</p>
+<p><strong>Proposition:</strong> There exist integers <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>, and <span class="math inline">\(z\)</span> so that <span class="math display">\[
+114=x^3+y^3+z^3
+\]</span></p>
+<p>To DISPROVE this statement, we need to rule out ALL triples <span class="math inline">\((x,y,z)\)</span> because the negation would be</p>
+<p><strong>Proposition:</strong> For all integers <span class="math inline">\(x\)</span>,<span class="math inline">\(y\)</span>, <span class="math inline">\(z\)</span>, we have <span class="math display">\[
+x^3+y^3+z^3\not= 114.
+\]</span></p>
+<p>In fact the answer to this question is unknown; after the solution of <span class="math inline">\(42\)</span>, <span class="math inline">\(114\)</span> is the smallest number where the answer is not known.</p>
+</div>
+<div id="chapter-2" class="title-slide slide section level1"><h1>Chapter 2</h1></div><div id="section-2.1-the-division-algorithm" class="slide section level2">
+<h1>Section 2.1: The division algorithm</h1>
+<p><strong>Definition:</strong> Given two integers <span class="math inline">\(d\)</span> and <span class="math inline">\(n\)</span>, we say that <span class="math inline">\(d\)</span> divides <span class="math inline">\(n\)</span> (or <span class="math inline">\(n\)</span> is divisible by <span class="math inline">\(d\)</span>) if there exists an integer <span class="math inline">\(m\)</span> so that <span class="math inline">\(n=dm\)</span>. We write <span class="math inline">\(d|n\)</span> to mean “<span class="math inline">\(d\)</span> divides <span class="math inline">\(n\)</span>”.</p>
+<p><strong>Proposition:</strong> Let <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> be integers.</p>
+<ol style="list-style-type: decimal">
+<li>if <span class="math inline">\(a|b\)</span> and <span class="math inline">\(b|c\)</span> then <span class="math inline">\(a|c\)</span>.</li>
+<li>if <span class="math inline">\(a|b\)</span> and <span class="math inline">\(a|c\)</span> then <span class="math inline">\(a|(bx+cy)\)</span> for any integers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. In particular <span class="math inline">\(a|(b+c)\)</span> and <span class="math inline">\(a|(b-c)\)</span>.</li>
+<li>if <span class="math inline">\(a|b\)</span> and <span class="math inline">\(b|a\)</span> then <span class="math inline">\(a=\pm b\)</span>.</li>
+<li>If <span class="math inline">\(a|b\)</span> and <span class="math inline">\(b\not=0\)</span> then <span class="math inline">\(|a|\le |b|\)</span>.</li>
+</ol>
+</div><div id="divisibilty-property-1" class="slide section level2">
+<h1>Divisibilty property 1</h1>
+<p><strong>Proposition:</strong> if <span class="math inline">\(a|b\)</span> and <span class="math inline">\(b|c\)</span> then <span class="math inline">\(a|c\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(a|b\)</span> means there exists an integer <span class="math inline">\(m\)</span> so that <span class="math inline">\(b=am\)</span>.</li>
+<li><span class="math inline">\(b|c\)</span> means there exists an integer <span class="math inline">\(k\)</span> so that <span class="math inline">\(c=bk\)</span>.</li>
+<li><span class="math inline">\(c=bk=amk\)</span>. Since there is is an integer <span class="math inline">\(mk\)</span> so that <span class="math inline">\(c=amk\)</span>, we know tht <span class="math inline">\(a|c\)</span>.</li>
+</ol>
+</div><div id="property-2" class="slide section level2">
+<h1>Property 2</h1>
+<p><strong>Proposition:</strong> if <span class="math inline">\(a|b\)</span> and <span class="math inline">\(a|c\)</span> then <span class="math inline">\(a|(bx+cy)\)</span> for any integers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. In particular <span class="math inline">\(a|(b+c)\)</span> and <span class="math inline">\(a|(b-c)\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(a|b\)</span> means that there is an integer <span class="math inline">\(m\)</span> so that <span class="math inline">\(b=am\)</span>.</li>
+<li><span class="math inline">\(a|c\)</span> means that there is an integer <span class="math inline">\(k\)</span> so that <span class="math inline">\(c=ak\)</span>.</li>
+<li><span class="math inline">\(bx+cy=amx+aky=a(mx+ky)\)</span>. Therefore there is an integer, <span class="math inline">\(s=mk+ky\)</span>, so that <span class="math inline">\(bx+cy=as\)</span>. Therefore <span class="math inline">\(a|(bx+cy)\)</span></li>
+</ol>
+</div><div id="property-3" class="slide section level2">
+<h1>Property 3</h1>
+<p><strong>Proposition:</strong> if <span class="math inline">\(a|b\)</span> and <span class="math inline">\(b|a\)</span> then <span class="math inline">\(a=b\)</span> or <span class="math inline">\(a=-b\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(a|b\)</span> means <span class="math inline">\(b=am\)</span> for some integer <span class="math inline">\(m\)</span>.</li>
+<li><span class="math inline">\(b|a\)</span> means <span class="math inline">\(a=bk\)</span> for some integer <span class="math inline">\(k\)</span>.</li>
+<li><span class="math inline">\(b=am=bmk\)</span> so <span class="math inline">\(b(1-km)=0\)</span>. There three possibilities:
+<ul>
+<li><span class="math inline">\(b=0\)</span>, in which case <span class="math inline">\(a=bk=0\)</span>, and <span class="math inline">\(a=b\)</span>.</li>
+<li><span class="math inline">\(k=m=1\)</span> in which case <span class="math inline">\(b=a\)</span>.</li>
+<li><span class="math inline">\(k=m=-1\)</span>, in which case <span class="math inline">\(b=-a\)</span>.</li>
+</ul></li>
+</ol>
+<p><em>Question:</em> We are using this fact. Let <span class="math inline">\(k\)</span> and <span class="math inline">\(m\)</span> be integers such that <span class="math inline">\(km=1\)</span>. Then either <span class="math inline">\(k=m=1\)</span> or <span class="math inline">\(k=m=-1\)</span>. Why is this true? Prove it.</p>
+</div><div id="property-4" class="slide section level2">
+<h1>Property 4</h1>
+<p><strong>Proposition:</strong> If <span class="math inline">\(a|b\)</span> and <span class="math inline">\(b\not=0\)</span>, then <span class="math inline">\(|a|\le|b|\)</span>.</p>
+<ol style="list-style-type: decimal">
+<li>Since <span class="math inline">\(a|b\)</span>, we have <span class="math inline">\(b=am\)</span>. Therefore <span class="math inline">\(b^2=a^2m^2\)</span>.</li>
+<li>If <span class="math inline">\(b\not=0\)</span>, then neither <span class="math inline">\(a\)</span> nor <span class="math inline">\(m\)</span> is zero. Then <span class="math inline">\(m^2\ge 1\)</span>, so <span class="math inline">\(b^2\ge a^2\)</span>.</li>
+<li>Since <span class="math inline">\(b^2\ge a^2\)</span>, we have <span class="math inline">\(|b|\ge |a|\)</span>.</li>
+</ol>
+</div><div id="division-algorithm-division-with-remainder" class="slide section level2">
+<h1>Division Algorithm (division with remainder)</h1>
+<p><strong>Proposition:</strong> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be integers, and suppose <span class="math inline">\(b&gt;0\)</span>. Then there are integers <span class="math inline">\(q\)</span> and <span class="math inline">\(r\)</span> so that <span class="math display">\[a=qb+r\]</span> and <span class="math display">\[
+0\le r&lt;b.
+\]</span> Furthermore, there is only one <span class="math inline">\(q\)</span> and one <span class="math inline">\(r\)</span> satisfying these conditions. (We say <span class="math inline">\(q\)</span> and <span class="math inline">\(r\)</span> are <em>unique</em>).</p>
+</div><div id="division-algorithm-examples" class="slide section level2">
+<h1>Division algorithm examples</h1>
+<p><strong>Examples:</strong></p>
+<p>Suppose <span class="math inline">\(b=2\)</span>. Then this proposition says that any integer <span class="math inline">\(a\)</span> can be written <span class="math display">\[
+a=2q+r
+\]</span> with <span class="math inline">\(r=0\)</span> or <span class="math inline">\(r=1\)</span>. So this proposition tells us that every number is either even or of the form <span class="math inline">\(2q+1\)</span> for some integer <span class="math inline">\(q\)</span>.</p>
+<p>Suppose <span class="math inline">\(b=3\)</span>. Then this proposition says that any integer <span class="math inline">\(a\)</span> can be written <span class="math display">\[
+a=3q+r
+\]</span> with <span class="math inline">\(r\in \{0,1,2\}\)</span>. In other words, there are three kinds of numbers: those that are divisible by <span class="math inline">\(3\)</span>; those that are of the form <span class="math inline">\(3q+1\)</span> (meaning they are one more than a multiple of <span class="math inline">\(3\)</span>) and those of the form <span class="math inline">\(3q+2\)</span> (meaning they are two more than, or one less than, a multiple of <span class="math inline">\(3\)</span>.</p>
+</div><div id="grade-school" class="slide section level2">
+<h1>Grade School</h1>
+<p>In grade school, we called <span class="math inline">\(q\)</span> the quotient and <span class="math inline">\(r\)</span> the remainder when dividing <span class="math inline">\(a\)</span> by <span class="math inline">\(b\)</span>.</p>
+<p>For example, dividing <span class="math inline">\(7\)</span> into <span class="math inline">\(25\)</span> gives <span class="math inline">\(3\)</span> with remainder <span class="math inline">\(4\)</span>. In other words, <span class="math inline">\(25=7*3+4\)</span>.</p>
+<p>We want the remainder to be less than the divisor (or we could take more into the quotient)</p>
+</div><div id="proof-of-division-algorithm" class="slide section level2">
+<h1>Proof of Division Algorithm</h1>
+<p><strong>The Well-ordering principle:</strong> Every non-empty set <span class="math inline">\(S\)</span> of positive integers has a smallest element: that is, there exists (exactly one) <span class="math inline">\(x\in S\)</span> so that, for all <span class="math inline">\(y\in S\)</span>, <span class="math inline">\(x\le y\)</span>.</p>
+<ul>
+<li>If <span class="math inline">\(S\)</span> is nonempty,</li>
+<li>then there exists <span class="math inline">\(x\in S\)</span></li>
+<li>such that, for all <span class="math inline">\(y\in S\)</span></li>
+<li><span class="math inline">\(x\le y\)</span>.</li>
+</ul>
+<p>THIS IS AN AXIOM!</p>
+<p><strong>Another version:</strong> Let <span class="math inline">\(S\)</span> be a set of positive integers. Suppose that, for every <span class="math inline">\(y\in S\)</span>, there exists <span class="math inline">\(x\in S\)</span> so that <span class="math inline">\(x&lt;y\)</span>. Then <span class="math inline">\(S\)</span> is empty.</p>
+<p>Negation of the original statement: If, for all <span class="math inline">\(x\in S\)</span>, there exists <span class="math inline">\(y\in S\)</span> so that <span class="math inline">\(y&lt;x\)</span>, then <span class="math inline">\(S\)</span> is empty.</p>
+</div><div id="proof-of-division-algorithm-2" class="slide section level2">
+<h1>Proof of Division Algorithm 2</h1>
+<p>We have <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>; we want to divide <span class="math inline">\(a\)</span> by <span class="math inline">\(b\)</span> and identify the remainder.</p>
+<ul>
+<li>First suppose <span class="math inline">\(a&gt;0\)</span> and <span class="math inline">\(b&gt;0\)</span>.<br />
+</li>
+<li>Divison is repeated subtraction so consider <span class="math inline">\(a, a-b, a-2b, a-3b,\ldots\)</span>. Call this set <span class="math inline">\(A\)</span>.</li>
+<li>Let <span class="math inline">\(S\)</span> be the set of positive elements of <span class="math inline">\(A\)</span>.<br />
+</li>
+<li><span class="math inline">\(S\)</span> is nonempty because <span class="math inline">\(a\in S\)</span>.</li>
+<li><span class="math inline">\(S\)</span> has a least element. Let <span class="math inline">\(r\)</span> be that element. Then <span class="math inline">\(r=a-qb\)</span> for some <span class="math inline">\(q\)</span> in <span class="math inline">\(\mathbb{Z}\)</span>.</li>
+<li><span class="math inline">\(r\ge 0\)</span> because <span class="math inline">\(r\in S\)</span> and <span class="math inline">\(S\)</span> consists of positive elements.</li>
+<li><span class="math inline">\(a-(q+1)b&lt; 0\)</span> because <span class="math inline">\(r\)</span> is the smallest positive element of the set <span class="math inline">\(A\)</span>.</li>
+<li><span class="math inline">\(r-b=a-qb-b=a-(q+1)b&lt; 0\)</span> so <span class="math inline">\(r&lt;b\)</span></li>
+</ul>
+<p>Now suppose <span class="math inline">\(a=xb+s\)</span> and <span class="math inline">\(0\le s&lt;b\)</span>. Then <span class="math inline">\(qb+r=xb+s\)</span> so <span class="math inline">\((q-x)b=s-r\)</span>. This tells us that <span class="math inline">\(b\)</span> divides <span class="math inline">\(s-r\)</span>. Since <span class="math inline">\(0\le r&lt;b\)</span> and <span class="math inline">\(0\le s&lt;b\)</span>, we know that <span class="math inline">\(0\le |r-s|&lt;b\)</span>. Therefore <span class="math inline">\(r-s=0\)</span> so <span class="math inline">\(r=s\)</span>, and then <span class="math inline">\(q=x\)</span>. In other words, <span class="math inline">\(q\)</span> and <span class="math inline">\(r\)</span> are the only solutions to the equation <span class="math inline">\(a=qb+r\)</span> with <span class="math inline">\(0\le r&lt;b\)</span>.</p>
+<p>The condition that <span class="math inline">\(a\)</span> be positive is not necessary. Can you re-do the proof if <span class="math inline">\(a&lt;0\)</span>? You have to fix a few steps.</p>
+</div><div id="some-examples" class="slide section level2">
+<h1>Some examples</h1>
+<p>What is the remainder when <span class="math inline">\(-257\)</span> is divided by <span class="math inline">\(11\)</span>? What is the quotient.</p>
+<p>Recall that a number is ‘<span class="math inline">\(5\)</span>-ish’ if it is divisible by <span class="math inline">\(5\)</span>. What does the division algorithm tell you about numbers that are NOT <span class="math inline">\(5\)</span>-ish?</p>
+</div><div id="greatest-common-divisor" class="slide section level2">
+<h1>Greatest common divisor</h1>
+<p><strong>Definition:</strong> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be integers, at least one of which is not zero. An integer <span class="math inline">\(d\)</span> is a <em>common divisor</em> of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> if <span class="math inline">\(d|a\)</span> and <span class="math inline">\(d|b\)</span>. The <em>greatest common divisor</em> <span class="math inline">\(\mathrm{gcd}(a,b)\)</span> of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is the largest integer among all common divisors of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p>
+<p>Note that a common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> must be smaller than <span class="math inline">\(|a|\)</span> and <span class="math inline">\(|b|\)</span>. So there must be a greatest one. (How is this related to the well ordering principle?)</p>
+<p>The <strong>Euclidean Algorithm</strong> is a method for finding the greatest common divisor. It is the prototypical example of a “method of descent” in which you take a problem and systematically transform it into easier, but equivalent, problems until the solution becomes obvious.</p>
+</div><div id="examples-of-euclids-algorithm" class="slide section level2">
+<h1>Examples of Euclid’s Algorithm</h1>
+<pre><code>Euclidean Algorithm
+Enter a: 1230
+Enter b&gt;0: 54
+1230    =   22*54   +   42
+54  =   1*42    +   12
+42  =   3*12    +   6
+12  =   2*6 +   0
+GCD = 6</code></pre>
+</div><div id="example-2" class="slide section level2">
+<h1>Example 2</h1>
+<pre><code>Euclidean Algorithm
+Enter a: 1029381029
+Enter b&gt;0: 1201233111
+          1029381029=                   0*          1201233111 +           1029381029
+          1201233111=                   1*          1029381029 +            171852082
+          1029381029=                   5*           171852082 +            170120619
+           171852082=                   1*           170120619 +              1731463
+           170120619=                  98*             1731463 +               437245
+             1731463=                   3*              437245 +               419728
+              437245=                   1*              419728 +                17517
+              419728=                  23*               17517 +                16837
+               17517=                   1*               16837 +                  680
+               16837=                  24*                 680 +                  517
+                 680=                   1*                 517 +                  163
+                 517=                   3*                 163 +                   28
+                 163=                   5*                  28 +                   23
+                  28=                   1*                  23 +                    5
+                  23=                   4*                   5 +                    3
+                   5=                   1*                   3 +                    2
+                   3=                   1*                   2 +                    1
+                   2=                   2*                   1 +                    0
+GCD = 1</code></pre>
+</div><div id="why-does-euclids-algorithm-work" class="slide section level2">
+<h1>Why does Euclid’s Algorithm work?</h1>
+</div>
+</body>
+</html>
