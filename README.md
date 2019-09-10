@@ -22,6 +22,10 @@ Office hours: 9:00 - 10:00 Mondays, 12:15-13:00 Wednesdays (or by appointment)<b
 
 </p>
 
+### Schedule (Tentative)
+
+- <a href="Docs/schedule.html">
+
 ### Other Information
 
 - <a href="Homework/Homework.html"> Homework </a>

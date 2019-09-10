@@ -189,10 +189,24 @@ The *greatest common divisor* $\mathrm{gcd}(a,b)$ of $a$ and $b$ is the largest 
 
 Note that a common divisor of $a$ and $b$ must be smaller than $|a|$ and $|b|$.  So there must be a greatest one.  (How is this related to the well ordering principle?)
 
-The **Euclidean Algorithm** is a method for finding the greatest common divisor.  It is the prototypical example of a "method of descent" in which
-you take a problem and systematically transform it into easier, but equivalent, problems until the solution becomes obvious.
+Some examples:
 
-## Examples of Euclid's Algorithm
+- $\mathrm{gcd}(145,55) = 5$. (The divisors of $145$ are $1, 5, 29, and 145$; of $55$ are $1,5,11,55$; the common divisors are $1,5$.
+- $\mathrm{gcd}(64,12)=4$.  
+- $\mathrm{gcd}(100,49)=1$.
+
+To prove that an integer $d$ is a common divisor of $a$ and $b$, you must show that $d|a$ and $d|b$.
+
+To prove that it is the greatest common divisor of $a$ and $b$, you must prove:
+
+- that it is a common divisor, and
+- if $x$ is another common divisor, then $x\le d$.
+
+
+## Euclid's Algorithm
+
+The **Euclidean Algorithm** is a method for finding the greatest common divisor.  It is the prototypical example of a "method of descent" in which
+you take a problem and systematically transform it into easier, but equivalent, problems until the solution becomes obvious.  
 
 ```
 Euclidean Algorithm
@@ -233,6 +247,45 @@ GCD = 1
 ```
 
 ## Why does Euclid's Algorithm work?
+
+In each step in Euclid's algorithm, we replace a pair of numbers $(a,b)$ with $(b,r)$, where $r$ is the remainder
+when $a$ is divided by $b$.  The point is that the greatest common divisor of this new, smaller pair of numbers is
+the same.  Since each time we do this, the numbers get smaller, eventually one of them has to become zero.  But the greatest
+common divisor of $x$ and $0$ is $x$, so at the last step the greatest common divisor is visible.
+
+The key idea is that the replacement of $a$ and $b$ by $b$ and $r$ does not change the greatest common divisor. 
+
+**Proposition:** Let $a$ and $b$ be two integers with $b\not=0$.  Let $q$ and $r$ be integers so that $a=qb+r$.  Then
+$$
+\mathrm{gcd}(a,b) = \mathrm{gcd}(b,r)
+$$.
+
+Proof:  
+
+1.  Let $d=\mathrm{gcd}(a,b)$.  
+2.  Since $d|a$ and $d|b$, we know that $d|r$ because $r=a-qb$.  (Property ii of divisibility).
+3.  $d$ is a common divisor of $b$ and $r$.
+4.  Let $x$ be any common divisor of $b$ and $r$. Then $x$ divides $a$ because $a=qb+r$. (Property ii of divisibility).
+5.  $x$ is a common divisor of $a$ and $b$.  Therefore $x\le d$.  
+6.  Any common divisor of $b$ and $r$ is less than or equal to $d$ so $d$ is the greatest common divisor of $b$ and $r$.
+7.  $d=\mathrm{gcd}(a,b)=\mathrm{gcd}(b,r)$.
+
+
+## Proof of Euclid's algorithm
+
+Given $a$ and $b$ with $b\not=0$, construct the sequence of remainders where $r_1$ is the remainder when
+$a$ is divided by $b$, $r_2$ is the remainder when $b$ is divided by $r_1$, and $r_k$ is the remainder
+when $r_{k-2}$ is divided by $r_{k-1}$.  
+
+**Proposition**:  There exists an $N$ so that $r_{N}\not=0$ and $r_{N+1}=0$, and this $r_{N}=\mathrm{gcd}(a,b)$.
+
+Proof: 
+
+1.  The sequence of remainders is (strictly) decreasing and and all remainders are greater than or equal to zero, so the sequence
+must eventually reach zero.
+2.  By the proposition on the previous slide (2.21 in the book) the greatest common divisor of $r_{i}$ and $r_{i+1}$ is the same
+as that of $a$ and $b$.
+3.  The greatest common divisor of $r_{N}$ and $r_{N+1}$ is $r_{N}$ since $r_{N+1}=0$.
 
 
 
