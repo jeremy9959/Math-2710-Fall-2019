@@ -288,4 +288,75 @@ as that of $a$ and $b$.
 3.  The greatest common divisor of $r_{N}$ and $r_{N+1}$ is $r_{N}$ since $r_{N+1}=0$.
 
 
+## The extended euclidean algorithm
 
+See page 31.  Given integers $a$ and $b$, construct a table:
+
+| a | b |   | q |
+|---|---|---|---|
+| 1 | 0 | a |   |
+| 0 | 1 | b |   |
+
+The next row of the table is constructed by
+1: divide a by b to get q and r, and write them as follows:
+
+| a | b |   | q |
+|---|---|---|---|
+| 1 | 0 | a |   |
+| 0 | 1 | b |   |
+|   |   | r | q |
+
+Then fill in the two left most columns by calculating
+(row-2)-q(row-1).
+
+| a | b  | r | q |
+|---|----|---|---|
+| 1 | 0  | a |   |
+| 0 | 1  | b |   |
+| 1 | -q | r | a |
+
+
+Then repeat this process until you get a zero in the r column.
+
+
+## An example
+
+|a              |b              |r              |q              |
+|---------------|---------------|---------------|---------------|
+|              1|              0|           1534|              0|
+|              0|              1|             87|              0|
+|              1|            -17|             55|             17|
+|             -1|             18|             32|              1|
+|              2|            -35|             23|              1|
+>|             -3|             53|              9|              1|
+|              8|           -141|              5|              2|
+|            -11|            194|              4|              1|
+|             19|           -335|              1|              1|
+
+
+## Linear Combinations
+
+**Theorem:** Let $a$ and $b$ be integers with $b\not=0$.  Then there are integers $x$ and $y$ so that
+$ax+by=d$ where $d$ is the greatest common divisor of $a$ and $b$.  Conversely, if $d$ is a common divisor of $a$ and $b$
+so that there exist integers $x$ and $y$ such that $ax+by=d$, then $d$ is the greatest common divisor of $a$ and $b$.
+
+Proof: Each row of the extended GCD algorithm has $x,y$ in the columns headed $a,b$.  And each row satisfies $ax+by=r$ where
+$r$ is the entry in that column.  The last row has the greatest common divisor in the $r$ column, so those $x$ and $y$ give the solution.
+(Strictly speaking this is a proof by induction).
+
+Conversely, suppose $d$ is a common divisor of $a$ and $b$ and $ax+by=d$ for some $x$ and $y$.  Let $f$ be any other common divisor. 
+Then $f$ divides $ax+by$ so $f$ divides $d$ so $d\ge f$.  Thus $d$ must be the greatest common divisor.
+
+## Other consequences.
+
+Let $a$ and $b$ be integers with $b\not=0$ and let $d$ be their greatest common divisor.
+
+- $d=1$ if and only if there are $x$ and $y$ so that $ax+by=1$.
+- The greatest common divisor of $a/d$ and $b/d$ is $1$.
+- Let $u$ be any common divisor of $a$ and $b$.  Then $a|d$. 
+
+Also the following important fact.
+
+**Proposition:** Suppose $a,b,c$ are integers and $\mathrm{gcd}(a,c)=1$.  If $a|bc$ then $a|b$.
+
+**Proof:** $ax+cy=1$ so $abx+bcy=b$.  Since $a$ divides $ab$ and $a$ divides $bc$ we have $a|b$.

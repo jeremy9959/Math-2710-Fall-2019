@@ -161,9 +161,22 @@ a=3q+r
 <h1>Greatest common divisor</h1>
 <p><strong>Definition:</strong> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be integers, at least one of which is not zero. An integer <span class="math inline">\(d\)</span> is a <em>common divisor</em> of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> if <span class="math inline">\(d|a\)</span> and <span class="math inline">\(d|b\)</span>. The <em>greatest common divisor</em> <span class="math inline">\(\mathrm{gcd}(a,b)\)</span> of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is the largest integer among all common divisors of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p>
 <p>Note that a common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> must be smaller than <span class="math inline">\(|a|\)</span> and <span class="math inline">\(|b|\)</span>. So there must be a greatest one. (How is this related to the well ordering principle?)</p>
+<p>Some examples:</p>
+<ul>
+<li><span class="math inline">\(\mathrm{gcd}(145,55) = 5\)</span>. (The divisors of <span class="math inline">\(145\)</span> are <span class="math inline">\(1, 5, 29, and 145\)</span>; of <span class="math inline">\(55\)</span> are <span class="math inline">\(1,5,11,55\)</span>; the common divisors are <span class="math inline">\(1,5\)</span>.</li>
+<li><span class="math inline">\(\mathrm{gcd}(64,12)=4\)</span>.<br />
+</li>
+<li><span class="math inline">\(\mathrm{gcd}(100,49)=1\)</span>.</li>
+</ul>
+<p>To prove that an integer <span class="math inline">\(d\)</span> is a common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, you must show that <span class="math inline">\(d|a\)</span> and <span class="math inline">\(d|b\)</span>.</p>
+<p>To prove that it is the greatest common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, you must prove:</p>
+<ul>
+<li>that it is a common divisor, and</li>
+<li>if <span class="math inline">\(x\)</span> is another common divisor, then <span class="math inline">\(x\le d\)</span>.</li>
+</ul>
+</div><div id="euclids-algorithm" class="slide section level2">
+<h1>Euclid’s Algorithm</h1>
 <p>The <strong>Euclidean Algorithm</strong> is a method for finding the greatest common divisor. It is the prototypical example of a “method of descent” in which you take a problem and systematically transform it into easier, but equivalent, problems until the solution becomes obvious.</p>
-</div><div id="examples-of-euclids-algorithm" class="slide section level2">
-<h1>Examples of Euclid’s Algorithm</h1>
 <pre><code>Euclidean Algorithm
 Enter a: 1230
 Enter b&gt;0: 54
@@ -198,6 +211,207 @@ Enter b&gt;0: 1201233111
 GCD = 1</code></pre>
 </div><div id="why-does-euclids-algorithm-work" class="slide section level2">
 <h1>Why does Euclid’s Algorithm work?</h1>
+<p>In each step in Euclid’s algorithm, we replace a pair of numbers <span class="math inline">\((a,b)\)</span> with <span class="math inline">\((b,r)\)</span>, where <span class="math inline">\(r\)</span> is the remainder when <span class="math inline">\(a\)</span> is divided by <span class="math inline">\(b\)</span>. The point is that the greatest common divisor of this new, smaller pair of numbers is the same. Since each time we do this, the numbers get smaller, eventually one of them has to become zero. But the greatest common divisor of <span class="math inline">\(x\)</span> and <span class="math inline">\(0\)</span> is <span class="math inline">\(x\)</span>, so at the last step the greatest common divisor is visible.</p>
+<p>The key idea is that the replacement of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> by <span class="math inline">\(b\)</span> and <span class="math inline">\(r\)</span> does not change the greatest common divisor.</p>
+<p><strong>Proposition:</strong> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be two integers with <span class="math inline">\(b\not=0\)</span>. Let <span class="math inline">\(q\)</span> and <span class="math inline">\(r\)</span> be integers so that <span class="math inline">\(a=qb+r\)</span>. Then <span class="math display">\[
+\mathrm{gcd}(a,b) = \mathrm{gcd}(b,r)
+\]</span>.</p>
+<p>Proof:</p>
+<ol style="list-style-type: decimal">
+<li>Let <span class="math inline">\(d=\mathrm{gcd}(a,b)\)</span>.<br />
+</li>
+<li>Since <span class="math inline">\(d|a\)</span> and <span class="math inline">\(d|b\)</span>, we know that <span class="math inline">\(d|r\)</span> because <span class="math inline">\(r=a-qb\)</span>. (Property ii of divisibility).</li>
+<li><span class="math inline">\(d\)</span> is a common divisor of <span class="math inline">\(b\)</span> and <span class="math inline">\(r\)</span>.</li>
+<li>Let <span class="math inline">\(x\)</span> be any common divisor of <span class="math inline">\(b\)</span> and <span class="math inline">\(r\)</span>. Then <span class="math inline">\(x\)</span> divides <span class="math inline">\(a\)</span> because <span class="math inline">\(a=qb+r\)</span>. (Property ii of divisibility).</li>
+<li><span class="math inline">\(x\)</span> is a common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. Therefore <span class="math inline">\(x\le d\)</span>.<br />
+</li>
+<li>Any common divisor of <span class="math inline">\(b\)</span> and <span class="math inline">\(r\)</span> is less than or equal to <span class="math inline">\(d\)</span> so <span class="math inline">\(d\)</span> is the greatest common divisor of <span class="math inline">\(b\)</span> and <span class="math inline">\(r\)</span>.</li>
+<li><span class="math inline">\(d=\mathrm{gcd}(a,b)=\mathrm{gcd}(b,r)\)</span>.</li>
+</ol>
+</div><div id="proof-of-euclids-algorithm" class="slide section level2">
+<h1>Proof of Euclid’s algorithm</h1>
+<p>Given <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> with <span class="math inline">\(b\not=0\)</span>, construct the sequence of remainders where <span class="math inline">\(r_1\)</span> is the remainder when <span class="math inline">\(a\)</span> is divided by <span class="math inline">\(b\)</span>, <span class="math inline">\(r_2\)</span> is the remainder when <span class="math inline">\(b\)</span> is divided by <span class="math inline">\(r_1\)</span>, and <span class="math inline">\(r_k\)</span> is the remainder when <span class="math inline">\(r_{k-2}\)</span> is divided by <span class="math inline">\(r_{k-1}\)</span>.</p>
+<p><strong>Proposition</strong>: There exists an <span class="math inline">\(N\)</span> so that <span class="math inline">\(r_{N}\not=0\)</span> and <span class="math inline">\(r_{N+1}=0\)</span>, and this <span class="math inline">\(r_{N}=\mathrm{gcd}(a,b)\)</span>.</p>
+<p>Proof:</p>
+<ol style="list-style-type: decimal">
+<li>The sequence of remainders is (strictly) decreasing and and all remainders are greater than or equal to zero, so the sequence must eventually reach zero.</li>
+<li>By the proposition on the previous slide (2.21 in the book) the greatest common divisor of <span class="math inline">\(r_{i}\)</span> and <span class="math inline">\(r_{i+1}\)</span> is the same as that of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</li>
+<li>The greatest common divisor of <span class="math inline">\(r_{N}\)</span> and <span class="math inline">\(r_{N+1}\)</span> is <span class="math inline">\(r_{N}\)</span> since <span class="math inline">\(r_{N+1}=0\)</span>.</li>
+</ol>
+</div><div id="the-extended-euclidean-algorithm" class="slide section level2">
+<h1>The extended euclidean algorithm</h1>
+<p>See page 31. Given integers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, construct a table:</p>
+<table>
+<thead>
+<tr class="header">
+<th>a</th>
+<th>b</th>
+<th></th>
+<th>q</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>a</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>b</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The next row of the table is constructed by 1: divide a by b to get q and r, and write them as follows:</p>
+<table>
+<thead>
+<tr class="header">
+<th>a</th>
+<th>b</th>
+<th></th>
+<th>q</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>a</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>b</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+<td>r</td>
+<td>q</td>
+</tr>
+</tbody>
+</table>
+<p>Then fill in the two left most columns by calculating (row-2)-q(row-1).</p>
+<table>
+<thead>
+<tr class="header">
+<th>a</th>
+<th>b</th>
+<th>r</th>
+<th>q</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>a</td>
+<td></td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>b</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>-q</td>
+<td>r</td>
+<td>a</td>
+</tr>
+</tbody>
+</table>
+<p>Then repeat this process until you get a zero in the r column.</p>
+</div><div id="an-example" class="slide section level2">
+<h1>An example</h1>
+<table>
+<thead>
+<tr class="header">
+<th>a</th>
+<th>b</th>
+<th>r</th>
+<th>q</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>0</td>
+<td>1534</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td>0</td>
+<td>1</td>
+<td>87</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>-17</td>
+<td>55</td>
+<td>17</td>
+</tr>
+<tr class="even">
+<td>-1</td>
+<td>18</td>
+<td>32</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>-35</td>
+<td>23</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td>&gt;</td>
+<td>-3</td>
+<td>53</td>
+<td>9</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>-141</td>
+<td>5</td>
+<td>2</td>
+</tr>
+<tr class="even">
+<td>-11</td>
+<td>194</td>
+<td>4</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td>19</td>
+<td>-335</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+</div><div id="linear-combinations" class="slide section level2">
+<h1>Linear Combinations</h1>
+<p><strong>Theorem:</strong> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be integers with <span class="math inline">\(b\not=0\)</span>. Then there are integers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> so that <span class="math inline">\(ax+by=d\)</span> where <span class="math inline">\(d\)</span> is the greatest common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. Conversely, if <span class="math inline">\(d\)</span> is a common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> so that there exist integers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> such that <span class="math inline">\(ax+by=d\)</span>, then <span class="math inline">\(d\)</span> is the greatest common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p>
+<p>Proof: Each row of the extended GCD algorithm has <span class="math inline">\(x,y\)</span> in the columns headed <span class="math inline">\(a,b\)</span>. And each row satisfies <span class="math inline">\(ax+by=r\)</span> where <span class="math inline">\(r\)</span> is the entry in that column. The last row has the greatest common divisor in the <span class="math inline">\(r\)</span> column, so those <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> give the solution. (Strictly speaking this is a proof by induction).</p>
+<p>Conversely, suppose <span class="math inline">\(d\)</span> is a common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> and <span class="math inline">\(ax+by=d\)</span> for some <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. Let <span class="math inline">\(f\)</span> be any other common divisor. Then <span class="math inline">\(f\)</span> divides <span class="math inline">\(ax+by\)</span> so <span class="math inline">\(f\)</span> divides <span class="math inline">\(d\)</span> so <span class="math inline">\(d\ge f\)</span>. Thus <span class="math inline">\(d\)</span> must be the greatest common divisor.</p>
+</div><div id="other-consequences." class="slide section level2">
+<h1>Other consequences.</h1>
+<p>Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be integers with <span class="math inline">\(b\not=0\)</span> and let <span class="math inline">\(d\)</span> be their greatest common divisor.</p>
+<ul>
+<li><span class="math inline">\(d=1\)</span> if and only if there are <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> so that <span class="math inline">\(ax+by=1\)</span>.</li>
+<li>The greatest common divisor of <span class="math inline">\(a/d\)</span> and <span class="math inline">\(b/d\)</span> is <span class="math inline">\(1\)</span>.</li>
+<li>Let <span class="math inline">\(u\)</span> be any common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. Then <span class="math inline">\(a|d\)</span>.</li>
+</ul>
+<p>Also the following important fact.</p>
+<p><strong>Proposition:</strong> Suppose <span class="math inline">\(a,b,c\)</span> are integers and <span class="math inline">\(\mathrm{gcd}(a,c)=1\)</span>. If <span class="math inline">\(a|bc\)</span> then <span class="math inline">\(a|b\)</span>.</p>
+<p><strong>Proof:</strong> <span class="math inline">\(ax+cy=1\)</span> so <span class="math inline">\(abx+bcy=b\)</span>. Since <span class="math inline">\(a\)</span> divides <span class="math inline">\(ab\)</span> and <span class="math inline">\(a\)</span> divides <span class="math inline">\(bc\)</span> we have <span class="math inline">\(a|b\)</span>.</p>
 </div>
 </body>
 </html>
