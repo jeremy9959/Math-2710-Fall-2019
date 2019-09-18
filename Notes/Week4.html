@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Sep 16-20" />
+  <title>Math 2710</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Math 2710</h1>
+  <p class="author">
+Sep 16-20
+  </p>
+</div>
+<div id="characterization-of-the-gcd" class="slide section level2">
+<h1>Characterization of the gcd</h1>
+<p><strong>Proposition:</strong> (2.29, page 34) Suppose <span class="math inline">\(b\not=0\)</span>. An integer <span class="math inline">\(d\)</span> is the greatest common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> if and only if</p>
+<ul>
+<li><span class="math inline">\(d\ge 0\)</span></li>
+<li><span class="math inline">\(d\)</span> is a common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span></li>
+<li>If <span class="math inline">\(r\)</span> is a common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, then <span class="math inline">\(r|d\)</span>.</li>
+</ul>
+<p><strong>Proof:</strong> First suppose that these three conditions are true. Then <span class="math inline">\(d\)</span> is a common divisor, and by Proposition 2.1 (iv), if <span class="math inline">\(r\)</span> is any other common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, then <span class="math inline">\(r|d\)</span> so <span class="math inline">\(|r|\le d\)</span>. So <span class="math inline">\(d\)</span> is the greatest common divisor.</p>
+<p>Now suppose <span class="math inline">\(d\)</span> is the greatest common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. Then <span class="math inline">\(d\ge 0\)</span> and <span class="math inline">\(d\)</span> is a common divisor, so we just need to check the third condition. By the extended euclidean algorithm there are <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> so that <span class="math inline">\(ax+by=d\)</span>. By Proposition 2.1 (ii), any common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> divides <span class="math inline">\(ax+by=d\)</span>, as we wanted to show.</p>
+</div>
+<div id="least-common-multiple" class="slide section level2">
+<h1>Least common multiple</h1>
+<p><strong>Definition:</strong> A common multiple of two integers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, with <span class="math inline">\(b\not=0\)</span>, is any integer <span class="math inline">\(m\)</span> such that <span class="math inline">\(a|m\)</span> and <span class="math inline">\(b|m\)</span>. The <strong>least common multiple</strong> of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is the smallest positive integer which is a common multiple of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p>
+<p><strong>Theorem:</strong> The lcm of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is |ab/g| where <span class="math inline">\(g\)</span> is the gcd of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p>
+<p><strong>Proof:</strong> We can assume <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are non-negative as this does not affect the lcm. Because <span class="math inline">\(g\)</span> divides both <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, we have <span class="math inline">\(ab/g=a(b/g)=b(a/g)\)</span> so <span class="math inline">\(ab/g\)</span> is an integer and it is a common multiple of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. Now let <span class="math inline">\(t\)</span> be any common multiple of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. Find <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> so that <span class="math inline">\(ax+by=g\)</span>. Then <span class="math inline">\(tax+tby=tg\)</span>. Since <span class="math inline">\(t\)</span> is a common multiple of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, we have <span class="math inline">\(tax\)</span> and <span class="math inline">\(tby\)</span> are both multiples of <span class="math inline">\(ab\)</span>. So <span class="math inline">\(tax+tby=abs\)</span> for some integer <span class="math inline">\(s\)</span>. We conclude that <span class="math inline">\(t=(ab/g)s\)</span>, so that <span class="math inline">\(t\)</span> is a multiple of <span class="math inline">\(ab/g\)</span>. This means <span class="math inline">\(t\ge (ab/g)\)</span> so <span class="math inline">\(ab/g\)</span> must be the least common multiple.</p>
+</div>
+<div id="linear-diophantine-equations" class="slide section level2">
+<h1>Linear Diophantine Equations</h1>
+<p>A <em>diophantine equation</em> is an equation where the variables are restricted to integer values.</p>
+<p>A linear diophantine equation in one variable is of the form <span class="math display">\[
+ax=b
+\]</span> where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are integers and we want <span class="math inline">\(x\)</span> to be an integer. Clearly this has a solution exactly when <span class="math inline">\(a|b\)</span>.</p>
+</div>
+<div id="linear-diophantine-equations-in-2-variables" class="slide section level2">
+<h1>Linear Diophantine Equations in 2 variables</h1>
+<p>A linear diophantine equation in two variables is an equation of the form <span class="math display">\[
+ax+by=c
+\]</span> where <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> are integers.<br />
+Solving such an equation means finding <em>integers</em> <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> that satisfy the condition.</p>
+</div>
+<div id="theorem-on-linear-diophantine-equations" class="slide section level2">
+<h1>Theorem on Linear Diophantine Equations</h1>
+<p><strong>Theorem:</strong></p>
+<ul>
+<li><p>The linear diophantine equation <span class="math inline">\(ax+by=c\)</span> has a solution if and only if <span class="math inline">\(\mathrm{gcd}(a,b)|c\)</span>.</p></li>
+<li><p>If <span class="math inline">\(x_0\)</span>, <span class="math inline">\(y_0\)</span> is one solution to the equation, and <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is any other solution, then there exists an integer <span class="math inline">\(n\)</span> so that <span class="math display">\[
+x=x_0+n\frac{b}{d}\mathrm{\ \ and\ \ }y=y_0-n\frac{a}{d}
+\]</span></p></li>
+</ul>
+</div>
+</body>
+</html>
