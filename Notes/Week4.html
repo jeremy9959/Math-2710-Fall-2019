@@ -68,5 +68,27 @@ x=x_0+n\frac{b}{d}\mathrm{\ \ and\ \ }y=y_0-n\frac{a}{d}
 \]</span></p></li>
 </ul>
 </div>
+<div id="proof-of-main-theorem-on-linear-diophantine-equations" class="slide section level2">
+<h1>Proof of Main Theorem on Linear Diophantine Equations</h1>
+<ol style="list-style-type: decimal">
+<li>If <span class="math inline">\(ax+by=c\)</span> has a solution, then <span class="math inline">\(\mathrm{gcd}(a,b)\)</span> must divide <span class="math inline">\(c\)</span>. (This is Proposition 2.1 (ii))$.</li>
+<li>If <span class="math inline">\(\mathrm{gcd}(a,b)\)</span> divides <span class="math inline">\(c\)</span>, then there are <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> such that <span class="math inline">\(ax+by=c\)</span>. To find such <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>, write <span class="math inline">\(c=\mathrm{gcd}(a,b)n\)</span>. Use Euclid’s algorithm to find <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> with <span class="math inline">\(ax+by=\mathrm{gcd}(a,b)\)</span>. Then <span class="math inline">\(anx+bny=n\mathrm{gcd}(a,b)=c\)</span>. So <span class="math inline">\(nx\)</span> and <span class="math inline">\(ny\)</span> are a solution to the original equation.</li>
+</ol>
+</div>
+<div id="proof-continued" class="slide section level2">
+<h1>Proof continued</h1>
+<ol start="3" style="list-style-type: decimal">
+<li>If <span class="math inline">\((x,y)\)</span> and <span class="math inline">\((x&#39;,y&#39;)\)</span> are two solutions to <span class="math inline">\(ax+by=c\)</span>, then <span class="math display">\[
+a(x-x&#39;)+b(y-y&#39;)=0\mathrm{\ so\ } a(x-x&#39;)=b(y&#39;-y).
+\]</span> Divide both sides of this equation by <span class="math inline">\(d=\mathrm{gcd}(a,b)\)</span> to get <span class="math display">\[\begin{equation}
+\frac{a}{d}(x-x&#39;)=\frac{b}{d}(y-y&#39;)
+\end{equation}\]</span> Remember that <span class="math inline">\(\mathrm{gcd}(a/d,b/d)=1\)</span>. (This is Proposition 2.27 (ii)) At the same time, <span class="math inline">\(a/d\)</span> divides the left side of this equality, so it must divide the right side. By Proposition 2.28, this means that <span class="math inline">\(a/d\)</span> divides <span class="math inline">\(y-y&#39;\)</span> so <span class="math inline">\(y-y&#39;=(a/d)m\)</span> for some integer <span class="math inline">\(m\)</span>. Also, <span class="math inline">\(b/d\)</span> divides <span class="math inline">\(x-x&#39;\)</span> so <span class="math inline">\(x-x&#39;=(b/d)m&#39;\)</span>. Therefore <span class="math display">\[
+\frac{a}{d}\frac{b}{d}m&#39;=\frac{a}{d}\frac{b}{d}m
+\]</span> so <span class="math inline">\(m=m&#39;\)</span>. In other words, <span class="math inline">\(x&#39;=x-\frac{b}{d}m\)</span> and <span class="math inline">\(y&#39;=y+\frac{a}{d}m\)</span> for some <span class="math inline">\(m\in\mathbb{Z}\)</span>.</li>
+<li>So far we know that any two solutions are related like <span class="math inline">\((x,y)\)</span> and <span class="math inline">\((x&#39;,y&#39;)\)</span> for SOME <span class="math inline">\(m\)</span>. But in fact any <span class="math inline">\(m\)</span> works because <span class="math display">\[
+a(x-\frac{b}{d}m)+b(y+\frac{a}{d}m)=ax+by-\frac{ab}{d}m+\frac{ab}{d}m=ax+by=c.
+\]</span> This concludes the proof of the main theorem.</li>
+</ol>
+</div>
 </body>
 </html>

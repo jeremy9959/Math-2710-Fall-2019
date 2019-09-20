@@ -58,3 +58,34 @@ $$
 x=x_0+n\frac{b}{d}\mathrm{\ \ and\ \ }y=y_0-n\frac{a}{d}
 $$
 
+## Proof of Main Theorem on Linear Diophantine Equations
+
+1.  If $ax+by=c$ has a solution, then $\mathrm{gcd}(a,b)$ must divide $c$. (This is Proposition 2.1 (ii))$.
+2.  If $\mathrm{gcd}(a,b)$ divides $c$, then there are $x$ and $y$ such that $ax+by=c$.  To find such $x$ and $y$,
+write $c=\mathrm{gcd}(a,b)n$.  Use Euclid's algorithm to find $x$ and $y$ with $ax+by=\mathrm{gcd}(a,b)$.  Then
+$anx+bny=n\mathrm{gcd}(a,b)=c$.  So $nx$ and $ny$ are a solution to the original equation.
+
+## Proof continued
+
+3.  If $(x,y)$ and $(x',y')$ are two solutions to $ax+by=c$, then 
+$$
+a(x-x')+b(y-y')=0\mathrm{\ so\ } a(x-x')=b(y'-y).
+$$
+Divide both sides of this equation by $d=\mathrm{gcd}(a,b)$ to get
+\begin{equation}
+\frac{a}{d}(x-x')=\frac{b}{d}(y-y')
+\end{equation}
+Remember that $\mathrm{gcd}(a/d,b/d)=1$. (This is Proposition 2.27 (ii)) 
+At the same time, $a/d$ divides the left side of this equality, so it must
+divide the right side.  By Proposition 2.28, this means that $a/d$ divides $y-y'$ so $y-y'=(a/d)m$ for some integer $m$.
+Also, $b/d$ divides $x-x'$ so $x-x'=(b/d)m'$.  Therefore
+$$
+\frac{a}{d}\frac{b}{d}m'=\frac{a}{d}\frac{b}{d}m
+$$
+so $m=m'$.  In other words, $x'=x-\frac{b}{d}m$ and $y'=y+\frac{a}{d}m$ for some $m\in\mathbb{Z}$.
+4.  So far we know that any two solutions are related like $(x,y)$ and $(x',y')$ for SOME $m$.  But in fact any $m$
+works because
+$$
+a(x-\frac{b}{d}m)+b(y+\frac{a}{d}m)=ax+by-\frac{ab}{d}m+\frac{ab}{d}m=ax+by=c.
+$$
+This concludes the proof of the main theorem.

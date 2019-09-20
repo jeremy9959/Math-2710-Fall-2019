@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Supplemental20190918</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h2 id="the-gcd-as-the-smallest-positive-linear-combination">The gcd as the smallest positive linear combination</h2>
+<p><strong>Theorem:</strong> Let <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> be integers with <span class="math inline">\(b\not=0\)</span>. Then the greatest common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is the smallest positive value <span class="math inline">\(ax+by\)</span> as <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> run through all integers.</p>
+<p><strong>Proof:</strong> Let <span class="math inline">\(d\)</span> be the smallest positive value of <span class="math inline">\(ax+by\)</span>. Such a value exists by the Well Ordering Principle. We show that <span class="math inline">\(d=\mathrm{gcd}(a,b)\)</span>.</p>
+<ul>
+<li><p>First, suppose that <span class="math inline">\(s\)</span> is a common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. Then <span class="math inline">\(s|(ax+by)\)</span> by Proposition 2.1(ii), so <span class="math inline">\(s|d\)</span>. Therefore <span class="math inline">\(d\ge s\)</span> by Proposition 2.1(iv). So <span class="math inline">\(d\)</span> is greater than or equal to every common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p></li>
+<li><p>Second we show that <span class="math inline">\(d|a\)</span>. Apply the division algorithm to write <span class="math inline">\(a=qd+r\)</span> with <span class="math inline">\(0\le r&lt;d\)</span>. Multiply the equation <span class="math inline">\(ax+by=d\)</span> by <span class="math inline">\(q\)</span> to obtain <span class="math display">\[
+qax+qby=qd=a-r
+\]</span> so <span class="math display">\[
+r=a(1-qx)+b(-qy).
+\]</span> Since <span class="math inline">\(r\)</span> is of the form <span class="math inline">\(ax&#39;+by&#39;\)</span> for integers <span class="math inline">\(x&#39;\)</span> and <span class="math inline">\(y&#39;\)</span>, and <span class="math inline">\(r&lt;d\)</span>, we know that <span class="math inline">\(r\)</span> cannot be positive. Therefore <span class="math inline">\(r=0\)</span>, so <span class="math inline">\(d|a\)</span>.</p></li>
+<li><p>A similar argument shows that <span class="math inline">\(d|b\)</span>.</p></li>
+<li><p>Since <span class="math inline">\(d\)</span> is a common divisor of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, and is greater than or equal to any other common divisor, we conclude that <span class="math inline">\(d=\mathrm{gcd}(a,b)\)</span>.</p></li>
+</ul>
+<h2 id="the-relationship-between-lcm-and-gcd">The relationship between lcm and gcd</h2>
+<p><strong>Theorem:</strong> <span class="math inline">\(\mathrm{lcm}(a,b)\mathrm{gcd}(a,b)=ab\)</span>.</p>
+<p><strong>Proof:</strong> First, notice that <span class="math inline">\(\mathrm{gcd}(a,b)\)</span> divides <span class="math inline">\(ab\)</span> because in fact it divides each of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. Let <span class="math inline">\(T\)</span> be any common multiple of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, that is, any integer such that <span class="math inline">\(a|T\)</span> and <span class="math inline">\(b|T\)</span>. Find <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> so that <span class="math display">\[
+ax+by=\mathrm{gcd}(a,b)
+\]</span> and multiply this equation by <span class="math inline">\(T\)</span>: <span class="math display">\[
+Tax+Tby=\mathrm{gcd}(a,b)T.
+\]</span> Now notice that <span class="math inline">\(ab|aT\)</span> because <span class="math inline">\(a\)</span> divides <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> divides <span class="math inline">\(T\)</span>; and also <span class="math inline">\(ab\)</span> divides <span class="math inline">\(bT\)</span> for the same sort of reason. Therefore we can factor <span class="math inline">\(ab\)</span> out of <span class="math inline">\(Tax+Tby=abU\)</span> and obtain <span class="math display">\[
+abU=\mathrm{gcd}(a,b)T.
+\]</span> Finally we have <span class="math display">\[
+T=\frac{ab}{\mathrm{gcd}(a,b)}U.
+\]</span> In other words, <span class="math inline">\(T\)</span> isa multiple of <span class="math inline">\(ab/\mathrm{gcd}(a,b)\)</span>. This shows that any common multiple of <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is a multiple of <span class="math inline">\(M=ab/\mathrm{gcd}(a,b)\)</span>, and is therefore greater than or equal to <span class="math inline">\(M\)</span>. Putting this together we see that <span class="math inline">\(M\)</span> is a common multiple that is smaller than or equal to any other common multiple, and it is therefore <span class="math inline">\(\mathrm{lcm}(a,b)\)</span>.</p>
+</body>
+</html>
