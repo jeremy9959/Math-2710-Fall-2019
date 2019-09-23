@@ -1,4 +1,4 @@
-all : Week1.html Week1.pdf Week1.md Week2.html Week2.pdf Week2.html Week3.html Week3.md Week3.pdf Week4.md Week4.html Week4.pdf
+all : Week1.html Week1.pdf Week1.md Week2.html Week2.pdf Week2.html Week3.html Week3.md Week3.pdf Week4.md Week4.html Week4.pdf Week5.md Week5.pdf Week5.html
 
 %.html : %.md
 	pandoc -s --mathjax -t slidy $< -o $@   

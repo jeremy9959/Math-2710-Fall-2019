@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Sep 23-27" />
+  <title>Math 2710</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Math 2710</h1>
+  <p class="author">
+Sep 23-27
+  </p>
+</div>
+<div id="prime-numbers" class="slide section level2">
+<h1>Prime Numbers</h1>
+<p><strong>Definition:</strong> An integer <span class="math inline">\(p&gt;1\)</span> is called <em>prime</em> if its only positive divisors are <span class="math inline">\(1\)</span> and <span class="math inline">\(p\)</span>. Otherwise it is called <em>composite.</em></p>
+<p><strong>Proposition:</strong> Every integer greater than <span class="math inline">\(1\)</span> can be written as a product of prime numbers (including the case where the integer is a product of just one prime number.)</p>
+<p><strong>Lemma:</strong> Let <span class="math inline">\(N&gt;1\)</span> be an integer. Let <span class="math inline">\(d&gt;1\)</span> be the smallest divisor of <span class="math inline">\(N\)</span> greater than <span class="math inline">\(1\)</span>. Then <span class="math inline">\(d\)</span> is prime.</p>
+<p><strong>Proof:</strong> By contradiction. If <span class="math inline">\(d\)</span> is not prime, it has a divisor <span class="math inline">\(r\)</span> greater than <span class="math inline">\(1\)</span> and smaller than <span class="math inline">\(d\)</span>. Since <span class="math inline">\(r|d\)</span>, and <span class="math inline">\(d|N\)</span>, <span class="math inline">\(r\)</span> is a divisor of <span class="math inline">\(N\)</span>. (Proposition 2.1 (i)). This contradicts the fact that <span class="math inline">\(d\)</span> is the smallest divisor of <span class="math inline">\(N\)</span> greater than <span class="math inline">\(1\)</span>. Therefore <span class="math inline">\(d\)</span> is prime.</p>
+<p><strong>Proof of the Proposition:</strong> Let <span class="math inline">\(S\)</span> be the set of integers greater than one that are not a product of prime numbers. If <span class="math inline">\(S\)</span> is not empty, it has a smallest element, Call that element <span class="math inline">\(N\)</span>. Let <span class="math inline">\(d\)</span> be the smallest divisor of <span class="math inline">\(N\)</span> greater than <span class="math inline">\(1\)</span>. If <span class="math inline">\(d=N\)</span>, then <span class="math inline">\(N\)</span> is prime by the Lemma, so it is a product of prime numbers, which is a contraction of <span class="math inline">\(N\in S\)</span>. If <span class="math inline">\(d&lt;N\)</span>, then <span class="math inline">\(d\)</span> is a prime number by the lemma, and <span class="math inline">\(N/d&lt;N\)</span>. Since <span class="math inline">\(N/d&lt;N\)</span>$, <span class="math inline">\(N/d\not\in S\)</span>, so <span class="math inline">\(N/d\)</span> is a product of prime numbers. But then <span class="math inline">\(N=d(N/d)\)</span> so <span class="math inline">\(N\)</span> is also a product of prime numbers. Therefore <span class="math inline">\(S\)</span> must be empty, and every integer is a product of primes.</p>
+</div>
+<div id="there-are-infinitely-many-primes" class="slide section level2">
+<h1>There are infinitely many primes</h1>
+<p><strong>Theorem:</strong> There are infinitely many primes.</p>
+<p><strong>Proof:</strong> We will show that, given any prime number <span class="math inline">\(P\)</span>, there is a prime number <span class="math inline">\(Q\)</span> that is greater than <span class="math inline">\(P\)</span>. Given <span class="math inline">\(P\)</span>, let <span class="math inline">\(M\)</span> be the product of all the prime numbers less than or equal to <span class="math inline">\(P\)</span>, and let <span class="math inline">\(H=M+1\)</span>. Notice that if <span class="math inline">\(L\le P\)</span> is a prime number, then <span class="math inline">\(L|M\)</span>, so <span class="math inline">\(L\not|H\)</span> (Proposition 2.1(ii)). Let <span class="math inline">\(Q\)</span> be the smallest divisor of <span class="math inline">\(H\)</span> that is greater than <span class="math inline">\(1\)</span>. By the lemma, <span class="math inline">\(H\)</span> is prime. By the preceeding remark, <span class="math inline">\(Q\)</span> cannot be less than or equal to <span class="math inline">\(P\)</span>. Therefore <span class="math inline">\(Q\)</span> is a prime number greater than <span class="math inline">\(P\)</span>, as desired.</p>
+</div>
+</body>
+</html>
