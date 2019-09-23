@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Sep 23-27" />
+  <title>Math 2710</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Math 2710</h1>
+  <p class="author">
+Sep 23-27
+  </p>
+</div>
+<div id="base-b-arithmetic" class="slide section level2">
+<h1>Base b arithmetic</h1>
+<p><strong>Theorem:</strong> Let <span class="math inline">\(N&gt;0\)</span> be an integer and let <span class="math inline">\(b&gt;0\)</span> be another integer. Then there exists an integer <span class="math inline">\(n\)</span> and exactly one set of integers <span class="math inline">\(r_0,\ldots, r_n\)</span>, with <span class="math inline">\(r_n\not=0\)</span> and all <span class="math inline">\(0\le r_{i}&lt;b\)</span>, so that <span class="math display">\[
+N = r_{n}b^{n}+r_{n-1}b^{n-1}+\ldots+r_{0}.
+\]</span></p>
+</div>
+<div id="proof-part-i" class="slide section level2">
+<h1>Proof part I</h1>
+<p><strong>Proof:</strong> One proof of this is given on pages 42-43 of the text. Here is a slightly different one. First we prove that, for every positive integer, there is at least one set <span class="math inline">\(r_{0},\ldots, r_{n}\)</span> such that <span class="math display">\[
+N = r_{n}b^{n}+r_{n-1}b^{n-1}+\ldots+r_{0}.
+\]</span></p>
+<p>Then we will show that there is only one such set. Let <span class="math inline">\(S\)</span> be the set of positive integers for which there DO NOT exist an integer <span class="math inline">\(n\)</span> and at least one sequence <span class="math inline">\(r_0,\ldots, r_n\)</span> as in the theorem. We will show <span class="math inline">\(S\)</span> is empty by contradiction. So if <span class="math inline">\(S\)</span> is not empty, by well-ordering it has a smallest element. Call that element <span class="math inline">\(M\)</span>. By the division algorithm, we can write <span class="math inline">\(M=Ab+r\)</span> with <span class="math inline">\(0\le r&lt;b\)</span>. Since <span class="math inline">\(A&lt;M\)</span>, and <span class="math inline">\(M\)</span> is the first number not of the desired form, we can write <span class="math display">\[
+A = r_{m}b^{m}+\cdots+r_{0}
+\]</span> But then <span class="math display">\[
+M=Ab+r=r_{m}b^{m+1}+\cdots+r_{0}b+r
+\]</span> which <em>IS</em> of the desired form. This contradicts the assertion that <span class="math inline">\(S\)</span> is non-empty so <span class="math inline">\(S\)</span> must be empty.</p>
+</div>
+<div id="proof-part-ii" class="slide section level2">
+<h1>Proof part II</h1>
+<p>To show that there is only one sequence that works, suppose we have two such sequences so that <span class="math display">\[
+N = r_{n}b^{n}+r_{n-1}b^{n-1}+\ldots+r_{0}.
+\]</span></p>
+<p>and also</p>
+<p><span class="math display">\[
+N = s_{n}b^{n}+s_{n-1}b^{n-1}+\ldots+s_{0}.
+\]</span></p>
+<p>If the two representations are different, there must be a smallest integer <span class="math inline">\(j\)</span> such that <span class="math inline">\(r_j\not=s_j\)</span>. Subtracting the two representations, all of the terms involving <span class="math inline">\(b^{i}\)</span> for <span class="math inline">\(i&lt;j\)</span> would cancel out, so we would have</p>
+<p><span class="math display">\[
+N-N=0=b^{j}(Ab+(r_j-s_j))
+\]</span></p>
+<p>and so <span class="math inline">\(Ab+(r_j-s_j)=0\)</span>. Since <span class="math inline">\(b\)</span> divides <span class="math inline">\(Ab\)</span>, we must have <span class="math inline">\(b\)</span> divides <span class="math inline">\(r_j-s_j\)</span>, and since both are between <span class="math inline">\(0\)</span> and <span class="math inline">\(b\)</span> , this means <span class="math inline">\(r_j-s_j=0\)</span>. This contradicts the assumption that there was a <span class="math inline">\(j\)</span> where <span class="math inline">\(r_j\)</span> and <span class="math inline">\(s_j\)</span> were different so they must all be the same</p>
+</div>
+<div id="prime-numbers" class="slide section level2">
+<h1>Prime numbers</h1>
+<p><strong>Proposition:</strong> If <span class="math inline">\(p\)</span> is prime, and <span class="math inline">\(p\)</span> divides a product <span class="math inline">\(ab\)</span>, then <span class="math inline">\(p|a\)</span> or <span class="math inline">\(p|b\)</span>.</p>
+<p><strong>Proof:</strong> We know that <span class="math inline">\(\mathrm{gcd}(a,p)=1\)</span> or <span class="math inline">\(\mathrm{gcd}(a,p)=p\)</span>. In the second case, <span class="math inline">\(p|a\)</span>. In the first, case, we can apply Proposition 2.28 to see that <span class="math inline">\(p|b\)</span>.</p>
+<p><strong>Theorem:</strong> Let <span class="math inline">\(N&gt;0\)</span> be a positive integer. Then there is one and only one way to write <span class="math inline">\(N\)</span> as a product of primes written in non-decreasing order.</p>
+<p><strong>Proof:</strong> Assume the result is false and Let <span class="math inline">\(N\)</span> be the smallest integer that has two such representations <span class="math display">\[
+p_1p_2\cdots p_k=q_1q_2\cdots q_k.
+\]</span> Then <span class="math inline">\(p_1|q_1q_2\cdots q_k\)</span>. If <span class="math inline">\(p_1=q_1\)</span>, we could cancel <span class="math inline">\(p_1\)</span> from the two representations and get a smaller integer <span class="math inline">\(N/p_1\)</span> with two representations, so we must have <span class="math inline">\(p_1\not=q_1\)</span>. Therefore <span class="math inline">\(p_1|q_2\cdots q_k\)</span>. By the same argument, <span class="math inline">\(p_1\not=q_2\)</span> so <span class="math inline">\(p_1|q_3\cdots q_k\)</span>. Continuing in this way we eventually get <span class="math inline">\(p_1|q_k\)</span>. Since <span class="math inline">\(p_1\not=1\)</span>, we have <span class="math inline">\(p_1=q_k\)</span>. This means we can cancel <span class="math inline">\(p_1=q_k\)</span> from the two representations to get a smaller integer with two representations; that’s a contradiction since <span class="math inline">\(N\)</span> was the smallest such. Therefore the representation is unique.</p>
+</div>
+<div id="prime-factorizations-divisors-gcd-lcm" class="slide section level2">
+<h1>Prime factorizations, divisors, gcd, lcm</h1>
+<p><strong>Definition:</strong> Let <span class="math inline">\(\mathrm{ord}_p(n)\)</span> be the power of <span class="math inline">\(p\)</span> that occurs in the prime factorization of <span class="math inline">\(n\)</span>.</p>
+<p><strong>Proposition:</strong> If <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are two integers and <span class="math inline">\(\mathrm{ord}_p(n)=\mathrm{ord}_{p}(m)\)</span> for all primes <span class="math inline">\(p\)</span>, then <span class="math inline">\(n=\pm m\)</span>.</p>
+<p><strong>Proposition:</strong> If <span class="math inline">\(d\)</span> and <span class="math inline">\(n\)</span> are two integers, then <span class="math inline">\(d|n\)</span> if and only if <span class="math inline">\(\mathrm{ord}_p(d)\le \mathrm{ord}_p(n)\)</span> for all primes <span class="math inline">\(p\)</span>.</p>
+<p><strong>Proposition:</strong></p>
+<ul>
+<li><span class="math inline">\(\mathrm{ord}_p(\mathrm{gcd}(a,b))=\mathrm{min}(\mathrm{ord}_p(a),\mathrm{ord}_p(b))\)</span> for all primes <span class="math inline">\(p\)</span>.</li>
+<li><span class="math inline">\(\mathrm{ord}_p(\mathrm{gcd}(a,b))=\mathrm{max}(\mathrm{ord}_p(a),\mathrm{ord}_p(b))\)</span> for all primes <span class="math inline">\(p\)</span>.</li>
+</ul>
+</div>
+</body>
+</html>

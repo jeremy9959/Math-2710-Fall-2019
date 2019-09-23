@@ -347,6 +347,30 @@ $r$ is the entry in that column.  The last row has the greatest common divisor i
 Conversely, suppose $d$ is a common divisor of $a$ and $b$ and $ax+by=d$ for some $x$ and $y$.  Let $f$ be any other common divisor. 
 Then $f$ divides $ax+by$ so $f$ divides $d$ so $d\ge f$.  Thus $d$ must be the greatest common divisor.
 
+
+## A more complete proof 
+
+**Proposition:** Let $a$ and $b$ be integers with $b\not=0$ and let $d$ be the greatest common divisor of
+$a$ and $b$.  Then there exist integers $x$ and $y$ so that
+$$
+ax+by=d.
+$$
+
+Proof: Let 
+$$
+S=\{ ax+by : x,y\in\mathbb{Z}\}.
+$$
+Both $b$ and $-b$ belong to $S$, and therefore the subset of $S$ consisting of positive elements is non-empty.
+Let $d$ be the smallest positive element of $S$, which exists by the well-ordering principle. I will show
+first that $d$ is a common divisor of $a$ and $b$, and then that it is the greatest common divisor.
+
+Use the division algorithm to write $a=qd+r$ with $0\le r<d$>  Then $a=q(ax+by)+r$ and so $(1-qx)a+bqy=r$.
+This shows that $r\in S$.  Since $0\le r<d$, and $d$ is the smallest positive element of $S$, we must have $r=0$
+and therefore $d|a$.  Repeating the argument with $b$ shows that $d|b$, so $d$ is a common divisor of $a$ and $b$.
+
+To show that $d$ is the greatest common divisor, let $s>0$ be any common divisor.  Then since $s|a$ and $s|b$,
+we know that $s|(ax+by)$ and so $s|d$.  Therefore $s\le d$, so $d$ is the largest common divisor. 
+
 ## Other consequences.
 
 Let $a$ and $b$ be integers with $b\not=0$ and let $d$ be their greatest common divisor.
