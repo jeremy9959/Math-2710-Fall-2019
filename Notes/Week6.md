@@ -1,93 +1,58 @@
 % Math 2710
-% Sep 23-27
+% Oct 2-4
 
-## Base b arithmetic
+## Congruence
 
-**Theorem:** Let $N>0$ be an integer and let $b>0$ be another integer.  Then there exists an integer $n$ and exactly one set of integers
-$r_0,\ldots, r_n$, with $r_n\not=0$ and all $0\le r_{i}<b$, so that
+Let $m$ be a positive integer.  Given two integers $a$ and $b$, we say that "$a$ is congruent to $b$ modulo $m$" if
+$m$ divides $a-b$.  We write this:
 $$
-N = r_{n}b^{n}+r_{n-1}b^{n-1}+\ldots+r_{0}.
-$$
-
-## Proof part I
-
-**Proof:** One proof of this is given on pages 42-43 of the text.  Here is a slightly different one.  First we prove that, for every positive integer,
-there is at least one set $r_{0},\ldots, r_{n}$ such that
-$$
-N = r_{n}b^{n}+r_{n-1}b^{n-1}+\ldots+r_{0}.
+a\equiv b\pmod{m}.
 $$
 
-Then we will show that there is only one such set.
-Let $S$ be the set of positive integers for which there DO NOT exist an integer $n$ and at least one sequence $r_0,\ldots, r_n$ as in the theorem.
-We will show $S$ is empty by contradiction.  So if $S$ is not empty, by well-ordering it has a smallest element. Call that element $M$.
-By the division algorithm, we can write $M=Ab+r$ with $0\le r<b$.  Since $A<M$, and $M$ is the first number not of the desired form, we can write 
-$$
-A = r_{m}b^{m}+\cdots+r_{0}
-$$
-But then
-$$
-M=Ab+r=r_{m}b^{m+1}+\cdots+r_{0}b+r
-$$
-which *IS* of the desired form.  This contradicts the assertion that $S$ is non-empty so $S$ must be empty.
+For example, $11\equiv 39\pmod{7}$ because $39-11=28$ and $28$ is divisible by $7$.
 
-## Proof part II
+## Properties of Congruence
 
-To show that there is only one sequence that works, suppose we have two such sequences so that
-$$
-N = r_{n}b^{n}+r_{n-1}b^{n-1}+\ldots+r_{0}.
-$$
+For a fixed $m$, the congruence relation has properties similar to "=":
 
-and also 
+**Proposition 3.11.** Let $m$ be a fixed positive integer, and let $a$, $b$, and $c$ be other integers.
+Then 
 
-$$
-N = s_{n}b^{n}+s_{n-1}b^{n-1}+\ldots+s_{0}.
-$$
+- $a\equiv a\pmod{m}$.
+- if $a\equiv b\pmod{m}$ then $b\equiv a\pmod{m}.$
+- if $a\equiv b\pmod{m}$ and $b\equiv c\pmod{m}$ then $a\equiv c\pmod{m}$.
 
-If the two representations are different, there must be a  smallest integer $j$ such that $r_j\not=s_j$. Subtracting the two representations, all of the terms
-involving $b^{i}$ for $i<j$ would cancel out, so we would have
+**Proposition 3.12.** The congruence relation behaves well with respect to arithmetic.  Suppose $a\equiv a'\pmod{m}$
+and $b\equiv b'\pmod{m}.$ Then:
 
-$$
-N-N=0=b^{j}(Ab+(r_j-s_j))
-$$
+- $ax+by\equiv a'x+b'y\pmod{m}$ for all integers $x$ and $y$.
+- $ab\equiv a'b'\pmod{m}$.
 
-and so $Ab+(r_j-s_j)=0$.  Since $b$ divides $Ab$, we must have $b$ divides $r_j-s_j$, and since both are between $0$ and $b$ ,
-this means $r_j-s_j=0$. This contradicts the assumption that there was a $j$ where $r_j$ and $s_j$ were different so they must all be the same
+## Examples
 
-## Prime numbers
+We saw that $11\equiv 39\pmod{7}$.  Therefore
 
-**Proposition:** If $p$ is prime, and $p$ divides a product $ab$, then $p|a$ or $p|b$.
+- $11^2\equiv 39^2\pmod{7}$
+- $(5)(11)\equiv (5)(39)\pmod{7}$
+- $(5)(11)\equiv(-2)(39)\pmod{7}$ because $5\equiv -2\pmod{7}$.
 
-**Proof:** We know that $\mathrm{gcd}(a,p)=1$ or $\mathrm{gcd}(a,p)=p$.  In the second case, $p|a$.  In the first, case,
-we can apply Proposition 2.28 to see that $p|b$. 
+**Proposition:** Every integer $a$ is congruent mod $m$ to exactly one integer in the set $\{0,1,\ldots, m-1\}$.
+Two integers $a$ and $b$ are congruent modulo $m$ if and only if $a$ and $b$ have the same remainder when divided by $m$.
 
-**Theorem:** Let $N>0$ be a positive integer.  Then there is one and only one way to write 
-$N$ as a product of primes written in non-decreasing order.
+Also every integer $a$ is congruent mod $m$ to exactly one integer in the set $\{1-m,2-m,\ldots, -1,0\}$.
 
-**Proof:** Assume the result is false and Let $N$ be the smallest integer that has two such representations
-$$
-p_1p_2\cdots p_k=q_1q_2\cdots q_k.
-$$
-Then $p_1|q_1q_2\cdots q_k$.  If $p_1=q_1$, we could cancel $p_1$ from the two representations and get a smaller integer $N/p_1$
-with two representations, so we must have $p_1\not=q_1$. Therefore $p_1|q_2\cdots q_k$.  By the same argument, $p_1\not=q_2$ so
-$p_1|q_3\cdots q_k$.  Continuing in this way we eventually get $p_1|q_k$.  Since $p_1\not=1$, we have $p_1=q_k$.  This means
-we can cancel $p_1=q_k$ from the two representations to get a smaller integer with two representations; that's a contradiction since
-$N$ was the smallest such.  Therefore the representation is unique.
+## Dividing both sides of a congruence
 
-## Prime factorizations, divisors, gcd, lcm
+It is NOT true in general that if $b\not\equiv 0\pmod{m}$ and  $ab\equiv cb\pmod{m}$ then $a\equiv c\pmod{m}$.  
 
-**Definition:** Let $\mathrm{ord}_p(n)$ be the power of $p$ that occurs in the prime factorization of $n$.
+For example $6\equiv -12\pmod{18}$ but $1\not\equiv -2\pmod{18}$.  
 
-**Proposition:** If $m$ and $n$ are two integers and $\mathrm{ord}_p(n)=\mathrm{ord}_{p}(m)$ for all primes $p$, then $n=\pm m$.
+What is true is the following.
 
-**Proposition:** If $d$ and $n$ are two integers, then $d|n$ if and only if $\mathrm{ord}_p(d)\le \mathrm{ord}_p(n)$ for all primes $p$.
+**Proposition.** If  $ac\equiv bc\pmod{m}$ and $\mathrm{gcd}(c,m)=1$ then $a\equiv b\pmod{m}$.
 
-**Proposition:**
-
-- $\mathrm{ord}_p(\mathrm{gcd}(a,b))=\mathrm{min}(\mathrm{ord}_p(a),\mathrm{ord}_p(b))$ for all primes $p$.
-- $\mathrm{ord}_p(\mathrm{gcd}(a,b))=\mathrm{max}(\mathrm{ord}_p(a),\mathrm{ord}_p(b))$ for all primes $p$.
-
-
-
+Proof: If $ac\equiv bc\pmod{m}$ then $m|(ac-bc)=(a-b)c$.  If $\mathrm{gcd}(c,m)=1$ then by Proposition 2.28 we have $m|(a-b)$
+and therefore $a\equiv b\pmod{m}$.  
 
 
 
