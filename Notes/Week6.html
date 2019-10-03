@@ -68,5 +68,21 @@ a\equiv b\pmod{m}.
 <p><strong>Proposition.</strong> If <span class="math inline">\(ac\equiv bc\pmod{m}\)</span> and <span class="math inline">\(\mathrm{gcd}(c,m)=1\)</span> then <span class="math inline">\(a\equiv b\pmod{m}\)</span>.</p>
 <p>Proof: If <span class="math inline">\(ac\equiv bc\pmod{m}\)</span> then <span class="math inline">\(m|(ac-bc)=(a-b)c\)</span>. If <span class="math inline">\(\mathrm{gcd}(c,m)=1\)</span> then by Proposition 2.28 we have <span class="math inline">\(m|(a-b)\)</span> and therefore <span class="math inline">\(a\equiv b\pmod{m}\)</span>.</p>
 </div>
+<div id="congruence-equations-in-general" class="slide section level2">
+<h1>Congruence equations in general</h1>
+<p>One can go further and understand exactly what happens with the equation <span class="math inline">\(ax\equiv b\pmod{m}\)</span> using the main theorem on linear diophantine equations.</p>
+<p>Finding a solution to <span class="math inline">\(ax\equiv b\pmod{m}\)</span> means finding an integer <span class="math inline">\(x\)</span> so that <span class="math inline">\(m\)</span> divides <span class="math inline">\(ax-b\)</span>. In other words, finding <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> so that <span class="math inline">\(ax-b=my\)</span>. But this is the diophantine equation <span class="math inline">\(ax-my=b\)</span> and we know that this as a solution if and only if <span class="math inline">\(\mathrm{gcd}(a,m)|b\)</span> and, in that case, there are infinitely many solutions given by <span class="math inline">\(x_0+n\mathrm{m}{d}\)</span> where <span class="math inline">\(d=\mathrm{gcd}(a,m)\)</span>. In other words, the solutions are <span class="math inline">\(x\equiv x_0\pmod{(m/d)}\)</span>.</p>
+<p>This means there are <span class="math inline">\(d\)</span> solutions mod <span class="math inline">\(m\)</span>, given by <span class="math inline">\(x_0+n(m/d)\)</span> with <span class="math inline">\(n=0,1,\ldots,d-1\)</span>. See Theorem 3.54 on page 69.</p>
+</div>
+<div id="equivalence-relations" class="slide section level2">
+<h1>Equivalence Relations</h1>
+<p>A relation <span class="math inline">\(R\)</span> between two elements of a set <span class="math inline">\(S\)</span> is called an equivalence relation if it is symmetric, reflexive, and transitive.</p>
+<p>Examples: on the integers, equality and congruence modulo <span class="math inline">\(m\)</span> are equivalence relations. On objects, having the same color is an equivalence relation. One people, having the same last name is an equivalence relation.</p>
+<p>An equivalence relation partitions the set into equivalence classes. The class of an element <span class="math inline">\(a\in S\)</span>, written <span class="math inline">\([a]\)</span>, is the subset of <span class="math inline">\(S\)</span> consisting of elements <span class="math inline">\(b\)</span> such that <span class="math inline">\(bRa\)</span>.</p>
+<ul>
+<li><span class="math inline">\(a\in [a]\)</span>.</li>
+<li>Two equivalence classes are either disjoint or identical.</li>
+</ul>
+</div>
 </body>
 </html>

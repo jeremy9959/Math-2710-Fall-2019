@@ -54,6 +54,33 @@ What is true is the following.
 Proof: If $ac\equiv bc\pmod{m}$ then $m|(ac-bc)=(a-b)c$.  If $\mathrm{gcd}(c,m)=1$ then by Proposition 2.28 we have $m|(a-b)$
 and therefore $a\equiv b\pmod{m}$.  
 
+## Congruence equations in general
+
+One can go further and understand exactly what happens with the equation $ax\equiv b\pmod{m}$ using the main
+theorem on linear diophantine equations.
+
+Finding a solution to $ax\equiv b\pmod{m}$ means finding an integer $x$ so that $m$ divides $ax-b$.  In other words,
+finding $y$ and $x$ so that $ax-b=my$.  But this is the diophantine equation $ax-my=b$ and we know that
+this as a solution if and only if $\mathrm{gcd}(a,m)|b$ and, in that case, there are infinitely many solutions given
+by $x_0+n\mathrm{m}{d}$ where $d=\mathrm{gcd}(a,m)$.  In other words, the solutions are $x\equiv x_0\pmod{(m/d)}$.
+
+This means there are $d$ solutions mod $m$, given by $x_0+n(m/d)$ with $n=0,1,\ldots,d-1$.  See Theorem 3.54 on page
+69.
+
+## Equivalence Relations
+
+A relation $R$ between two elements of a set $S$ is called an equivalence relation if it is symmetric,
+reflexive, and transitive.  
+
+Examples: on the integers, equality and congruence modulo $m$ are equivalence relations.  On objects, having the same
+color is an equivalence relation.  One people, having the same last name is an equivalence relation.
+
+An equivalence relation partitions the set into equivalence classes.  The class of an element $a\in S$, written $[a]$,
+is the subset of $S$ consisting of elements $b$ such that $bRa$.  
+
+- $a\in [a]$.
+- Two equivalence classes are either disjoint or identical. 
+
 
 
 
