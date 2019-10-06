@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Oct 2-4" />
+  <title>Math 2710</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Math 2710</h1>
+  <p class="author">
+Oct 2-4
+  </p>
+</div>
+<div id="congruence" class="slide section level2">
+<h1>Congruence</h1>
+<p>Let <span class="math inline">\(m\)</span> be a positive integer. Given two integers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, we say that “<span class="math inline">\(a\)</span> is congruent to <span class="math inline">\(b\)</span> modulo <span class="math inline">\(m\)</span>” if <span class="math inline">\(m\)</span> divides <span class="math inline">\(a-b\)</span>. We write this: <span class="math display">\[
+a\equiv b\pmod{m}.
+\]</span></p>
+<p>For example, <span class="math inline">\(11\equiv 39\pmod{7}\)</span> because <span class="math inline">\(39-11=28\)</span> and <span class="math inline">\(28\)</span> is divisible by <span class="math inline">\(7\)</span>.</p>
+</div>
+<div id="properties-of-congruence" class="slide section level2">
+<h1>Properties of Congruence</h1>
+<p>For a fixed <span class="math inline">\(m\)</span>, the congruence relation has properties similar to “=”:</p>
+<p><strong>Proposition 3.11.</strong> Let <span class="math inline">\(m\)</span> be a fixed positive integer, and let <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span>, and <span class="math inline">\(c\)</span> be other integers. Then</p>
+<ul>
+<li><span class="math inline">\(a\equiv a\pmod{m}\)</span>.</li>
+<li>if <span class="math inline">\(a\equiv b\pmod{m}\)</span> then <span class="math inline">\(b\equiv a\pmod{m}.\)</span></li>
+<li>if <span class="math inline">\(a\equiv b\pmod{m}\)</span> and <span class="math inline">\(b\equiv c\pmod{m}\)</span> then <span class="math inline">\(a\equiv c\pmod{m}\)</span>.</li>
+</ul>
+<p><strong>Proposition 3.12.</strong> The congruence relation behaves well with respect to arithmetic. Suppose <span class="math inline">\(a\equiv a&#39;\pmod{m}\)</span> and <span class="math inline">\(b\equiv b&#39;\pmod{m}.\)</span> Then:</p>
+<ul>
+<li><span class="math inline">\(ax+by\equiv a&#39;x+b&#39;y\pmod{m}\)</span> for all integers <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>.</li>
+<li><span class="math inline">\(ab\equiv a&#39;b&#39;\pmod{m}\)</span>.</li>
+</ul>
+</div>
+<div id="examples" class="slide section level2">
+<h1>Examples</h1>
+<p>We saw that <span class="math inline">\(11\equiv 39\pmod{7}\)</span>. Therefore</p>
+<ul>
+<li><span class="math inline">\(11^2\equiv 39^2\pmod{7}\)</span></li>
+<li><span class="math inline">\((5)(11)\equiv (5)(39)\pmod{7}\)</span></li>
+<li><span class="math inline">\((5)(11)\equiv(-2)(39)\pmod{7}\)</span> because <span class="math inline">\(5\equiv -2\pmod{7}\)</span>.</li>
+</ul>
+<p><strong>Proposition:</strong> Every integer <span class="math inline">\(a\)</span> is congruent mod <span class="math inline">\(m\)</span> to exactly one integer in the set <span class="math inline">\(\{0,1,\ldots, m-1\}\)</span>. Two integers <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are congruent modulo <span class="math inline">\(m\)</span> if and only if <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> have the same remainder when divided by <span class="math inline">\(m\)</span>.</p>
+<p>Also every integer <span class="math inline">\(a\)</span> is congruent mod <span class="math inline">\(m\)</span> to exactly one integer in the set <span class="math inline">\(\{1-m,2-m,\ldots, -1,0\}\)</span>.</p>
+</div>
+<div id="dividing-both-sides-of-a-congruence" class="slide section level2">
+<h1>Dividing both sides of a congruence</h1>
+<p>It is NOT true in general that if <span class="math inline">\(b\not\equiv 0\pmod{m}\)</span> and <span class="math inline">\(ab\equiv cb\pmod{m}\)</span> then <span class="math inline">\(a\equiv c\pmod{m}\)</span>.</p>
+<p>For example <span class="math inline">\(6\equiv -12\pmod{18}\)</span> but <span class="math inline">\(1\not\equiv -2\pmod{18}\)</span>.</p>
+<p>What is true is the following.</p>
+<p><strong>Proposition.</strong> If <span class="math inline">\(ac\equiv bc\pmod{m}\)</span> and <span class="math inline">\(\mathrm{gcd}(c,m)=1\)</span> then <span class="math inline">\(a\equiv b\pmod{m}\)</span>.</p>
+<p>Proof: If <span class="math inline">\(ac\equiv bc\pmod{m}\)</span> then <span class="math inline">\(m|(ac-bc)=(a-b)c\)</span>. If <span class="math inline">\(\mathrm{gcd}(c,m)=1\)</span> then by Proposition 2.28 we have <span class="math inline">\(m|(a-b)\)</span> and therefore <span class="math inline">\(a\equiv b\pmod{m}\)</span>.</p>
+</div>
+<div id="congruence-equations-in-general" class="slide section level2">
+<h1>Congruence equations in general</h1>
+<p>One can go further and understand exactly what happens with the equation <span class="math inline">\(ax\equiv b\pmod{m}\)</span> using the main theorem on linear diophantine equations.</p>
+<p>Finding a solution to <span class="math inline">\(ax\equiv b\pmod{m}\)</span> means finding an integer <span class="math inline">\(x\)</span> so that <span class="math inline">\(m\)</span> divides <span class="math inline">\(ax-b\)</span>. In other words, finding <span class="math inline">\(y\)</span> and <span class="math inline">\(x\)</span> so that <span class="math inline">\(ax-b=my\)</span>. But this is the diophantine equation <span class="math inline">\(ax-my=b\)</span> and we know that this as a solution if and only if <span class="math inline">\(\mathrm{gcd}(a,m)|b\)</span> and, in that case, there are infinitely many solutions given by <span class="math inline">\(x_0+n\mathrm{m}{d}\)</span> where <span class="math inline">\(d=\mathrm{gcd}(a,m)\)</span>. In other words, the solutions are <span class="math inline">\(x\equiv x_0\pmod{(m/d)}\)</span>.</p>
+<p>This means there are <span class="math inline">\(d\)</span> solutions mod <span class="math inline">\(m\)</span>, given by <span class="math inline">\(x_0+n(m/d)\)</span> with <span class="math inline">\(n=0,1,\ldots,d-1\)</span>. See Theorem 3.54 on page 69.</p>
+</div>
+<div id="equivalence-relations" class="slide section level2">
+<h1>Equivalence Relations</h1>
+<p>A relation <span class="math inline">\(R\)</span> between two elements of a set <span class="math inline">\(S\)</span> is called an equivalence relation if it is symmetric, reflexive, and transitive.</p>
+<p>Examples: on the integers, equality and congruence modulo <span class="math inline">\(m\)</span> are equivalence relations. On objects, having the same color is an equivalence relation. One people, having the same last name is an equivalence relation.</p>
+<p>An equivalence relation partitions the set into equivalence classes. The class of an element <span class="math inline">\(a\in S\)</span>, written <span class="math inline">\([a]\)</span>, is the subset of <span class="math inline">\(S\)</span> consisting of elements <span class="math inline">\(b\)</span> such that <span class="math inline">\(bRa\)</span>.</p>
+<ul>
+<li><span class="math inline">\(a\in [a]\)</span>.</li>
+<li>Two equivalence classes are either disjoint or identical.</li>
+</ul>
+</div>
+</body>
+</html>
