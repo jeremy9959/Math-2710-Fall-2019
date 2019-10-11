@@ -84,5 +84,29 @@ a\equiv b\pmod{m}.
 <li>Two equivalence classes are either disjoint or identical.</li>
 </ul>
 </div>
+<div id="congruence-classes" class="slide section level2">
+<h1>Congruence classes</h1>
+<p>Suppose <span class="math inline">\(S\)</span> is a set and <span class="math inline">\(\sim\)</span> is an equivalence relation. Then we know that <span class="math inline">\(S\)</span> is divided up into classes <span class="math inline">\([x]\)</span> where <span class="math inline">\([x]=\{y\in S: y\sim x\}\)</span>.</p>
+<p>The element <span class="math inline">\(x\)</span> is called a representative of the class.</p>
+<p>In the case of congruence modulo a fixed integer <span class="math inline">\(m\)</span>, there are <span class="math inline">\(m\)</span> classes <span class="math inline">\([0],\ldots, [m-1]\)</span>.</p>
+<p>Each class is an <em>arithmetic progression</em>: <span class="math display">\[
+[x]=\ldots,x-5m,x-4m,x-3m,x-2m,x-m,x,x+m,x+2m,\ldots
+\]</span></p>
+</div>
+<div id="arithmetic-on-congruence-classes" class="slide section level2">
+<h1>Arithmetic on congruence classes</h1>
+<p>One can do arithmetic on equivalence classes by defining <span class="math inline">\([a]+[b]=[a+b]\)</span> and <span class="math inline">\([a][b]=[ab]\)</span>.</p>
+<p><strong>Proposition:</strong> This definition makes sense. In other words, if <span class="math inline">\(a\equiv a&#39;\pmod{m}\)</span> and <span class="math inline">\(b\equiv b&#39;\pmod{m}\)</span> then <span class="math inline">\([a]+[b]=[a+b]=[a&#39;+b&#39;]=[a&#39;]+[b&#39;]\)</span> and similarly for products.</p>
+<p>The set of congruence classes modulo <span class="math inline">\(m\)</span> is written <span class="math inline">\(\mathbb{Z}_m\)</span> in the book.</p>
+</div>
+<div id="inverses" class="slide section level2">
+<h1>Inverses</h1>
+<p>If <span class="math inline">\(m\)</span> is prime, then the equation <span class="math inline">\(ax\equiv 1\pmod{m}\)</span> has a solution <span class="math inline">\(x\)</span> provided <span class="math inline">\(a\not=0\)</span> mod <span class="math inline">\(m\)</span>.</p>
+<p>This follows from Euclid’s algorithm.</p>
+<p><strong>Theorem:</strong> If <span class="math inline">\(p\)</span> is prime and <span class="math inline">\(n\)</span> is any integer then <span class="math inline">\(n^p\equiv n\pmod{p}\)</span>. If <span class="math inline">\(p\not|n\)</span>, then <span class="math inline">\(n^{p-1}\equiv 1\pmod{p}\)</span>.</p>
+<p><strong>Proof:</strong> First, show that <span class="math inline">\(a,2a,3a,\ldots,(p-1)a\)</span> are all different modulo <span class="math inline">\(p\)</span>. So they are a rearrangment of <span class="math inline">\(1,2,\ldots, p-1\)</span>. Then all of them together to get <span class="math display">\[
+(p-1)!a^{p-1}\equiv (p-1)!\pmod{p}.
+\]</span> Since <span class="math inline">\(p\not|(p-1)!\)</span>, cancel it from both sides and get <span class="math inline">\(a^{p-1}\equiv 1\)</span>.</p>
+</div>
 </body>
 </html>

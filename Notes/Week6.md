@@ -82,9 +82,44 @@ is the subset of $S$ consisting of elements $b$ such that $bRa$.
 - Two equivalence classes are either disjoint or identical. 
 
 
+## Congruence classes
 
+Suppose $S$ is a set and $\sim$ is an equivalence relation.  Then we know that $S$ is divided up
+into classes $[x]$ where $[x]=\{y\in S: y\sim x\}$.  
 
+The element $x$ is called a representative of the class. 
 
+In the case of congruence modulo a fixed integer $m$, there are $m$ classes $[0],\ldots, [m-1]$.
+
+Each class is an *arithmetic progression*:
+$$
+[x]=\ldots,x-5m,x-4m,x-3m,x-2m,x-m,x,x+m,x+2m,\ldots
+$$
+
+## Arithmetic on congruence classes
+
+One can do arithmetic on equivalence classes by defining $[a]+[b]=[a+b]$ and $[a][b]=[ab]$.
+
+**Proposition:** This definition makes sense.  In other words, if $a\equiv a'\pmod{m}$ and
+$b\equiv b'\pmod{m}$ then $[a]+[b]=[a+b]=[a'+b']=[a']+[b']$ and similarly for products.
+
+The set of congruence classes modulo $m$ is written $\mathbb{Z}_m$ in the book.
+
+## Inverses
+
+If $m$ is prime, then the equation $ax\equiv 1\pmod{m}$ has a solution $x$ provided $a\not=0$ mod $m$.
+
+This follows from Euclid's algorithm.
+
+**Theorem:** If $p$ is prime and $n$ is any integer then $n^p\equiv n\pmod{p}$.  If $p\not|n$, then
+$n^{p-1}\equiv 1\pmod{p}$.
+
+**Proof:** First, show that $a,2a,3a,\ldots,(p-1)a$ are all different modulo $p$. So they are
+a rearrangment of $1,2,\ldots, p-1$.  Then all of them together to get
+$$
+(p-1)!a^{p-1}\equiv (p-1)!\pmod{p}.
+$$
+Since $p\not|(p-1)!$, cancel it from both sides and get $a^{p-1}\equiv 1$.
 
 
 
