@@ -32,4 +32,13 @@ lead time.  Thus it is in your interest to stay current on the homework.
 - Oct 2: 1,2,3,6,7
 - Oct 4: 8,11, 56, 62, 63
 - Oct 7: 22, 24, 26, 31, 48, 67, 68
-- Oct 10: 65, 66, 98, 99.
+- Oct 9: 65, 66, 98, 99.
+- Oct 11: 71, 101
+
+**Chapter 4**
+
+- Oct 14: 1, 5, 7, 10, 11, 49
+- Oct 16: 15, 16, 21, 24, 25, 52
+- Oct 18: 28, 31, 32, 43, 56, 80
+- Oct 21: 59, 60, 61, 62, 63, 82
+

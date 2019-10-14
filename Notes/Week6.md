@@ -1,5 +1,5 @@
 % Math 2710
-% Oct 2-4
+% Oct 2-11
 
 ## Congruence
 
