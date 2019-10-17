@@ -96,6 +96,42 @@ then $na_n=a_{n-1}$.  So $a_{n}=a_{n-1}/n$.  If $a_{0}=1$, this gives $a_n=1/n!$
 
 **Finite geometric series:** Prove that $\sum_{i=0}^{N} r^{N}=(r^{N+1}-1)/(r-1)$.
 
+## Binomial coefficients
+
+**Definition:** The binomial coefficient $\binom{n}{r}$ is defined as
+$$
+\binom{n}{r}=\frac{n!}{r!(n-r)!}
+$$
+for integers $n$ and $r$ with $n\ge 1$ and $0\le r\le n$.
+
+Notice that $\binom{n}{n}=\binom{n}{0}=1$ and $\binom{n}{r}=\binom{n}{n-r}$; also $\binom{n}{1}=\binom{n}{n-1}=n$.
+
+**Proposition:** $\binom{n}{r-1}+\binom{n}{r}=\binom{n+1}{r}$ if $1\le r\le n$.
+
+Notice that this condition actually determines all of the values of $\binom{n}{r}$ recursively once
+we set the 'end conditions' $\binom{n}{0}=\binom{n}{n}=1$.
+
+## Conclusions about binomial coefficients
+
+**Proposition:** The coefficients are all integers.  By induction.  We know that $\binom{1}{r}$ are integers for $r=0,1$.
+
+**Proof:** Suppose that all of the binomial coefficients $\binom{N}{r}$ are integers for $r=0,\ldots, N$.  (In other words,
+a row of Pascal's triangle is made up of integers.)  Then the next row has integer ends (by definition) and the middle
+values are sums of values from the previous row, so they are also integers.
+
+**Proposition:** The binomial coefficient $\binom{n}{r}$ counts the number of $r$ element subsets in an $n$ element set.
+
+**Proof:** Let $S$ be a set with $n$ elements. Pick one element of $S$, and call it $x$.  Then we can divide the $r$ element subsets of 
+$S$ into two subsets: those that contain $x$, and those that don't.  The number of subsets of $S$ with $r$ elements that
+don't contain $x$ is precisely the number of $r$ element subsets of $S-\{x\}$, which by induction is $\binom{n-1}{r}$.
+The number of subsets that do contain $x$ is the same as the number of $r-1$ element subsets of $S-\{x\}$, so it is 
+$\binom{n-1}{r-1}$.  Thus the number of subsets obeys the same recursion relation as the binomial coefficients so they are equal.
+
+**Proposition:** The binomial theorem:
+$$
+(a+b)^n=\sum_{r=0}^{n}\binom{n}{r}a^rb^{n-r}
+$$
+
 
 
 

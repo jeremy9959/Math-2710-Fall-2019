@@ -86,5 +86,24 @@ f(x)=a_0+a_1x+a_2x^2+\cdots
 <p><strong>Fibonacci numbers:</strong> Show that consecutive fibonacci numbers have gcd equal to <span class="math inline">\(1\)</span>.</p>
 <p><strong>Finite geometric series:</strong> Prove that <span class="math inline">\(\sum_{i=0}^{N} r^{N}=(r^{N+1}-1)/(r-1)\)</span>.</p>
 </div>
+<div id="binomial-coefficients" class="slide section level2">
+<h1>Binomial coefficients</h1>
+<p><strong>Definition:</strong> The binomial coefficient <span class="math inline">\(\binom{n}{r}\)</span> is defined as <span class="math display">\[
+\binom{n}{r}=\frac{n!}{r!(n-r)!}
+\]</span> for integers <span class="math inline">\(n\)</span> and <span class="math inline">\(r\)</span> with <span class="math inline">\(n\ge 1\)</span> and <span class="math inline">\(0\le r\le n\)</span>.</p>
+<p>Notice that <span class="math inline">\(\binom{n}{n}=\binom{n}{0}=1\)</span> and <span class="math inline">\(\binom{n}{r}=\binom{n}{n-r}\)</span>; also <span class="math inline">\(\binom{n}{1}=\binom{n}{n-1}=n\)</span>.</p>
+<p><strong>Proposition:</strong> <span class="math inline">\(\binom{n}{r-1}+\binom{n}{r}=\binom{n+1}{r}\)</span> if <span class="math inline">\(1\le r\le n\)</span>.</p>
+<p>Notice that this condition actually determines all of the values of <span class="math inline">\(\binom{n}{r}\)</span> recursively once we set the ‘end conditions’ <span class="math inline">\(\binom{n}{0}=\binom{n}{n}=1\)</span>.</p>
+</div>
+<div id="conclusions-about-binomial-coefficients" class="slide section level2">
+<h1>Conclusions about binomial coefficients</h1>
+<p><strong>Proposition:</strong> The coefficients are all integers. By induction. We know that <span class="math inline">\(\binom{1}{r}\)</span> are integers for <span class="math inline">\(r=0,1\)</span>.</p>
+<p><strong>Proof:</strong> Suppose that all of the binomial coefficients <span class="math inline">\(\binom{N}{r}\)</span> are integers for <span class="math inline">\(r=0,\ldots, N\)</span>. (In other words, a row of Pascal’s triangle is made up of integers.) Then the next row has integer ends (by definition) and the middle values are sums of values from the previous row, so they are also integers.</p>
+<p><strong>Proposition:</strong> The binomial coefficient <span class="math inline">\(\binom{n}{r}\)</span> counts the number of <span class="math inline">\(r\)</span> element subsets in an <span class="math inline">\(n\)</span> element set.</p>
+<p><strong>Proof:</strong> Let <span class="math inline">\(S\)</span> be a set with <span class="math inline">\(n\)</span> elements. Pick one element of <span class="math inline">\(S\)</span>, and call it <span class="math inline">\(x\)</span>. Then we can divide the <span class="math inline">\(r\)</span> element subsets of <span class="math inline">\(S\)</span> into two subsets: those that contain <span class="math inline">\(x\)</span>, and those that don’t. The number of subsets of <span class="math inline">\(S\)</span> with <span class="math inline">\(r\)</span> elements that don’t contain <span class="math inline">\(x\)</span> is precisely the number of <span class="math inline">\(r\)</span> element subsets of <span class="math inline">\(S-\{x\}\)</span>, which by induction is <span class="math inline">\(\binom{n-1}{r}\)</span>. The number of subsets that do contain <span class="math inline">\(x\)</span> is the same as the number of <span class="math inline">\(r-1\)</span> element subsets of <span class="math inline">\(S-\{x\}\)</span>, so it is <span class="math inline">\(\binom{n-1}{r-1}\)</span>. Thus the number of subsets obeys the same recursion relation as the binomial coefficients so they are equal.</p>
+<p><strong>Proposition:</strong> The binomial theorem: <span class="math display">\[
+(a+b)^n=\sum_{r=0}^{n}\binom{n}{r}a^rb^{n-r}
+\]</span></p>
+</div>
 </body>
 </html>
