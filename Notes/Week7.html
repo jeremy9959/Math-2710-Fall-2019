@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Oct 14-18" />
+  <title>Math 2710</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Math 2710</h1>
+  <p class="author">
+Oct 14-18
+  </p>
+</div>
+<div id="mathematical-induction" class="slide section level2">
+<h1>Mathematical Induction</h1>
+<p>The axiom of induction says the following. Let <span class="math inline">\(\mathbb{P}\)</span> denote the positive integers, and let <span class="math inline">\(S\)</span> be a subset of <span class="math inline">\(\mathbb{P}\)</span>. If:</p>
+<ul>
+<li><span class="math inline">\(1\in S\)</span></li>
+<li><span class="math inline">\(n\in S\implies n+1\in S\)</span> for all <span class="math inline">\(n\in \mathbb{P}\)</span></li>
+</ul>
+<p>then <span class="math inline">\(S=P\)</span>.</p>
+<p>This is applied to propositions in the following way. Suppose for each <span class="math inline">\(n\)</span> we have a proposition <span class="math inline">\(P(n)\)</span>. Suppose <span class="math inline">\(P(1)\)</span> is true, and, for all <span class="math inline">\(n\in\mathbb{P}\)</span>, <span class="math inline">\(P(n)\implies P(n+1)\)</span>. Then <span class="math inline">\(P(n)\)</span> is true for all <span class="math inline">\(n\)</span>. To prove this, let <span class="math inline">\(S\)</span> be the set of <span class="math inline">\(n\)</span> for which <span class="math inline">\(P(n)\)</span> is true and use the axiom of induction to prove that <span class="math inline">\(S=\mathbb{P}\)</span>.</p>
+</div>
+<div id="induction-and-the-well-ordering-principle" class="slide section level2">
+<h1>Induction and the well-ordering principle</h1>
+<p>The axiom of induction and the well-ordering principle are equivalent. To see this, first suppose that the well ordering principle holds, so that <em>every non-empty set of positive integers has a least element.</em></p>
+<p>Now suppose <span class="math inline">\(S\)</span> is a subset of the positive integers that satisfies <span class="math inline">\(1\in S\)</span> and if <span class="math inline">\(n\in S\)</span> then <span class="math inline">\(n+1\in S\)</span>. Let <span class="math inline">\(U\)</span> be the set of positive integers that are NOT in <span class="math inline">\(S\)</span>; note that <span class="math inline">\(1\not\in U\)</span> since <span class="math inline">\(1\in S\)</span>. If <span class="math inline">\(U\)</span> is non-empty then by well ordering it has a least element, say <span class="math inline">\(m\)</span>, and <span class="math inline">\(m&gt;1\)</span>. Therefore <span class="math inline">\(m-1\in S\)</span>. By the assumption, <span class="math inline">\(m-1\in S\implies m\in S\)</span>, which is a contradiction. We conclude that <span class="math inline">\(U\)</span> must have been empty so <span class="math inline">\(S\)</span> contains all positive integers.</p>
+<p>Now suppose the <em>axiom of induction holds</em> and let <span class="math inline">\(U\)</span> be a non-empty set of positive integers. Suppose <span class="math inline">\(U\)</span> does not have a least element. Let <span class="math inline">\(P(n)\)</span> be the proposition that <span class="math inline">\(\{1,2,\ldots, n\}\not\subset U\)</span>. Now <span class="math inline">\(P(1)\)</span> is true since if <span class="math inline">\(1\in U\)</span>, <span class="math inline">\(1\)</span> is clearly the least element in <span class="math inline">\(U\)</span>. Suppose <span class="math inline">\(P(n)\)</span> is true. Then <span class="math inline">\(n+1\not\in U\)</span>, since otherwise <span class="math inline">\(n+1\)</span> would be a least element of <span class="math inline">\(U\)</span>. By the axiom of induction, <span class="math inline">\(P(n)\)</span> is true for all <span class="math inline">\(n\)</span>. But since every positive integer <span class="math inline">\(k\)</span> belongs to <span class="math inline">\(P(k)\)</span>, this means that no integer <span class="math inline">\(k\)</span> belongs to <span class="math inline">\(U\)</span>, so <span class="math inline">\(U\)</span> is empty.</p>
+</div>
+<div id="standard-examples" class="slide section level2">
+<h1>Standard Examples</h1>
+<ul>
+<li><span class="math inline">\(1+2+3+\ldots+n = \frac{n(n+1)}{2}\)</span></li>
+<li><span class="math inline">\(n!\ge 2^n\)</span> for all <span class="math inline">\(n\)</span>.</li>
+<li><span class="math inline">\(1+3+5+\ldots+(2N-1) = N^2\)</span></li>
+</ul>
+</div>
+<div id="a-look-back" class="slide section level2">
+<h1>A look back</h1>
+<p>The text makes the following remark on page 91:</p>
+<blockquote>
+<p>This principle of induction has already been implicitly used in the Euclidean Algorithm 2.22, the Extended Euclidean algorithm 2.25, Theorem 2.41 on base b representations, twice in the Unique Factorization Theorem 2.54, and in the generalized Chinese Remainder Theorem 3.66.</p>
+</blockquote>
+<p>In the proof of the Fundamental Theorem of algebra, the following step is important. Suppose <span class="math inline">\(N\)</span> has two factorizations into primes: <span class="math display">\[
+N=p_1 p_2\cdots p_m=q_1 q_2 \cdots q_n.
+\]</span> Then since <span class="math inline">\(p_1\)</span> divides the product <span class="math inline">\(q_1 q_2\cdots q_n\)</span>, we must have <span class="math inline">\(p_1\)</span> equal to one of the <span class="math inline">\(q_i\)</span> for <span class="math inline">\(i=1,\ldots n\)</span>. In the book, this is done by a “and so on” argument but you really need induction.</p>
+<p><strong>Proposition:</strong> If a prime <span class="math inline">\(p\)</span> divides a product <span class="math inline">\(q_1\cdots q_m\)</span> of <span class="math inline">\(m\)</span> primes, then <span class="math inline">\(p=q_i\)</span> for some <span class="math inline">\(i=1,\ldots, m\)</span>.</p>
+<p><strong>Proof:</strong> By induction. If <span class="math inline">\(m=1\)</span>, then <span class="math inline">\(p|q_1\)</span> and therefore <span class="math inline">\(p=q_1\)</span> since the only divisor of <span class="math inline">\(q_1\)</span> greater than <span class="math inline">\(1\)</span> is <span class="math inline">\(q_1\)</span> itself. Now suppose the result is true for <span class="math inline">\(m\)</span> primes. Suppose <span class="math inline">\(p|q_1\cdots q_{m+1}\)</span>. Then <span class="math inline">\(p|(q_1\cdots q_m)q_{m+1}\)</span>. When a prime divides a product, it divides one or the other factor, so either <span class="math inline">\(p|(q_1\cdots q_m)\)</span> or <span class="math inline">\(p|q_{m_1}\)</span>. In the second case, <span class="math inline">\(p=q_{m+1}\)</span>, while in the first, by the inductive hypothesis, <span class="math inline">\(p=q_i\)</span> for <span class="math inline">\(i=1,\ldots, m\)</span>. Thus the result holds for all <span class="math inline">\(m\)</span> by induction.</p>
+</div>
+<div id="recursion" class="slide section level2">
+<h1>Recursion</h1>
+<p>Let’s call the three poles of the Towers of Hanoi puzzle A, B, and C, and suppose that <span class="math inline">\(N\)</span> disks start out stacked properly on disk A.</p>
+<p>If there is only one disk, the Towers of Hanoi have an obvious solution – just move that one disk from A to B.</p>
+<p>If there are N disks, solve the puzzle by first moving the top N-1 disks to pole C, then move the bottom (big) disk to pole B, then move the N-1 disks from C back to B.</p>
+<p>If <span class="math inline">\(f(n)\)</span> is the number of steps needed to move <span class="math inline">\(n\)</span> disks, then <span class="math inline">\(f(n+1)=2f(n)+1\)</span> and <span class="math inline">\(f(1)=1\)</span>. This is called a <em>recursive</em> definition.</p>
+<p><strong>Proposition:</strong> <span class="math inline">\(f(n)=2^{n}-1\)</span>.</p>
+<p><strong>Proof:</strong> By induction. Since <span class="math inline">\(f(1)=2-1=1\)</span>, the base case is true. Suppose <span class="math inline">\(f(n)=2^{n}-1\)</span>. Then <span class="math inline">\(f(n+1)=2(2^n-1)+1=2^{n+1}+1\)</span>. So the formula holds in all cases.</p>
+</div>
+<div id="other-recursive-definitions" class="slide section level2">
+<h1>Other recursive definitions</h1>
+<p><strong>Fibonacci Numbers:</strong> <span class="math inline">\(a_0=0\)</span>, <span class="math inline">\(a_1=1\)</span>, and <span class="math inline">\(a_{n+1}=a_{n}+a_{n-1}\)</span>.</p>
+<p><strong>Differential equations:</strong> <span class="math inline">\(f&#39;(x)=f(x)\)</span>. If <span class="math display">\[
+f(x)=a_0+a_1x+a_2x^2+\cdots
+\]</span> then <span class="math inline">\(na_n=a_{n-1}\)</span>. So <span class="math inline">\(a_{n}=a_{n-1}/n\)</span>. If <span class="math inline">\(a_{0}=1\)</span>, this gives <span class="math inline">\(a_n=1/n!\)</span>.</p>
+<p><strong>Maximum:</strong> Define the maximum of <span class="math inline">\(a_1,\ldots, a_n\)</span> to be <span class="math inline">\(\mathrm{max}(\mathrm{max}(a_1,\ldots, a_{n-1}),a_n))\)</span></p>
+<p><strong>Newton’s method:</strong> <span class="math inline">\(x_{n+1}=x_{n}-f(x_n)/f&#39;(x_n).\)</span></p>
+</div>
+<div id="things-to-work-on" class="slide section level2">
+<h1>Things to work on</h1>
+<p><strong>Fibonacci numbers:</strong> Show that consecutive fibonacci numbers have gcd equal to <span class="math inline">\(1\)</span>.</p>
+<p><strong>Finite geometric series:</strong> Prove that <span class="math inline">\(\sum_{i=0}^{N} r^{N}=(r^{N+1}-1)/(r-1)\)</span>.</p>
+</div>
+</body>
+</html>

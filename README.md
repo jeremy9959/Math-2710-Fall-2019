@@ -42,7 +42,7 @@ and [Proposition 2](https://mathcs.clarku.edu/~djoyce/java/elements/bookVII/prop
 - <a href="Notes/Week4.html"> Week Four </a>
 - <a href="Notes/Week5.html"> Week Five </a>
 - <a href="Notes/Week6.html"> Week Six </a>
-
+- <a href="Notes/Week7.html"> Week Seven </a>
 
 
 
