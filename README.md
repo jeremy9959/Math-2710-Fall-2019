@@ -44,7 +44,14 @@ and [Proposition 2](https://mathcs.clarku.edu/~djoyce/java/elements/bookVII/prop
 - <a href="Notes/Week6.html"> Week Six </a>
 - <a href="Notes/Week7.html"> Week Seven </a>
 
+For week 8, we will also rely on selected sections from [The Book of Proof](https://www.people.vcu.edu/~rhammack/BookOfProof/Main.pdf)
+by Richard Hammack.  In particular:
 
+- Section 13.1 (The Triangle Inequality)
+- Section 13.7 (Sequences)
+- Section 13.8 (Series)
+
+and the associated problems.
 
 
 
