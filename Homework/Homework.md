@@ -42,3 +42,15 @@ lead time.  Thus it is in your interest to stay current on the homework.
 - Oct 18: 28, 31, 32, 43, 56, 80
 - Oct 21: 59, 60, 61, 62, 63, 82
 
+**Chapter 5 and [The Book Of Proof](https://www.people.vcu.edu/~rhammack/BookOfProof/Main.pdf)**
+
+- Oct 21: Hammack pg. 264: 1,3,8,9
+- Oct 23: Hammack pg. 264: 4,5,7,10,11 
+- Oct 25  Hammack pg. 264 14. pg. 268. 1, 2.
+
+Additional Problems:
+- Prove that if $p$ is prime then $\binom{p}{r}$ is divisible by $p$.  Use this to prove that $n^p\equiv n\pmod{p}$ for all $n$
+and any prime number $p$.
+
+- Oct 28: Gilbert/Vanstone, Chapter 5: 23, 24, 29, 30, 32
+- Oct 30: GV Chapter 5: 31, 41, 42, 47, 48.

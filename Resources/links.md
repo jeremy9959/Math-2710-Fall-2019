@@ -15,3 +15,5 @@
 observation of Bertrand Russell that illustrated that naive notions of "sets" lead to logical contradictions.
 Famously, Russell's work destroyed the life work of [Frege](https://en.wikipedia.org/wiki/Gottlob_Frege)
 who had hoped to reduce arithmetic to logic.
+
+- Some nice notes on mathematical writing by [Frances Su](https://www.dropbox.com/s/l5sochi8i348zxn/Su_Some%20Guidelines%20for%20Good%20Mathematical%20Writing.pdf?dl=0)  of Harvey Mudd College.
