@@ -16,6 +16,7 @@
   </style>
   <link rel="stylesheet" type="text/css" media="screen, projection, print"
     href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
   <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
     charset="utf-8" type="text/javascript"></script>
 </head>
@@ -26,8 +27,41 @@
 Oct 21-25
   </p>
 </div>
-<div class="slide section level6">
-
+<div id="sequences" class="slide section level2">
+<h1>Sequences</h1>
+<p><strong>Definition:</strong> An (infinite) sequence with rational coefficients is a function <span class="math inline">\(a:\mathbb{P}\to\mathbb{Q}\)</span>. Normally we view it as the sequence <span class="math inline">\(a(1),a(2),\ldots\)</span>.</p>
+<p>Some examples:</p>
+<ul>
+<li><span class="math inline">\(a(n)=0\)</span> for all <span class="math inline">\(n\)</span> (the zero sequence).</li>
+<li><span class="math inline">\(a(n)=1/n\)</span> for <span class="math inline">\(n=1,2,\ldots\)</span></li>
+<li><span class="math inline">\(a(n)=n\)</span> for <span class="math inline">\(n=1,2,\ldots\)</span></li>
+<li><span class="math inline">\(a(n)=(-1)^n\)</span> for <span class="math inline">\(n=1,2,\ldots\)</span></li>
+</ul>
+<p>We would like to have a way to speak about what happens to sequences as <span class="math inline">\(n\)</span> gets larger and larger (so for example the sequence grows, it bounces around, or it approaches a particular number.)</p>
+</div>
+<div id="limit-of-a-sequence" class="slide section level2">
+<h1>Limit of a sequence</h1>
+<p><strong>Definition:</strong> Let <span class="math inline">\(a(n)\)</span> be a sequence. Then we say that the limit of <span class="math inline">\(a(n)\)</span> is <span class="math inline">\(L\)</span> if, for every <span class="math inline">\(\epsilon&gt;0\)</span>, there is an integer <span class="math inline">\(N\)</span>, so that <span class="math inline">\(|a(n)-L|&lt;\epsilon\)</span> for all <span class="math inline">\(n\ge N\)</span>. This is written:</p>
+<p><span class="math display">\[
+\lim_{n\to\infty} a(n)=L.
+\]</span></p>
+<p>and we say that the sequence <em>converges to <span class="math inline">\(L\)</span></em>. <img src="seq.png" /></p>
+</div>
+<div id="limits-are-about-estimation" class="slide section level2">
+<h1>Limits are about estimation</h1>
+<p><strong>Examples</strong></p>
+<ul>
+<li>Let <span class="math inline">\(a(n)\)</span> be the sequence defined by <span class="math inline">\(a(1)=1, a(2)=1/2, and a(n)=0\)</span> for <span class="math inline">\(n&gt;2\)</span>. Prove that the limit <span class="math inline">\(\lim_{n\to\infty} a(n)=0\)</span>.</li>
+<li>Let <span class="math inline">\(a(n)\)</span> be the sequence <span class="math inline">\(a(n)=1/n\)</span>. Prove that the limit of <span class="math inline">\(a(n)\)</span> as <span class="math inline">\(n\to\infty\)</span> is zero.</li>
+<li>Let <span class="math inline">\(a(n)=(-1)^{n}\)</span>. Prove that the limit isn’t <span class="math inline">\(1\)</span>. Then prove there is no limit.</li>
+<li>Let <span class="math inline">\(a(n)=n\)</span>. Is there a limit?</li>
+<li>Let <span class="math inline">\(a(n)=(n+1)/n\)</span>. Prove that the limit is <span class="math inline">\(1\)</span>.</li>
+<li>Let <span class="math inline">\(a(n)=4+(-1/2)^{n}\)</span>.</li>
+</ul>
+</div>
+<div id="some-other-limit-properties" class="slide section level2">
+<h1>Some other limit properties</h1>
+<p><strong>Proposition:</strong> Let <span class="math inline">\(a(n)\)</span> be a sequence and let <span class="math inline">\(b(n)\)</span> be the sequence defined by <span class="math inline">\(b(n)=a(n+5)\)</span>. (so <span class="math inline">\(b(n)\)</span> is the same as <span class="math inline">\(a(n)\)</span> but it “starts later.”) Prove that <span class="math inline">\(a(n)\)</span> converges if and only if <span class="math inline">\(b(n)\)</span> converges.</p>
 </div>
 </body>
 </html>

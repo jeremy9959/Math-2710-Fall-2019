@@ -127,14 +127,39 @@ don't contain $x$ is precisely the number of $r$ element subsets of $S-\{x\}$, w
 The number of subsets that do contain $x$ is the same as the number of $r-1$ element subsets of $S-\{x\}$, so it is 
 $\binom{n-1}{r-1}$.  Thus the number of subsets obeys the same recursion relation as the binomial coefficients so they are equal.
 
+## The binomial theorem
+
 **Proposition:** The binomial theorem:
 $$
 (a+b)^n=\sum_{r=0}^{n}\binom{n}{r}a^rb^{n-r}
 $$
 
+For $n=1$ this says that $a+b=\binom{1}{0}a+\binom{0}{1}b$ which is true since these binomial coefficients are both $1$.
 
+Suppose this is true for the $n^{th}$-power.  We compute
+$$
+(a+b)^{n}=a(a+b)^{n-1}+b(a+b)^{n-1}=\sum_{r=0}^{n-1}\binom{n-1}{r}a^{r+1}b^{n-1-r} + \sum_{r=0}^{n-1}\binom{n-1}{r}a^{r}b^{n-r}.
+$$
 
+## binomial theorem continued
 
+Using $s=r+1$ in the first sum, it becomes
+$$
+\sum_{s=1}^{n}\binom{n-1}{s-1}a^{s}b^{N-s}
+$$
+
+Renaming $r=s$ in the second sum, combining, and separating out the ends, we have
+$$
+(a+b)^{n} = a^{n}+\sum_{s=1}^{n-1}(\binom{n-1}{s-1}+\binom{n-1}{s})a^{s}b^{n-s}+b^{n}.
+$$
+
+## binomial theorem continued
+
+Finally, using the recursion relation for the binomial coefficients:
+$$
+\binom{n-1}{s-1}+\binom{n-1}{s}=\binom{n}{s}
+$$
+we have the desired formula for $n$.
 
 
 
