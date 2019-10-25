@@ -39,8 +39,51 @@ and we say that the sequence *converges to $L$*.
 - Let $a(n)=(n+1)/n$.  Prove that the limit is $1$.
 - Let $a(n)=4+(-1/2)^{n}$.  
 
-## Some other limit properties
 
-**Proposition:**
-Let $a(n)$ be a sequence and let $b(n)$ be the sequence defined by $b(n)=a(n+5)$.  (so $b(n)$ is the same as $a(n)$ but it "starts later.")
-Prove that $a(n)$ converges if and only if $b(n)$ converges.
+## Non-convergence
+
+A sequence $a(n)$  *does not converge* to a limit $L$ means that
+- there exists $\epsilon>0$ such that
+- for all $N$
+- there exists $n\ge N$ such that
+- $|a(n)-L|>\epsilon$
+
+The sequence $a(n)=(-1)^{n-1}$ does not converge to any limit because no matter what $L$ you pick and what $N$ you choose the distance $|(-1)^{n-1}-L|$ 
+bounces back and forth between $|1-L|$ and $|1+L|$ so if you choose $\epsilon$ smaller than the maximum of these two you satisfy the 'non-convergence'
+requirement.
+
+## Limit rules make arguments standard
+
+**Proposition:** If $a(n)$ converges to $L$ and $b(n)$ converges to $M$ then $a(n)+b(n)$ converges to $L+M$.  
+
+**Proof:** The estimation side calculation is that we can choose $N$ large enough that $|a(n)-L|<\epsilon$  and $|b(n)-M|<\epsilon$ for $n\ge N$.
+Then $|a(n)+b(n)-L-M|<2\epsilon$.  So given $\epsilon$ we should choose $N$ large enought that $|a(n)-L|<\epsilon/2$ and similarly $|b(n)-M|<\epsilon/2$.
+
+**Proposition:** Suppose that $a(n)$ is a sequence converging to $L$.  Prove that there is an $N$ so that $|a(n)|<2L$ for $n\ge N$. 
+
+**Proof:** Choose $\epsilon=L/2$.  Then there is an integer $N$ such that $|a(n)-L|<L/2$ for all $n\ge N$.  This means that $a(n)$ is between $L/2$ and $3L/2$
+so in particular it is less than $2L$.  
+
+**Proposition:** Suppose that $a(n)$ converges to $L$.  Prove that $a(n)^2$ converges to $L^2$.  
+
+**Proof:** $|a(n)^2-L^2|=|a(n)^2-a(n)L+a(n)L-L^2|\le |a(n)||a(n)-L| + |L||a(n)-L|$.  We can choose $N$ so that $|a(n)|<2L$ and $N'$ so that $|a(n)-L|<\epsilon/4L$.
+Then for $n$ bigger than both of these we have 
+$$|a(n)||a(n)-L|+|L||a(n)-L|\le (2L)\epsilon/4L+L\epsilon/4L=\epsilon/2+\epsilon/4=3\epsilon/4<\epsilon.$$
+Thus for $n\ge\mathrm{max}(N,N')$ we have $|a(n)^2-L^2|<\epsilon.$
+
+
+## Sequences
+
+A *sequence* is an infinite sum, but it is really a shorthand for a series.  The sequence
+$$
+a_0+a_1+a_2+\ldots
+$$
+is a short hand for the sequence of partial sums $(a_0,a_1+a_0,a_2+a_1+a_0,\ldots)$.
+
+A series converges to a limit $L$ means that the sequence of partial sums converges.
+
+Key example is the geometric series $\sum_{n=0}^{\infty} ar^{n}$.
+
+
+
+
