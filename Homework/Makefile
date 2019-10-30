@@ -1,7 +1,7 @@
 all: Homework.html
 
 %.html : %.md
-	pandoc -s $< -o $@
+	pandoc -s -t latex $< -o $@
 
 %.pdf : %.md
 	pandoc -s -t beamer $< -o $@
