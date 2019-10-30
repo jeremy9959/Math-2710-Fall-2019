@@ -1,7 +1,7 @@
 ---
 title: Homework
 ---
-
+\renewcommand{\pmod}[1]{(\mod #1)}
 
 I will assign problems for class discussion every day.  You should 
 do the listed problems **before** the corresponding class so that you are prepared to
@@ -49,9 +49,15 @@ lead time.  Thus it is in your interest to stay current on the homework.
 - Oct 25  Hammack pg. 264 14. pg. 268. 1, 2.
 
 Additional Problems:
+
 - Prove that if $p$ is prime then $\binom{p}{r}$ is divisible by $p$.  Use this to prove that $n^p\equiv n\pmod{p}$ for all $n$
 and any prime number $p$.
-- Let $f(x)=(1+x)^{n}$.  Prove that the $i^{th}$ derivative $f^{i}(x)=\frac{n!}{(n-i)!}(1+x)^{n-i}$ and therefore $f^{i}(0)=n!/(n-i)!$.
+
+- Let $f(x)=(1+x)^{n}$.  Prove that the $i^{th}$ derivative 
+$$
+f^{i}(x)=\frac{n!}{(n-i)!}(1+x)^{n-i}
+$$
+and therefore $f^{i}(0)=n!/(n-i)!$.
 Taylor's formula says that
 $$
 (1+x)^{n}=\sum_{i=0}^{n}\frac{f^{i}(0)}{i!}x^{i}
@@ -61,8 +67,6 @@ $$
 (1+x)^{n}=\sum_{i=0}^{n}\binom{n}{i}x^{i}.
 $$
 Use these facts to conclude that $\binom{n}{i}=\frac{n!}{(n-i)!i!}$
-
-
 
 
 - Oct 28: Gilbert/Vanstone, Chapter 5: 23-32,  24, 29, 30, 32

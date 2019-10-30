@@ -1,166 +1,77 @@
-\PassOptionsToPackage{unicode=true}{hyperref} % options for packages loaded elsewhere
-\PassOptionsToPackage{hyphens}{url}
-%
-\documentclass[]{article}
-\usepackage{lmodern}
-\usepackage{amssymb,amsmath}
-\usepackage{ifxetex,ifluatex}
-\usepackage{fixltx2e} % provides \textsubscript
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-  \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provides euro and other symbols
-\else % if luatex or xelatex
-  \usepackage{unicode-math}
-  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
-\fi
-% use upquote if available, for straight quotes in verbatim environments
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-% use microtype if available
-\IfFileExists{microtype.sty}{%
-\usepackage[]{microtype}
-\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
-\IfFileExists{parskip.sty}{%
-\usepackage{parskip}
-}{% else
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
-}
-\usepackage{hyperref}
-\hypersetup{
-            pdftitle={Homework},
-            pdfborder={0 0 0},
-            breaklinks=true}
-\urlstyle{same}  % don't use monospace font for urls
-\setlength{\emergencystretch}{3em}  % prevent overfull lines
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{0}
-% Redefines (sub)paragraphs to behave more like sections
-\ifx\paragraph\undefined\else
-\let\oldparagraph\paragraph
-\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
-\fi
-\ifx\subparagraph\undefined\else
-\let\oldsubparagraph\subparagraph
-\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
-\fi
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Homework</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header>
+<h1 class="title">Homework</h1>
+</header>
 
-% set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
-
-
-\title{Homework}
-\date{}
-
-\begin{document}
-\maketitle
-
-I will assign problems for class discussion every day. You should do the
-listed problems \textbf{before} the corresponding class so that you are
-prepared to discuss them.
-
-Periodically I will select a subset of the problems I have assigned to
-be handed in. The selected problems will be announced with a relatively
-short lead time. Thus it is in your interest to stay current on the
-homework.
-
-\textbf{Chapter 1} (page 20ff)
-
-\begin{itemize}
-\tightlist
-\item
-  Aug 26:
-\item
-  Aug 28: 1, 3, 10, 14, 22
-\item
-  Aug 30: 23, 24, 27, 57, 60, 80
-\item
-  Sep 4: 40, 42, 47, 73, 74
-\item
-  Sep 6: 62, 64, 68, 69, 84a
-\item
-  Sep 9: 77, 83, 84b
-\end{itemize}
-
-\textbf{Chapter 2}
-
-\begin{itemize}
-\tightlist
-\item
-  Sep 11: 1,3,8,10, 99
-\item
-  Sep 13: 14, 19, 27, 28, 43, 46, 75
-\item
-  Sep 16: 51, 52, 58, 73, 76, 77, 94
-\item
-  Sep 18: 81, 84, 93, 101
-\end{itemize}
-
-\textbf{Chapter 3}
-
-\begin{itemize}
-\tightlist
-\item
-  Oct 2: 1,2,3,6,7
-\item
-  Oct 4: 8,11, 56, 62, 63
-\item
-  Oct 7: 22, 24, 26, 31, 48, 67, 68
-\item
-  Oct 9: 65, 66, 98, 99.
-\item
-  Oct 11: 71, 101
-\end{itemize}
-
-\textbf{Chapter 4}
-
-\begin{itemize}
-\tightlist
-\item
-  Oct 14: 1, 5, 7, 10, 11, 49
-\item
-  Oct 16: 15, 16, 21, 24, 25, 52
-\item
-  Oct 18: 28, 31, 32, 43, 56, 80
-\item
-  Oct 21: 59, 60, 61, 62, 63, 82
-\end{itemize}
-
-\textbf{Chapter 5 and
-\href{https://www.people.vcu.edu/~rhammack/BookOfProof/Main.pdf}{The
-Book Of Proof}}
-
-\begin{itemize}
-\tightlist
-\item
-  Oct 21: Hammack pg. 264: 1,3,8,9
-\item
-  Oct 23: Hammack pg. 264: 4,5,7,10,11
-\item
-  Oct 25 Hammack pg. 264 14. pg. 268. 1, 2.
-\end{itemize}
-
-Additional Problems: - Prove that if \(p\) is prime then
-\(\binom{p}{r}\) is divisible by \(p\). Use this to prove that
-\(n^p\equiv n\pmod{p}\) for all \(n\) and any prime number \(p\). - Let
-\(f(x)=(1+x)^{n}\). Prove that the \(i^{th}\) derivative
-\(f^{i}(x)=\frac{n!}{(n-i)!}(1+x)^{n-i}\) and therefore
-\(f^{i}(0)=n!/(n-i)!\). Taylor's formula says that \[
+<p>I will assign problems for class discussion every day. You should do the listed problems <strong>before</strong> the corresponding class so that you are prepared to discuss them.</p>
+<p>Periodically I will select a subset of the problems I have assigned to be handed in. The selected problems will be announced with a relatively short lead time. Thus it is in your interest to stay current on the homework.</p>
+<p><strong>Chapter 1</strong> (page 20ff)</p>
+<ul>
+<li>Aug 26:</li>
+<li>Aug 28: 1, 3, 10, 14, 22</li>
+<li>Aug 30: 23, 24, 27, 57, 60, 80</li>
+<li>Sep 4: 40, 42, 47, 73, 74</li>
+<li>Sep 6: 62, 64, 68, 69, 84a</li>
+<li>Sep 9: 77, 83, 84b</li>
+</ul>
+<p><strong>Chapter 2</strong></p>
+<ul>
+<li>Sep 11: 1,3,8,10, 99</li>
+<li>Sep 13: 14, 19, 27, 28, 43, 46, 75</li>
+<li>Sep 16: 51, 52, 58, 73, 76, 77, 94</li>
+<li>Sep 18: 81, 84, 93, 101</li>
+</ul>
+<p><strong>Chapter 3</strong></p>
+<ul>
+<li>Oct 2: 1,2,3,6,7</li>
+<li>Oct 4: 8,11, 56, 62, 63</li>
+<li>Oct 7: 22, 24, 26, 31, 48, 67, 68</li>
+<li>Oct 9: 65, 66, 98, 99.</li>
+<li>Oct 11: 71, 101</li>
+</ul>
+<p><strong>Chapter 4</strong></p>
+<ul>
+<li>Oct 14: 1, 5, 7, 10, 11, 49</li>
+<li>Oct 16: 15, 16, 21, 24, 25, 52</li>
+<li>Oct 18: 28, 31, 32, 43, 56, 80</li>
+<li>Oct 21: 59, 60, 61, 62, 63, 82</li>
+</ul>
+<p><strong>Chapter 5 and <a href="https://www.people.vcu.edu/~rhammack/BookOfProof/Main.pdf">The Book Of Proof</a></strong></p>
+<ul>
+<li>Oct 21: Hammack pg. 264: 1,3,8,9</li>
+<li>Oct 23: Hammack pg. 264: 4,5,7,10,11</li>
+<li>Oct 25 Hammack pg. 264 14. pg. 268. 1, 2.</li>
+</ul>
+<p>Additional Problems:</p>
+<ul>
+<li><p>Prove that if <span class="math inline">\(p\)</span> is prime then <span class="math inline">\(\binom{p}{r}\)</span> is divisible by <span class="math inline">\(p\)</span>. Use this to prove that <span class="math inline">\(n^p\equiv n(\mod p)\)</span> for all <span class="math inline">\(n\)</span> and any prime number <span class="math inline">\(p\)</span>.</p></li>
+<li><p>Let <span class="math inline">\(f(x)=(1+x)^{n}\)</span>. Prove that the <span class="math inline">\(i^{th}\)</span> derivative <span class="math display">\[
+f^{i}(x)=\frac{n!}{(n-i)!}(1+x)^{n-i}
+\]</span> and therefore <span class="math inline">\(f^{i}(0)=n!/(n-i)!\)</span>. Taylor’s formula says that <span class="math display">\[
 (1+x)^{n}=\sum_{i=0}^{n}\frac{f^{i}(0)}{i!}x^{i}
-\] while the binomial theorem says that \[
+\]</span> while the binomial theorem says that <span class="math display">\[
 (1+x)^{n}=\sum_{i=0}^{n}\binom{n}{i}x^{i}.
-\] Use these facts to conclude that \(\binom{n}{i}=\frac{n!}{(n-i)!i!}\)
-
-\begin{itemize}
-\tightlist
-\item
-  Oct 28: Gilbert/Vanstone, Chapter 5: 23-32, 24, 29, 30, 32
-\item
-  Oct 30: GV Chapter 5: 31, 37, 41, 42, 44, 47, 48.
-\end{itemize}
-
-\end{document}
+\]</span> Use these facts to conclude that <span class="math inline">\(\binom{n}{i}=\frac{n!}{(n-i)!i!}\)</span></p></li>
+<li>Oct 28: Gilbert/Vanstone, Chapter 5: 23-32, 24, 29, 30, 32</li>
+<li><p>Oct 30: GV Chapter 5: 31, 37, 41, 42, 44, 47, 48.</p></li>
+</ul>
+</body>
+</html>
