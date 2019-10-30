@@ -73,13 +73,5 @@ Oct 21-25
 <p><strong>Proposition:</strong> Suppose that <span class="math inline">\(a(n)\)</span> converges to <span class="math inline">\(L\)</span>. Prove that <span class="math inline">\(a(n)^2\)</span> converges to <span class="math inline">\(L^2\)</span>.</p>
 <p><strong>Proof:</strong> <span class="math inline">\(|a(n)^2-L^2|=|a(n)^2-a(n)L+a(n)L-L^2|\le |a(n)||a(n)-L| + |L||a(n)-L|\)</span>. We can choose <span class="math inline">\(N\)</span> so that <span class="math inline">\(|a(n)|&lt;2L\)</span> and <span class="math inline">\(N&#39;\)</span> so that <span class="math inline">\(|a(n)-L|&lt;\epsilon/4L\)</span>. Then for <span class="math inline">\(n\)</span> bigger than both of these we have <span class="math display">\[|a(n)||a(n)-L|+|L||a(n)-L|\le (2L)\epsilon/4L+L\epsilon/4L=\epsilon/2+\epsilon/4=3\epsilon/4&lt;\epsilon.\]</span> Thus for <span class="math inline">\(n\ge\mathrm{max}(N,N&#39;)\)</span> we have <span class="math inline">\(|a(n)^2-L^2|&lt;\epsilon.\)</span></p>
 </div>
-<div id="sequences-1" class="slide section level2">
-<h1>Sequences</h1>
-<p>A <em>sequence</em> is an infinite sum, but it is really a shorthand for a series. The sequence <span class="math display">\[
-a_0+a_1+a_2+\ldots
-\]</span> is a short hand for the sequence of partial sums <span class="math inline">\((a_0,a_1+a_0,a_2+a_1+a_0,\ldots)\)</span>.</p>
-<p>A series converges to a limit <span class="math inline">\(L\)</span> means that the sequence of partial sums converges.</p>
-<p>Key example is the geometric series <span class="math inline">\(\sum_{n=0}^{\infty} ar^{n}\)</span>.</p>
-</div>
 </body>
 </html>
