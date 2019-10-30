@@ -28,6 +28,8 @@ Office hours: 9:00 - 10:00 Mondays, 12:15-13:00 Wednesdays (or by appointment)<b
 ### Other Information
 
 - <a href="Homework/Homework.html"> Homework </a>
+- <a href="Notes/StudyGuide.html"> Study Guide for First Exam </a>
+- <a href="Notes/StudyGuide2.html"> Study Guide for Second Exam </a>
 
 ### Euclidean Algorithm (from Euclid)
 
@@ -43,6 +45,8 @@ and [Proposition 2](https://mathcs.clarku.edu/~djoyce/java/elements/bookVII/prop
 - <a href="Notes/Week5.html"> Week Five </a>
 - <a href="Notes/Week6.html"> Week Six </a>
 - <a href="Notes/Week7.html"> Week Seven </a>
+- <a href="Notes/Week8.html"> Week Eight </a>
+- <a href="Notes/Week9.html"> Week Nine </a>
 
 For week 8, we will also rely on selected sections from [The Book of Proof](https://www.people.vcu.edu/~rhammack/BookOfProof/Main.pdf)
 by Richard Hammack.  In particular:
