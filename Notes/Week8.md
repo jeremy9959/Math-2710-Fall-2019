@@ -72,17 +72,6 @@ $$|a(n)||a(n)-L|+|L||a(n)-L|\le (2L)\epsilon/4L+L\epsilon/4L=\epsilon/2+\epsilon
 Thus for $n\ge\mathrm{max}(N,N')$ we have $|a(n)^2-L^2|<\epsilon.$
 
 
-## Sequences
-
-A *sequence* is an infinite sum, but it is really a shorthand for a series.  The sequence
-$$
-a_0+a_1+a_2+\ldots
-$$
-is a short hand for the sequence of partial sums $(a_0,a_1+a_0,a_2+a_1+a_0,\ldots)$.
-
-A series converges to a limit $L$ means that the sequence of partial sums converges.
-
-Key example is the geometric series $\sum_{n=0}^{\infty} ar^{n}$.
 
 
 
