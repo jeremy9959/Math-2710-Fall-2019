@@ -58,16 +58,19 @@ a\frac{r^{k+1}-1+r^{k+2}-r^{k+1}}{r-1}=a\frac{r^{k+2}-1}{r-1}.
 \]</span></p>
 </div>
 <div id="infinite-geometric-seriens" class="slide section level2">
-<h1>infinite geometric seriens</h1>
+<h1>Infinite geometric seriens</h1>
 <p><strong>Proposition:</strong> If <span class="math inline">\(|r|&lt;1\)</span>, the infinite geometric series <span class="math display">\[
 a+ar+ar^2+\cdots
 \]</span> converges to <span class="math display">\[
-\frac{a}{r-1}.
+\frac{a}{1-r}.
 \]</span></p>
-<p>Proof: use the limit rules.</p>
+<p><strong>Proof:</strong> The partial sums are <span class="math inline">\(s(n)=a\frac{r^{n+1}-1}{r-1}\)</span>. Since <span class="math inline">\(\frac{a}{1-r}\)</span> is a constant we can write this as <span class="math display">\[
+s(n)=\frac{a}{1-r}(1-r^{n+1}).
+\]</span></p>
+<p>Now the sequence <span class="math inline">\(r^{n+1}\)</span> converges to zero when <span class="math inline">\(r&lt;1\)</span> (proof?) and so <span class="math inline">\(1-r^{n+1}\)</span> converges to <span class="math inline">\(1\)</span> (proof) and so <span class="math inline">\(s(n)\)</span> converges to <span class="math inline">\(a/(1-r)\)</span>.</p>
 </div>
 <div id="other-examples" class="slide section level2">
-<h1>other examples</h1>
+<h1>Other examples</h1>
 <p>The harmonic series <span class="math display">\[
 1+1/2+1/3+\cdots
 \]</span> does not converge. For a proof, see problem 33 on page 105 of the Gilbert-Vanstone book where they ask you to show by induction that, for all <span class="math inline">\(n\)</span>, <span class="math display">\[
@@ -80,10 +83,62 @@ a+ar+ar^2+\cdots
 .a_0a_1a_2\cdots = \sum_{i=0}^{\infty} a_{i}10^{-i}
 \]</span></p>
 <p>An eventually repeating decimal is a decimal expansion such that there is an <span class="math inline">\(N\)</span> and a <span class="math inline">\(k\)</span> so that for all <span class="math inline">\(i\ge N\)</span> we have <span class="math inline">\(a_{i+k}=a_{i}\)</span>. In other words there is a block of <span class="math inline">\(k\)</span> digits <span class="math inline">\(a_N, a_{N+1},\cdots,a_{N+k}\)</span> that repeat over and over.</p>
-<p><strong>Proposition:</strong> An eventually repeating decimal converges to a rational number.</p>
 </div>
-<div id="base-r-expansions" class="slide section level2">
-<h1>Base <span class="math inline">\(r\)</span> expansions</h1>
+<div id="repeating-decimals-converge-to-rational-numbers" class="slide section level2">
+<h1>Repeating decimals converge to rational numbers</h1>
+<p><strong>Proposition:</strong> An eventually repeating decimal converges to a rational number.</p>
+<p><strong>Proof:</strong> First suppose our decimal begins repeating right at the decimal point, so it looks like <span class="math inline">\(a_1 a_2\cdots a_k a_1 a_2\cdots\)</span>. Let <span class="math inline">\(A\)</span> be the integer <span class="math inline">\(a_1a_2\cdots a_k\)</span>. Then the decimal corresponds to the series <span class="math display">\[
+\frac{A}{10^{k}}(1+\frac{1}{10^{k}}+\cdots)
+\]</span> This is a geometric series which we know converges to <span class="math display">\[
+\frac{A}{10^{k}}\frac{1}{1-(1/10)^{k}}
+\]</span> which is a rational number.</p>
+</div>
+<div id="repeating-decimals-contd" class="slide section level2">
+<h1>Repeating decimals cont’d</h1>
+<p>If the decimal <span class="math inline">\(x\)</span> has an initial, non repeating part, of length <span class="math inline">\(N\)</span>, with digits <span class="math inline">\(a_1 a_2 \ldots a_N\)</span> followed by blocks of <span class="math inline">\(k\)</span> digits <span class="math inline">\(b_1 b_2\ldots b_k\)</span>, we can split out the leading part and write <span class="math inline">\(x\)</span> as the series:</p>
+<p><span class="math display">\[
+x=\frac{A}{10^{N}}+\frac{1}{10^{N+k}}(B + B/10^{k} + \cdots)
+\]</span> where <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are the integers made up of the initial digits and the repeating block respectively. The second part of this series converges to a rational number by the earlier work, and so the sum is a rational number.</p>
+</div>
+<div id="base-r" class="slide section level2">
+<h1>Base <span class="math inline">\(r\)</span></h1>
+<p>There was nothing special about base <span class="math inline">\(10\)</span> and the same would be true for repeating “decimals” in any base.</p>
+</div>
+<div id="every-rational-has-a-repeating-decimal-expansion" class="slide section level2">
+<h1>Every rational has a repeating decimal expansion</h1>
+<p>For the converse we make an inductive argument. We are given a fraction <span class="math inline">\(a/b\)</span> and we want to construct a decimal expansion and prove that it is repeating. First, we use the division algorithm to write <span class="math inline">\(a=qb+r\)</span> and see that <span class="math inline">\(a/b = q +r/b\)</span>. Now we proceed as follows. We multiply <span class="math inline">\(r\)</span> by <span class="math inline">\(10\)</span> and divide again by <span class="math inline">\(b\)</span> using the division algorithm: <span class="math display">\[
+10r = q_1b+r_1.
+\]</span></p>
+</div>
+<div id="repeating-decimals-continued" class="slide section level2">
+<h1>Repeating decimals continued</h1>
+<p>This tells us that <span class="math inline">\(r/b = q_1/10+r_1/10b\)</span> Since <span class="math inline">\(r_1&lt;b\)</span>, the fraction <span class="math inline">\(r_1/10b\)</span> is less than <span class="math inline">\(1/10\)</span>. Also, since <span class="math inline">\(r_1&lt;b\)</span>, <span class="math inline">\(10r_1&lt;10b\)</span> and so <span class="math inline">\(q_1&lt;10\)</span>. Therefore <span class="math inline">\(q_1\)</span> is the first decimal digit of <span class="math inline">\(r/b\)</span>. Now we repeat the process with <span class="math inline">\(r_1\)</span>: <span class="math display">\[
+10r_1 = q_2b+r_2
+\]</span> which yields <span class="math inline">\(r_1/b = q_2/10 + r_2/(10b)\)</span> or <span class="math display">\[
+r/b=q_1/10+q_2/100+r_2/(100b).
+\]</span> Again, <span class="math inline">\(q_2&lt;10\)</span> and <span class="math inline">\(r_2/100b&lt;1/100\)</span>.</p>
+</div>
+<div id="repeating-decimals-continued-1" class="slide section level2">
+<h1>Repeating decimals continued</h1>
+<p>Now we proceed by induction. Suppose we have <span class="math display">\[
+r/b = q_1/10+q_2/100+\cdots+q_n/10^{n}+\frac{r_n}{10^{n}b}
+\]</span> with each <span class="math inline">\(q_i&lt;10\)</span> and <span class="math inline">\(r_n&lt;b\)</span> so that <span class="math inline">\(r_n/(10^{n}b)&lt;1/10^{n}\)</span>. Define <span class="math inline">\(r_{n+1}\)</span> by dividing by <span class="math inline">\(10r_{n}\)</span> by <span class="math inline">\(b\)</span>: <span class="math display">\[
+10r_{n}=q_{n+1}b+r_{n+1}.
+\]</span> Again, <span class="math inline">\(q_{n+1}&lt;10\)</span> and <span class="math inline">\(r_{n+1}&lt;b\)</span>. Also <span class="math display">\[
+r_{n}/b=\frac{q_{n+1}}{10}+\frac{r_{n+1}}{10b}
+\]</span> so <span class="math display">\[
+r/b = \frac{q_1}{10}+\frac{q_2}{100}+\cdots+\frac{q_n}{10^n}+\frac{q_{n+1}}{10^{n+1}}+\frac{r_{n+1}}{10^{n+1}b}.
+\]</span></p>
+</div>
+<div id="finishing-up" class="slide section level2">
+<h1>Finishing up</h1>
+<p>The key final observation in the proof is that the sequence of remainders <span class="math inline">\(r_{n+1}\)</span> have two important properties:</p>
+<ul>
+<li>First, they are all between <span class="math inline">\(0\)</span> and <span class="math inline">\(b\)</span>, and second</li>
+<li>Knowing <span class="math inline">\(r_{n}\)</span> determines <span class="math inline">\(r_{n+1}\)</span>.</li>
+</ul>
+<p>These two facts force the sequence of remainders to ultimately repeat, because after considering <span class="math inline">\(b+1\)</span> of them there have to be two of them which are equal; say <span class="math inline">\(r_{k}=r_{j}\)</span> for some pair <span class="math inline">\(k,j\)</span> with <span class="math inline">\(j&gt;k\)</span>. But then <span class="math inline">\(r_{k+1}=r_{j+1}\)</span>, <span class="math inline">\(r_{k+2}=r_{j+2}\)</span>, and so on, and in fact <span class="math inline">\(r_{i+(j-k)}=r_{i}\)</span> for any <span class="math inline">\(i\ge k\)</span>. Thus the sequence of <span class="math inline">\(r\)</span>’s, and therefore the sequence of <span class="math inline">\(q\)</span>’s, eventually becomes periodic.</p>
+<p><strong>Other bases:</strong> Notice that there was nothing special about <span class="math inline">\(10\)</span> in the proof above, so rational numbers have periodic expansions in any base.</p>
 </div>
 </body>
 </html>
