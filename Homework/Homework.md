@@ -71,3 +71,14 @@ Use these facts to conclude that $\binom{n}{i}=\frac{n!}{(n-i)!i!}$
 
 - Oct 28: Gilbert/Vanstone, Chapter 5: 23-32,  24, 29, 30, 32
 - Oct 30: GV Chapter 5: 31, 37, 41, 42, 44, 47, 48.
+
+**Chapters 12 and 14 of [The Book of Proof](https://www.people.vcu.edu/~rhammack/BookOfProof/Main.pdf)**
+
+- Nov 11: Hammack p. 228: 2, 4, 7, 8; p. 232: 2, 4, 8, 12, 14
+- Nov 13: Hammack p. 232: 16, 18. p. 238: 2, 4, 8, 10. p. 241: 2, 6, 8.
+- Nov 15: Hammack p. 243: 2, 6, 8, 10.
+- Nov 18: Hammack p. 274: 2, 4, 12, 14, 16
+- Nov 20: Hammack p. 280: 2, 4, 8, 12, 14
+- Nov 22: Hammack p. 280: 10, p. 283: 1, 2, 6, 8, 10.
+
+
