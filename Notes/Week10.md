@@ -44,4 +44,26 @@ A function is *surjective* if for every $b\in B$ there is an $a$ with $(a,b)\in 
 
 - Consider maps from $\{0,1,2\}$ to $\{0,1,2\}$.  how many are there?  How many are injective? How many surjective? How many bijective?
 
+- The function  $f:\mathbb{Z}_m\to \mathbb{Z}_m$ given by $f(x)=ax$ is bijective if $\mathrm{gcd}(a,m)=1$.  
+
+## Composition of functions
+
+**Definition:** Suppose that $f:A\to B$ is a function and $g:B\to C$ is a function.  The *composition* $g\circ f$ is a function from $A\to C$
+defined by $(g\circ f)(a)=g(f(a))$.  
+
+This makes sense because $f(a)\in B$ and $g:B\to C$.  
+
+**Examples:** 
+
+- $f:\mathbf{R}\to\mathbf{R}$ given by $f(x)=x^2$, and $g:\mathbf{R}\to\mathbf{R}$ with $g(x)=\sin(x)$.  What are $f\circ g$ and $g\circ f$?
+
+- $A=\{0,1,2,3\}$, $B=\{1,2,3,4\}$, $C=\{1,3,5,6\}$.   $f=\{(0,1),(1,2), (2,3),(3,3)\}$ in $A\times B$.  $g=\{(1,3), (2,3),(3,3),4,3)\}$ in $B\times C$. 
+What is the composition?
+
+## Properties of composition
+
+**Theorem:** Composition of functions is associative.
+
+**Theorem:** If $f:A\to B$ and $g:B\to C$ are injective then $g\circ f$ is injective.  Similarly if $f$ and $g$ are surjective then $g\circ f$ is surjective.
+And if both are bijective, so is the composition.
 
