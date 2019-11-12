@@ -47,6 +47,7 @@ and [Proposition 2](https://mathcs.clarku.edu/~djoyce/java/elements/bookVII/prop
 - <a href="Notes/Week7.html"> Week Seven </a>
 - <a href="Notes/Week8.html"> Week Eight </a>
 - <a href="Notes/Week9.html"> Week Nine </a>
+- <a href="Notes/Week10.html"> Week Ten </a>
 
 For week 8, we will also rely on selected sections from [The Book of Proof](https://www.people.vcu.edu/~rhammack/BookOfProof/Main.pdf)
 by Richard Hammack.  In particular:
@@ -57,5 +58,6 @@ by Richard Hammack.  In particular:
 
 and the associated problems.
 
+For Weeks 10-11, we will also rely on Hammack's Chapter 12 and 14 (in addition to Chapter 6 of Gilbert-Vanstone).
 
 
