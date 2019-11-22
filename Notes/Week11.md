@@ -91,13 +91,23 @@ the disjoint union of $A$ and $B$, which is therefore countable, so its subset $
 - The real numbers are uncountable.
 (diagonal argument)
 
+- The open open infinite interval $(0,\infty)$ has the same cardinality as $\mathbb{R}$.   Use the $\log(x)$ and $\exp(x)$
+as bijections.
+
+- If a subset $U$ of $A$ is uncountable, so is $A$.  Proof: Suppose not.  Then $A$ is countable, so $U$ is a subset of a countable set and therefore countable. 
+
 ## power sets
 
 **Theorem:** (Cantor)  The power set of a set $A$ has a "larger" cardinality than $A$.
 
 **Proof:** The map $a\to\{a\}$ puts $A$ inside $\mathcal{P}(A)$ so $\mathcal{P}(A)$ is bigger than or equal to $A$ in
 cardinality.  Suppose there is a bijection $f:A\to \mathcal{P}(A)$.  Let $U=\{a\in A: a\not\in f(a)\}$.
-This is a subset of $A$ so an element of $\mathcal{P}(A)$.  
+This is a subset of $A$ so an element of $\mathcal{P}(A)$.    Suppose $f(x)=U$.  Now if $x\in U$, then $x\in f(x)$,
+so $x\not\in U$.  But if $x\not\in U$, then $x\not\in f(x)$ so $x\in U$.  Neither is possible, so $U$ cannot
+be in the range of $f$, so $f$ is not bijective.
+
+
+
 
 
 
