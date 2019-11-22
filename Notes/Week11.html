@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="November 17-21" />
+  <title>Math 2710</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Math 2710</h1>
+  <p class="author">
+November 17-21
+  </p>
+</div>
+<div id="finite-and-countable-sets" class="slide section level2">
+<h1>Finite and countable sets</h1>
+<p><strong>Definition:</strong> For <span class="math inline">\(n\in\mathbb{N}\)</span> (where <span class="math inline">\(\mathbb{N}\)</span> are the natural numbers), we let <span class="math inline">\([n]\)</span> denote the set <span class="math inline">\(\{1,2,\ldots, n\}\)</span>.</p>
+<ul>
+<li><p>Two sets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> <em>have the same cardinality</em> if there is a bijective map <span class="math inline">\(f:A\to B\)</span>.</p></li>
+<li><p>A set <span class="math inline">\(A\)</span> is finite if there exists an <span class="math inline">\(n\)</span> so that <span class="math inline">\(A\)</span> has the same cardinality as <span class="math inline">\([n]\)</span>. Otherwise, <span class="math inline">\(A\)</span> is infinite.</p></li>
+<li><p>A set <span class="math inline">\(A\)</span> is countable if it is finite or if it has the same cardinality as <span class="math inline">\(\mathbb{N}\)</span>. In the latter case it is called “countably infinite.”</p></li>
+<li><p>An infinite set that is not countably infinite is called <em>uncountable.</em></p></li>
+</ul>
+</div>
+<div id="some-properties-of-cardinality" class="slide section level2">
+<h1>Some properties of cardinality</h1>
+<p><strong>Proposition:</strong> The relation “having the same cardinality” is an equivalence relation.</p>
+<p><strong>Proof:</strong> First, <span class="math inline">\(A\)</span> has the same cardinality as <span class="math inline">\(A\)</span> because the identity map (which sends <span class="math inline">\(a\in A\)</span> to itself) is a bijection. Second, if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same cardinality, that means there is a bijection <span class="math inline">\(f:A\to B\)</span>. But then the inverse function <span class="math inline">\(f^{-1}:B\to A\)</span> is a bijection in the other direction, so the relation is symmetric. Finally, suppose <span class="math inline">\(A\)</span> has the same cardinality as <span class="math inline">\(B\)</span>, and <span class="math inline">\(B\)</span> has the same cardinality as <span class="math inline">\(C\)</span>. Then there is a bijection <span class="math inline">\(f:A\to B\)</span> and <span class="math inline">\(g:B\to C\)</span>. The composition <span class="math inline">\(g\circ f:A\to C\)</span> is again a bijection, so <span class="math inline">\(A\)</span> and <span class="math inline">\(C\)</span> have the same cardinality.</p>
+</div>
+<div id="more-properties" class="slide section level2">
+<h1>More properties</h1>
+<p><strong>Proposition:</strong> An infinite subset <span class="math inline">\(T\)</span> of <span class="math inline">\(\mathbb{N}\)</span> is countably infinite.</p>
+<p>Proof: We construct a map <span class="math inline">\(\mathbb{N}\to T\)</span>. Let <span class="math inline">\(f(1)\)</span> be the smallest element of <span class="math inline">\(T\)</span>. For <span class="math inline">\(n&gt;1\)</span>, let <span class="math inline">\(T(n)=\{x\in T: x&gt;f(n-1)\}\)</span>. If <span class="math inline">\(T(n)\)</span> is empty, then <span class="math inline">\(T\)</span> is finite, which isn’t true; so by the well-ordering principle <span class="math inline">\(T(n)\)</span> has a smallest element. Let <span class="math inline">\(f(n)\)</span> be the smallest element of <span class="math inline">\(T(n)\)</span> for <span class="math inline">\(n\ge 2\)</span>.<br />
+<span class="math inline">\(f\)</span> is injective because <span class="math inline">\(f(1)&lt;f(2)&lt;\cdots\)</span>. We will show that <span class="math inline">\(f\)</span> is surjective. Suppose not. Then there is a smallest element x of <span class="math inline">\(T\)</span> for which there is no <span class="math inline">\(n\)</span> with <span class="math inline">\(f(n)=x\)</span>. Choose the largest element of <span class="math inline">\(T\)</span> which is smaller than <span class="math inline">\(x\)</span> and then there is an <span class="math inline">\(m\)</span> with <span class="math inline">\(f(m)=x\)</span>. But then <span class="math inline">\(x\)</span> is the smallest element of <span class="math inline">\(T(m+1)\)</span> so <span class="math inline">\(f(m+1)=x\)</span>, contradicting our choice of <span class="math inline">\(x\)</span>. Thus <span class="math inline">\(f\)</span> is surjective and therefore bijective.</p>
+</div>
+<div id="more-properties-1" class="slide section level2">
+<h1>more properties</h1>
+<p><strong>Proposition:</strong> An infinite subset <span class="math inline">\(T\)</span> of a countably infinite set <span class="math inline">\(S\)</span> is countably infinite.</p>
+<p><strong>Proof:</strong> There is a bijection <span class="math inline">\(f:\mathbb{N}\to S\)</span> since <span class="math inline">\(S\)</span> is countable. Let <span class="math inline">\(U\)</span> be the subset of <span class="math inline">\(\mathbf{N}\)</span> consisting of <span class="math inline">\(\{x\in \mathbb{N}: f(x)\in U\}.\)</span> This is an infinite subset of <span class="math inline">\(\mathbb{N}\)</span> which is therefore countably infinite and in bijection with <span class="math inline">\(U\)</span>, so <span class="math inline">\(U\)</span> is countably infinite.</p>
+</div>
+<div id="the-product-of-countable-sets" class="slide section level2">
+<h1>The product of countable sets</h1>
+<p><strong>Proposition:</strong> If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are countable, then so is <span class="math inline">\(A\times B\)</span>.</p>
+<p><strong>Proof:</strong> this is the “digaonals” argument.</p>
+<p><strong>Propositon:</strong> If <span class="math inline">\(A_1,\ldots, A_n\)</span> are countable then so is <span class="math inline">\(A_1\times A_2\times\cdots\times A_n\)</span>.</p>
+<p><strong>Proof:</strong> By induction. We know <span class="math inline">\(A_1\times A_2\)</span> is countable. Assume <span class="math inline">\(A_1\times\cdots\times A_n\)</span> is countable. Then <span class="math inline">\(A_1\times\cdots\times A_{n+1}\)</span> is countable because it is <span class="math inline">\((A_1\times\cdots\times A_n)\times A_{n+1}\)</span>.</p>
+</div>
+<div id="the-union-of-countable-sets" class="slide section level2">
+<h1>the union of countable sets</h1>
+<p><strong>Proposition:</strong> If <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are countable, so is <span class="math inline">\(A\cup B\)</span>.</p>
+<p><strong>Proof:</strong> The union of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> is a subject of the disjoint union of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>. Construct bijections <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> of <span class="math inline">\(\mathbb{N}\)</span> to each of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>. Define a new function <span class="math inline">\(a\)</span> with <span class="math inline">\(a(2n)=f(n)\)</span> and <span class="math inline">\(a(2n-1)=g(n)\)</span> for <span class="math inline">\(n=1,\ldots\)</span>. Then <span class="math inline">\(a\)</span> is a bijection of <span class="math inline">\(\mathbb{N}\)</span> with the disjoint union of <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span>, which is therefore countable, so its subset <span class="math inline">\(A\cup B\)</span> is also countable.</p>
+</div>
+<div id="more-properties-2" class="slide section level2">
+<h1>more properties</h1>
+<p><strong>Proposition:</strong> The integers are countable.</p>
+<p><strong>Proof:</strong> <span class="math inline">\(\mathbb{Z}\)</span> is the union of <span class="math inline">\(0,1,\ldots\)</span> and <span class="math inline">\(-1,-2,\ldots\)</span> each of which is countable.</p>
+<p><strong>Proposition:</strong> The rational numbers are countable..</p>
+<p><strong>Proof:</strong> The set of ordered pairs of integers <span class="math inline">\((a,b)\)</span> is countable, and the rational numbers is in bijection witha subset of this set.</p>
+</div>
+<div id="uncountable-sets" class="slide section level2">
+<h1>Uncountable sets</h1>
+<ul>
+<li><p>The set of infinite sequences <span class="math inline">\([a_1,a_2,a_3,\ldots]\)</span> with <span class="math inline">\(a_i\in\mathbb{N}\)</span> is uncountable. (this is the diagonal argument)</p></li>
+<li><p>The real numbers are uncountable. (diagonal argument)</p></li>
+<li><p>The open open infinite interval <span class="math inline">\((0,\infty)\)</span> has the same cardinality as <span class="math inline">\(\mathbb{R}\)</span>. Use the <span class="math inline">\(\log(x)\)</span> and <span class="math inline">\(\exp(x)\)</span> as bijections.</p></li>
+<li><p>If a subset <span class="math inline">\(U\)</span> of <span class="math inline">\(A\)</span> is uncountable, so is <span class="math inline">\(A\)</span>. Proof: Suppose not. Then <span class="math inline">\(A\)</span> is countable, so <span class="math inline">\(U\)</span> is a subset of a countable set and therefore countable.</p></li>
+</ul>
+</div>
+<div id="power-sets" class="slide section level2">
+<h1>power sets</h1>
+<p><strong>Theorem:</strong> (Cantor) The power set of a set <span class="math inline">\(A\)</span> has a “larger” cardinality than <span class="math inline">\(A\)</span>.</p>
+<p><strong>Proof:</strong> The map <span class="math inline">\(a\to\{a\}\)</span> puts <span class="math inline">\(A\)</span> inside <span class="math inline">\(\mathcal{P}(A)\)</span> so <span class="math inline">\(\mathcal{P}(A)\)</span> is bigger than or equal to <span class="math inline">\(A\)</span> in cardinality. Suppose there is a bijection <span class="math inline">\(f:A\to \mathcal{P}(A)\)</span>. Let <span class="math inline">\(U=\{a\in A: a\not\in f(a)\}\)</span>. This is a subset of <span class="math inline">\(A\)</span> so an element of <span class="math inline">\(\mathcal{P}(A)\)</span>. Suppose <span class="math inline">\(f(x)=U\)</span>. Now if <span class="math inline">\(x\in U\)</span>, then <span class="math inline">\(x\in f(x)\)</span>, so <span class="math inline">\(x\not\in U\)</span>. But if <span class="math inline">\(x\not\in U\)</span>, then <span class="math inline">\(x\not\in f(x)\)</span> so <span class="math inline">\(x\in U\)</span>. Neither is possible, so <span class="math inline">\(U\)</span> cannot be in the range of <span class="math inline">\(f\)</span>, so <span class="math inline">\(f\)</span> is not bijective.</p>
+</div>
+</body>
+</html>
