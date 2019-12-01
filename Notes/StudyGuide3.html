@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>StudyGuide3</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h2 id="final-exam-study-guide">Final Exam Study Guide</h2>
+<p><strong>Overview:</strong> The final exam is two hours long and will cover material from the entire course. However, it will have some emphasis on material covered since the second midterm – roughly 40-50% on the new material and 50% on the earlier material. <em>This study guide covers only the new material</em> and you should use it together with the first two guides to have the full picture of material to be covered.</p>
+<h3 id="functions-chapter-12-of-hammack-not-including-sections-12.3-and-12.6">Functions (Chapter 12 of Hammack, not including Sections 12.3 and 12.6)</h3>
+<p>You should be able to do essentially all of the problems in Sections 12.1-12.2 and 12.4-12.5 of Hammack.</p>
+<p>Take special note of:</p>
+<ul>
+<li><p>Definition of a function as a set of ordered pairs with certain properties (you should know this definition and how to apply it cold). Cartesian Product of two sets. Domain, codomain, and range. Different ways to represent functions (formulas, traditional graphs, circle and arrow pictures, such as Figures 12.1, 12.2, and 12.3 in Hammack).</p></li>
+<li><p>Definition of <em>injective</em> function. (Know this cold!) Ability to provide examples of functions that <em>are</em> and <em>are not</em> injective. Ability to recognize injectivity from the various types of pictures of functions. Ability to prove a function is injective, or disprove it.</p></li>
+<li><p>Definition of <em>surjective</em> function (know this cold!) Same goals as with injective functions</p></li>
+<li><p>Definition of <em>bijective</em> function (know this cold!) Same goals again.</p></li>
+</ul>
+<p>From Section 12.2, take special note of problems 1,2,4, 10, 11, 12, 17, 18 as well as the problems that I assigned from this section.</p>
+<ul>
+<li>Composition of functions. Properties of composition (such as associativity, Theorem 12.1) and relationship between injectivity/surjectivity of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> with injectivity/surjectivity of <span class="math inline">\(g\circ f\)</span> (Theorem 12.2). Understand and be able to use the key steps in the proofs of Theorems 12.1 and 12.2.</li>
+</ul>
+<p>Again, the problems on page 238 are all relevant.</p>
+<ul>
+<li>Inverse functions. Know the definition of an inverse function (the correct one, not the one I mangled in class. I will provide one below.) Understand and be able to apply the ideas that relate bijectivity of <span class="math inline">\(f\)</span> to the existence of an inverse for <span class="math inline">\(f\)</span>. <strong>IMPORTANT:</strong> This is one area where Gilbert and Vanstone is more useful than Hammack, because Hammack’s proof of Theorem 12.3 uses the notion of “inverse relation” which I did not discuss. I will provide a proof of this theorem as part of this study guide for the sake of consistency.</li>
+</ul>
+<p>The problems in Hammack, Section 12.5 are all relevant. In addition, you should be able to prove: - that if <span class="math inline">\(f\)</span> has an inverse, then <span class="math inline">\(f\)</span> is bijective; and - if <span class="math inline">\(f\)</span> is bijective then it has an inverse. See below.</p>
+<h3 id="cardinality-section-14.1-and-14.2">Cardinality (Section 14.1 and 14.2)</h3>
+<p>Know what it means to say that two sets have <em>the same cardinality</em>. Know the definition of <em>countably infinite</em> and <em>uncountable</em> set. Pay particular attention:</p>
+<ul>
+<li>to the argument in Theorem 14.2 that shows that the real numbers are NOT countable.</li>
+<li>to the argument in Figure 14.2 that shows the product of two countably infinite sets is countable</li>
+<li>to the argument in Theorem 14.4 that shows that the rational numbers are countable.</li>
+</ul>
+<p>You should be able to produce and explain these arguments.</p>
+<p>You should be able to produce other examples of both countable and uncountable sets and explain why they are countable or not. For example, make sure you see why Figure 14.1 shows that <span class="math inline">\((0,\infty)\)</span> and <span class="math inline">\((0,1)\)</span> have the same cardinality and what’s involved in proving this.</p>
+<p>In addition, the problems in 14.1 and 14.2 are relevant.</p>
+<h2 id="inverse-functions">Inverse functions</h2>
+<p>This section is designed to clarify the relationship between inverse functions and bijectivity.</p>
+<p><strong>Definition:</strong> Let <span class="math inline">\(f:A\to B\)</span> be a function. An inverse function <span class="math inline">\(f^{-1}\)</span> to <span class="math inline">\(f\)</span> is a function <span class="math inline">\(f^{-1}:B\to A\)</span> such that <span class="math inline">\(f^{-1}(f(a))=a\)</span> for all <span class="math inline">\(a\in A\)</span> and <span class="math inline">\(f(f^{-1}(b))=b\)</span> for all <span class="math inline">\(b\in B\)</span>.</p>
+<p>To test your understanding of this definition, prove that if <span class="math inline">\(f^{-1}\)</span> is an inverse function for <span class="math inline">\(f\)</span>, then <span class="math inline">\(f\)</span> is an inverse function for <span class="math inline">\(f^{-1}\)</span>.</p>
+<p><strong>Theorem:</strong> A function <span class="math inline">\(f:A\to B\)</span> has an inverse function <span class="math inline">\(f^{-1}\)</span> if and only if <span class="math inline">\(f\)</span> is bijective.</p>
+<p><strong>Proof:</strong> Suppose first that <span class="math inline">\(f\)</span> is bijective. As a set of ordered pairs in <span class="math inline">\(A\times B\)</span>, we have by definition: <span class="math display">\[
+f=\{(x,f(x)):x\in A\}$
+\]</span> Let <span class="math inline">\(h=\{(f(x),x):(x,f(x))\in f\}\)</span> be the set of points in <span class="math inline">\(B\times A\)</span> obtained by switching the entries of each pair in <span class="math inline">\(f\)</span>.</p>
+<p><strong>Step 1:</strong> <span class="math inline">\(h\)</span> is in fact a function from <span class="math inline">\(B\)</span> to <span class="math inline">\(A\)</span>. To check this, we need to know that <em>every element <span class="math inline">\(b\in B\)</span> occurs as the first element of a pair <span class="math inline">\((f(x),x)\)</span> exactly one time.</em> So first we check that every element of <span class="math inline">\(b\in B\)</span> occurs at least once. For this, we need to know that, for every element <span class="math inline">\(b\in B\)</span>, there is an <span class="math inline">\(x\in A\)</span> so that <span class="math inline">\(f(x)=b\)</span>. But since <span class="math inline">\(f\)</span> is bijective, it is surjective, and therefore such an <span class="math inline">\(x\)</span> exists. Next, we need to know that there is only <em>one</em> pair with first element <span class="math inline">\(b\)</span>. Suppose there were two – this would mean that there were <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> in <span class="math inline">\(A\)</span> so that <span class="math inline">\((f(x),x)\)</span> and <span class="math inline">\((f(y),y)\)</span> both have <span class="math inline">\(b\)</span> in the first slot, meaning that <span class="math inline">\(f(x)=b\)</span> and <span class="math inline">\(f(y)=b\)</span>. Since <span class="math inline">\(f\)</span> is injective, this can only happen if <span class="math inline">\(x=y\)</span>. So there is only one pair with <span class="math inline">\(b\)</span> in the first slot. That finishes the proof of this direction. <strong>NOTICE HOW WE USE BOTH INJECTIVITY AND SURJECTIVITY</strong></p>
+<p><strong>Step 2:</strong> Now we need to check that <span class="math inline">\(h\)</span> is actually <span class="math inline">\(f^{-1}\)</span>. Given <span class="math inline">\(x\in A\)</span>, Let’s look at <span class="math inline">\(h(f(x))\)</span>. For <span class="math inline">\(f(x)\)</span> we have the pair <span class="math inline">\((x,f(x))\)</span>. For <span class="math inline">\(h(f(x))\)</span> we need the pair with <span class="math inline">\(f(x)\)</span> in the first slot, but by definition that is <span class="math inline">\((f(x),x)\)</span>. So <span class="math inline">\(h(f(x))=x\)</span>. Now take <span class="math inline">\(y\in B\)</span>. Then we need to find the pair in <span class="math inline">\(h\)</span> with <span class="math inline">\(y\)</span> in its first slot. TO do that, we find <span class="math inline">\(y=f(x)\)</span>, and then the pair is <span class="math inline">\((y=f(x),x)\)</span>. Therefore <span class="math inline">\(h(y)=x\)</span> and <span class="math inline">\(f(h(y))=f(x)=y\)</span>. So <span class="math inline">\(h\)</span> satisfies <span class="math inline">\(h(f(x))=x\)</span> and <span class="math inline">\(f(h(y))=y\)</span> for <span class="math inline">\(x\in A\)</span> and <span class="math inline">\(y\in B\)</span>, so <span class="math inline">\(h=f^{-1}\)</span>.</p>
+<p>Now suppose that <span class="math inline">\(f\)</span> has an inverse function <span class="math inline">\(f^{-1}\)</span>. We must show that <span class="math inline">\(f\)</span> is bijective. Let’s first check that <span class="math inline">\(f\)</span> is injective. Suppose <span class="math inline">\(u,v \in A\)</span> and <span class="math inline">\(f(u)=f(v)\)</span>. Then <span class="math inline">\(f^{-1}(f(u))=f^{-1}(f(v))\)</span> so <span class="math inline">\(u=v\)</span>. Thus <span class="math inline">\(f\)</span> is injective. Next, we must show that <span class="math inline">\(f\)</span> is surjective. For that, choose <span class="math inline">\(b\in B\)</span>. We want to find <span class="math inline">\(x\in A\)</span> so that <span class="math inline">\(f(x)=b\)</span>. Apply <span class="math inline">\(f^{-1}\)</span> to both sides to get <span class="math inline">\(f^{-1}(f(x))=f^{-1}(b)\)</span>. Let <span class="math inline">\(x=f^{-1}(b)\)</span>. Then <span class="math inline">\(f(x)=f(f^{-1}(b))=b\)</span> so <span class="math inline">\(f\)</span> is surjective, and therefore bijective.</p>
+</body>
+</html>
