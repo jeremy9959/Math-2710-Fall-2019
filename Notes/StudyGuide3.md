@@ -45,6 +45,8 @@ In addition, you should be able to prove:
 - if $f$ is bijective then it has an inverse.
 See below.
 
+
+
 ### Cardinality (Section 14.1 and 14.2)
 
 Know what it means to say that two sets have *the same cardinality*.  Know the definition of *countably infinite* and *uncountable* set.  Pay particular attention:
@@ -60,6 +62,14 @@ explain why they are countable or not.  For example, make sure you see why Figur
 shows that $(0,\infty)$ and $(0,1)$ have the same cardinality and what's involved in proving this. 
 
 In addition, the problems in 14.1 and 14.2 are relevant. 
+
+## Gilbert and Vanstone 
+
+Although we have primarily followed Hammack for this portion of the course, there are useful problems
+in Gilbert and Vanstone and you should be able to do the following problems from  Chapter 6, pp. 153-161:
+
+Problems 1-17, 24-28, 35, 37, 38, 41, 99, 100.
+
 
 ## Inverse functions
 
