@@ -30,6 +30,7 @@ Office hours: 9:00 - 10:00 Mondays, 12:15-13:00 Wednesdays (or by appointment)<b
 - <a href="Homework/Homework.html"> Homework </a>
 - <a href="Notes/StudyGuide.html"> Study Guide for First Exam </a>
 - <a href="Notes/StudyGuide2.html"> Study Guide for Second Exam </a>
+- <a href="Notes/StudyGuide3.html"> Study Guide for Final Exam </a>
 
 ### Euclidean Algorithm (from Euclid)
 
