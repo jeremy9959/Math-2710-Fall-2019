@@ -48,6 +48,7 @@ and [Proposition 2](https://mathcs.clarku.edu/~djoyce/java/elements/bookVII/prop
 - <a href="Notes/Week8.html"> Week Eight </a>
 - <a href="Notes/Week9.html"> Week Nine </a>
 - <a href="Notes/Week10.html"> Week Ten </a>
+- <a href="Notes/Week11.html"> Week Eleven </a>
 
 For week 8, we will also rely on selected sections from [The Book of Proof](https://www.people.vcu.edu/~rhammack/BookOfProof/Main.pdf)
 by Richard Hammack.  In particular:
