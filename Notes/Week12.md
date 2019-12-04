@@ -22,11 +22,10 @@ Give counterexamples showing that $g\circ f$ can be injective but $g$ not inject
 
 - Go through Cantor's diagonalization argument proving that (for example) infinite sequences form an uncountable set. See pp. 271-272 and also Gilbert and Vanstone Theorem 6.67.
 
-
 - Let $A$ be the set of sequences of natural numbers $a_1,a_2,a_3,\ldots$ that are eventually constant at zero -- in other words,
 a sequence $a_1,a_2,\ldots$ is in $A$ if there exists an $N$ such that $a_i=0$ for all $i\ge N$.  Is $A$ countable?
 
-
-
 - Prove that the intervals  $(0,1)$ and $(a,b)$ in $\mathbb{R}$ have the same cardinality for any $a,b$ with $b>a$.  
+
+- Give 3 examples of functions that are surjective but not injective, and 3 examples of functions that are injective but not surjective
 
