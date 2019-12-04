@@ -13,12 +13,20 @@ Give counterexamples showing that $g\circ f$ can be injective but $g$ not inject
 
 - Give an example of a countable subset of the irrational numbers, or prove that no such subset exists.
 
+- How many surjective maps are there from a 3 element set to a 2 element set?  From a 4 element set to a 3 element set?
+
+
+##### More problems for in-class discussion
+
+- Go through the argument that $\mathbb{N}\times\mathbb{N}$ is countable (Figure 14.2) 
+
+- Go through Cantor's diagonalization argument proving that (for example) infinite sequences form an uncountable set. See pp. 271-272 and also Gilbert and Vanstone Theorem 6.67.
+
+
 - Let $A$ be the set of sequences of natural numbers $a_1,a_2,a_3,\ldots$ that are eventually constant at zero -- in other words,
 a sequence $a_1,a_2,\ldots$ is in $A$ if there exists an $N$ such that $a_i=0$ for all $i\ge N$.  Is $A$ countable?
 
-- How many surjective maps are there from a 3 element set to a 2 element set?  From a 4 element set to a 3 element set?
+
 
 - Prove that the intervals  $(0,1)$ and $(a,b)$ in $\mathbb{R}$ have the same cardinality for any $a,b$ with $b>a$.  
-
-
 
