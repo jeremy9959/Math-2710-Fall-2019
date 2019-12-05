@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Countability</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="countability-examples">Countability Examples</h1>
+<h2 id="eventually-zero-sequences">Eventually zero sequences</h2>
+<p><strong>Proposition:</strong> Let <span class="math inline">\(S\)</span> be the set of <em>eventually zero</em> sequences of non-negative integers <span class="math inline">\(a_1,a_2,\ldots\)</span>; eventually zero means that for each sequence <span class="math inline">\(s\)</span> there is an <span class="math inline">\(N\)</span> so that <span class="math inline">\(a_i=0\)</span> for <span class="math inline">\(i\ge N\)</span>. (Informally, the sequence can have anything at the beginning but eventually it becomes <span class="math inline">\(0,0,0,\ldots\)</span>.) Then <span class="math inline">\(S\)</span> is countable.</p>
+<p>This is interesting because we know on the one hand that, for any <span class="math inline">\(k\)</span>, the set of <span class="math inline">\(k\)</span>-tuples of non-negative integers <span class="math inline">\((a_1,\ldots, a_k)\)</span> is countable because it is a finite product of countable sets; and we know that the set of <em>all</em> sequences of non-negative integers <span class="math inline">\((a_1,a_2,\ldots)\)</span> is uncountable by the diagonalization argument. So <span class="math inline">\(S\)</span> is a kind of intermediate case, but it turns out to be countable as well.</p>
+<p><strong>Proof:</strong> First, let <span class="math inline">\(\mathbb{W}\)</span> be the set of non-negative integers and let <span class="math inline">\(A(n)\)</span> be <span class="math display">\[
+A(n)=\overbrace{W\times W\times W\times \cdots\times W}^{(n-1)}\times \mathbb{N}
+\]</span> For each <span class="math inline">\(n\)</span>, <span class="math inline">\(A(n)\)</span> is countable because it is a finite cartesian product of countable sets. For each <span class="math inline">\(n&gt;0\)</span> let <span class="math display">\[
+f_{n}:\mathbb{N}\to A(n)
+\]</span> be a bijection, and let <span class="math inline">\(f_0\)</span> send <span class="math inline">\(0\)</span> to the zero sequence.</p>
+<p>Now, let <span class="math inline">\(S(n)\subset S\)</span> be the subset of sequences whose last non-zero entry is in position <span class="math inline">\(n\)</span> (and let <span class="math inline">\(S(0)\)</span> be the zero sequence). Now each element of <span class="math inline">\(S\)</span> belongs to exactly one <span class="math inline">\(S(n)\)</span> – just choose the <span class="math inline">\(n\)</span> corresponding to the last non-zero entry in the sequence, or zero if the sequence is all zero. It suffices to prove that <span class="math inline">\(S^{*}\)</span>, which is <span class="math inline">\(S\)</span> with the zero sequence deleted, is countable.</p>
+<p>To construct a bijection from <span class="math inline">\(\mathbb{N}\to S^*\)</span>, first construct a bijection <span class="math inline">\(h:\mathbb{N}\times\mathbb{N}\to S^{*}\)</span> by sending <span class="math inline">\((x,y)\)</span> to <span class="math inline">\(f_x(y)\)</span>. This is a bijection, since every <span class="math inline">\(s\in S\)</span> belongs to exactly one <span class="math inline">\(S(n)\)</span> and <span class="math inline">\(f_n:\mathbb{N}\to S(n)\)</span> is bijective by construction.</p>
+<p>Finally, since <span class="math inline">\(\mathbb{N}\times\mathbb{N}\)</span> is countable, <span class="math inline">\(S^*\)</span>, and also <span class="math inline">\(S\)</span>, is countable.</p>
+</body>
+</html>
