@@ -32,3 +32,15 @@ a sequence $a_1,a_2,\ldots$ is in $A$ if there exists an $N$ such that $a_i=0$ f
 
 - Give 3 examples of functions that are surjective but not injective, and 3 examples of functions that are injective but not surjective
 
+### And still more problems
+
+Two tricky problems from Gilbert and Vanstone.
+
+- Prove that a function $f:X\to Y$ is injective if and only if, given two maps $g:T\to X$ and $h:T\to X$, 
+$$
+f\circ g:T\to X = f\circ h:T\to X \implies g=h.
+$$
+ 
+ 
+- If $f:A\to B$ and $g:B\to C$ are bijective maps, prove that the inverse map to $f\circ g$ is $g^{-1}\circ f^{-1}$. 
+
