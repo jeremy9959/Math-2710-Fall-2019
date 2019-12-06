@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>Week12</title>
   <style type="text/css">
       code{white-space: pre-wrap;}
@@ -13,37 +11,36 @@
       span.underline{text-decoration: underline;}
       div.column{display: inline-block; vertical-align: top; width: 50%;}
   </style>
-  <link rel="stylesheet" type="text/css" media="screen, projection, print"
-    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS_CHTML-full" type="text/javascript"></script>
-  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
-    charset="utf-8" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
 </head>
 <body>
-<div id="practice-problems-for-in-class-work" class="title-slide slide section level2"><h1>Practice Problems for in-class work</h1></div><h4 id="hammack-section-12.2">Hammack, Section 12.2:</h4>
+<h2 id="practice-problems-for-in-class-work">Practice Problems for in-class work</h2>
+<h4 id="hammack-section-12.2">Hammack, Section 12.2:</h4>
 <ul>
 <li><p>Problem 18, then prove that <span class="math inline">\(\mathbb{N}\)</span> and <span class="math inline">\(\mathbb{Z}\)</span> have the same cardinality. (the relevant function is <span class="math inline">\(f(n)=((-1)^n(2n-1)+1)/4\)</span>)</p></li>
 <li><p>Problems 11, 12: consider the functions <span class="math inline">\(\theta(a,b)=(-1)^ab\)</span> and <span class="math inline">\(\theta(a,b)=a-2ab+b\)</span> from from <span class="math inline">\(\{0,1\}\times\mathbb{N}\)</span> to <span class="math inline">\(\mathbb{Z}\)</span>. Are they injective? surjective? bijective?</p></li>
-</ul><h4 id="other-problems">other problems</h4>
+</ul>
+<h4 id="other-problems">other problems</h4>
 <ul>
 <li><p>Prove that if <span class="math inline">\(g\circ f\)</span> is injective, then <span class="math inline">\(f\)</span> is injective. Prove that if <span class="math inline">\(g\circ f\)</span> is surjective, then <span class="math inline">\(g\)</span> is surjective. Give counterexamples showing that <span class="math inline">\(g\circ f\)</span> can be injective but <span class="math inline">\(g\)</span> not injective, and <span class="math inline">\(g\circ f\)</span> is surjective by <span class="math inline">\(f\)</span> is not surjective.</p></li>
 <li><p>Give an example of a countable subset of the irrational numbers, or prove that no such subset exists.</p></li>
 <li><p>How many surjective maps are there from a 3 element set to a 2 element set? From a 4 element set to a 3 element set?</p></li>
-</ul><div id="more-problems-for-in-class-discussion" class="slide section level3">
-<h1>More problems for in-class discussion</h1>
+</ul>
+<h3 id="more-problems-for-in-class-discussion">More problems for in-class discussion</h3>
 <ul>
 <li><p>Go through the argument that <span class="math inline">\(\mathbb{N}\times\mathbb{N}\)</span> is countable (Figure 14.2)</p></li>
 <li><p>Go through Cantor’s diagonalization argument proving that (for example) infinite sequences form an uncountable set. See pp. 271-272 and also Gilbert and Vanstone Theorem 6.67.</p></li>
 </ul>
-</div><div id="more-problems-still" class="slide section level3">
-<h1>More problems still</h1>
+<h3 id="more-problems-still">More problems still</h3>
 <ul>
 <li><p>Let <span class="math inline">\(A\)</span> be the set of sequences of natural numbers <span class="math inline">\(a_1,a_2,a_3,\ldots\)</span> that are eventually constant at zero – in other words, a sequence <span class="math inline">\(a_1,a_2,\ldots\)</span> is in <span class="math inline">\(A\)</span> if there exists an <span class="math inline">\(N\)</span> such that <span class="math inline">\(a_i=0\)</span> for all <span class="math inline">\(i\ge N\)</span>. Is <span class="math inline">\(A\)</span> countable?</p></li>
 <li><p>Prove that the intervals <span class="math inline">\((0,1)\)</span> and <span class="math inline">\((a,b)\)</span> in <span class="math inline">\(\mathbb{R}\)</span> have the same cardinality for any <span class="math inline">\(a,b\)</span> with <span class="math inline">\(b&gt;a\)</span>.</p></li>
 <li><p>Give 3 examples of functions that are surjective but not injective, and 3 examples of functions that are injective but not surjective</p></li>
 </ul>
-</div><div id="and-still-more-problems" class="slide section level3">
-<h1>And still more problems</h1>
+<h3 id="and-still-more-problems">And still more problems</h3>
 <p>Two tricky problems from Gilbert and Vanstone.</p>
 <ul>
 <li><p>Prove that a function <span class="math inline">\(f:X\to Y\)</span> is injective if and only if, given two maps <span class="math inline">\(g:T\to X\)</span> and <span class="math inline">\(h:T\to X\)</span>, <span class="math display">\[
@@ -51,6 +48,5 @@ f\circ g:T\to X = f\circ h:T\to X \implies g=h.
 \]</span></p></li>
 <li><p>If <span class="math inline">\(f:A\to B\)</span> and <span class="math inline">\(g:B\to C\)</span> are bijective maps, prove that the inverse map to <span class="math inline">\(f\circ g\)</span> is <span class="math inline">\(g^{-1}\circ f^{-1}\)</span>.</p></li>
 </ul>
-</div>
 </body>
 </html>
