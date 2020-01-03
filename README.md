@@ -22,8 +22,8 @@ Office hours: 9:00 - 10:00 Mondays, 12:15-13:00 Wednesdays (or by appointment)<b
 
 </p>
 
-
 - <a href="Docs/schedule.html"> Schedule </a>
+- <a href="Docs/syllabus.html"> Syllabus </a>
 
 ### Other Information
 
@@ -37,7 +37,7 @@ Office hours: 9:00 - 10:00 Mondays, 12:15-13:00 Wednesdays (or by appointment)<b
 Euclid's algorithm is laid out in [Proposition 1](https://mathcs.clarku.edu/~djoyce/java/elements/bookVII/propVII1.html)
 and [Proposition 2](https://mathcs.clarku.edu/~djoyce/java/elements/bookVII/propVII2.html) of Book VII of Euclid's Elements.
 
-### Notes
+### Class Notes
 
 - <a href="Notes/Week1.html"> Week One  </a>
 - <a href="Notes/Week2.html"> Week Two </a>
@@ -50,6 +50,9 @@ and [Proposition 2](https://mathcs.clarku.edu/~djoyce/java/elements/bookVII/prop
 - <a href="Notes/Week9.html"> Week Nine </a>
 - <a href="Notes/Week10.html"> Week Ten </a>
 - <a href="Notes/Week11.html"> Week Eleven </a>
+- <a href="Notes/Week12.html"> Week Twelve </a>
+- <a href="Notes/Countability.html"> More on Countability </a>
+- <a href="Notes/Supplemental20190918.html"> More on gcd and lcm </a>
 
 For week 8, we will also rely on selected sections from [The Book of Proof](https://www.people.vcu.edu/~rhammack/BookOfProof/Main.pdf)
 by Richard Hammack.  In particular:
@@ -62,4 +65,10 @@ and the associated problems.
 
 For Weeks 10-11, we will also rely on Hammack's Chapter 12 and 14 (in addition to Chapter 6 of Gilbert-Vanstone).
 
+### Exams
+
+- <a href="Exams/First.pdf"> First Exam (pdf) </a>
+- <a href="Exams/Second.pdf"> Second Exam (pdf) </a>
+- <a href="Exams/Final.pdf"> Final Exam (version 1, pdf) </a>
+- <a href="Exams/Final2.pdf"> Final Exam (version 2, pdf) </a>
 
